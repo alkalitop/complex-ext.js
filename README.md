@@ -228,3 +228,10 @@ random complex (both real part and imaginary part are more than or equal to 0 an
 ```javascript
 Cxmath.random();
 ```
+
+## Development Note
+
+### v1
+
+#### 21.8.13
+1차 개발 완료
