@@ -14,7 +14,7 @@ CC BY-NC-ND 4.0
 const { Complex, Cxmath } = require(PATH);
 
 ```
-### Declare a complex number
+### Declaration & Properties
 #### constructor(re: number, im: number)
 declare with cartesian form (if the imaginary part equals zero, you can leave it out.)
 ```javascript
@@ -30,6 +30,14 @@ new Complex(Math.PI, 2, 'polar'); // 2exp(iπ) = -2
 copy
 ```javascript
 new Complex(z); // 1+2i
+```
+
+#### Properties
+```javascript
+z.re; // real part
+z.im; // imaginary part
+z.abs; // absolute value
+z.arg; // the argument
 ```
 
 ### The four fundamental arithmetic operations & involution
@@ -74,7 +82,7 @@ p.inv(6); // 117+44i
 
 ### Radical Root
 ```javascript
-let s = new complex(-1);
+let s = new Complex(-1);
 ```
 
 #### Cxmath.sqrt(z: number/complex)
@@ -85,6 +93,22 @@ Cxmath.sqrt(s); // 0+1i
 
 #### Cxmath.cbrt(z: number/complex)
 principal cube root
+```javascript
+Cxmath.cbrt(s); // 0.5+0.8660254037844386i
+```
+
+### Exponential function & Logarithm
+```javascript
+let t = new Complex(1, -5);
+
+#### Cxmath.exp(z: number/complex)
+exp(z)
+```javascript
+Cxmath.exp(t); // 0.7710737641656674+2.6066264306850795i
+```
+
+#### Cxmath.ln(z: number/complex)
+<a href="https://namu.wiki/w/복소로그함수">Log(z)</a>
 ```javascript
 Cxmath.cbrt(s); // 0.5+0.8660254037844386i
 ```
