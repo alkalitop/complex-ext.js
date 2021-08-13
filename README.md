@@ -173,6 +173,12 @@ arctangent
 Cxmath.atan(z);
 ```
 
+#### Cxmath.atan2(w: number/complex, z: number/complex)
+arctangent2
+```javascript
+Cxmath.atan2(w, z);
+```
+
 ### Hyperbolic Functions
 
 #### Cxmath.sinh(z: number/complex)
@@ -230,6 +236,9 @@ Cxmath.random();
 ```
 
 ## Development Note
+
+### 21.8.14
+atan2 함수 추가
 
 ### 21.8.13
 1차 개발 완료
