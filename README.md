@@ -100,6 +100,7 @@ Cxmath.cbrt(s); // 0.5+0.8660254037844386i
 ### Exponential function & Logarithm
 ```javascript
 let t = new Complex(1, -5);
+```
 
 #### Cxmath.exp(z: number/complex)
 exp(z)
@@ -110,5 +111,8 @@ Cxmath.exp(t); // 0.7710737641656674+2.6066264306850795i
 #### Cxmath.ln(z: number/complex)
 <a href="https://namu.wiki/w/복소로그함수">Log(z)</a>
 ```javascript
-Cxmath.cbrt(s); // 0.5+0.8660254037844386i
+Cxmath.ln(t); // 1.6290482690107408-1.373400766945016i
 ```
+
+#### Cxmath.log(b: number/complex, a: number/complex)
+logarithm with base b and antilogarithm a
