@@ -231,7 +231,5 @@ Cxmath.random();
 
 ## Development Note
 
-### v1
-
-#### 21.8.13
+### 21.8.13
 1차 개발 완료
