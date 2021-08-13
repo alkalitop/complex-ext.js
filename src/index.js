@@ -326,6 +326,14 @@ cxmath.atan = function (z) {
   return i.div(2).mul(cxmath.ln(i.add(s).div(i.sub(s))));
 };
 
+cxmath.atan2 = function (w, z) {
+  let t = complex._typer(w)+complex._typer(z);
+  if (t.includes('x')) {
+    throw new Error();
+  }
+  return cxmath.atan(new complex(w).div(new complex(z)));
+}
+
 cxmath.sinh = function (z) {
   let t = complex._typer(z);
   if (t.includes('x')) {
