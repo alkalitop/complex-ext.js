@@ -14,7 +14,7 @@ CC BY-NC-ND 4.0
 const { Complex, Cxmath } = require(PATH);
 
 ```
-### Declaration & Properties
+### Declaration
 #### constructor(re: number, im: number)
 declare with cartesian form (if the imaginary part equals zero, you can leave it out.)
 ```javascript
@@ -23,16 +23,16 @@ let z = new Complex(1, 2); // 1+2i
 #### constructor(abs: number, arg: number, 'polar')
 declare with polar form
 ```javascript
-new Complex(Math.PI, 2, 'polar'); // 2exp(iπ) = -2
+let z = new Complex(Math.PI, 2, 'polar'); // 2exp(iπ) = -2
 ```
 
 #### constructor(cx: complex)
 copy
 ```javascript
-new Complex(z); // 1+2i
+let z = new Complex(z); // 1+2i
 ```
 
-#### Properties
+### Properties
 ```javascript
 z.re; // real part
 z.im; // imaginary part
@@ -80,39 +80,97 @@ p.inv(q); // 932.1391946432212+95.9465336603415i
 p.inv(6); // 117+44i
 ```
 
-### Radical Root
-```javascript
-let s = new Complex(-1);
-```
+### Radical Roots
 
 #### Cxmath.sqrt(z: number/complex)
 principal square root
 ```javascript
-Cxmath.sqrt(s); // 0+1i
+Cxmath.sqrt(z);
 ```
 
 #### Cxmath.cbrt(z: number/complex)
 principal cube root
 ```javascript
-Cxmath.cbrt(s); // 0.5+0.8660254037844386i
+Cxmath.cbrt(z);
 ```
 
 ### Exponential function & Logarithm
-```javascript
-let t = new Complex(1, -5);
-```
 
 #### Cxmath.exp(z: number/complex)
 exp(z)
 ```javascript
-Cxmath.exp(t); // 0.7710737641656674+2.6066264306850795i
+Cxmath.exp(z);
 ```
 
 #### Cxmath.ln(z: number/complex)
-<a href="https://namu.wiki/w/복소로그함수">Log(z)</a>
+<a href="https://namu.wiki/w/복소로그함수">Log(z)</a>, natural logarithm defined in principal branch
 ```javascript
-Cxmath.ln(t); // 1.6290482690107408-1.373400766945016i
+Cxmath.ln(z);
 ```
 
 #### Cxmath.log(b: number/complex, a: number/complex)
-logarithm with base b and antilogarithm a
+logarithm with base b and antilogarithm a (defined in principal branch)
+```javascript
+Cxmath.log(b, a);
+```
+
+### Trigonometric Functions
+
+#### Cxmath.sin(z: number/complex)
+sine
+```javascript
+Cxmath.sin(z);
+```
+
+#### Cxmath.cos(z: number/complex)
+cosine
+```javascript
+Cxmath.cos(z);
+```
+
+#### Cxmath.tan(z: number/complex)
+tangent
+```javascript
+Cxmath.tan(z);
+```
+
+### Inverse Trigonometric Functions
+
+#### Cxmath.asin(z: number/complex)
+arcsine
+```javascript
+Cxmath.asin(z);
+```
+
+#### Cxmath.acos(z: number/complex)
+arccosine
+```javascript
+Cxmath.acos(z);
+```
+
+#### Cxmath.atan(z: number/complex)
+arctangent
+```javascript
+Cxmath.atan(z);
+```
+
+### Hyperbolic Functions
+
+#### Cxmath.sinh(z: number/complex)
+hyperbolic sine
+```javascript
+Cxmath.sinh(z);
+```
+
+#### Cxmath.cosh(z: number/complex)
+hyperbolic cosine
+```javascript
+Cxmath.cosh(z);
+```
+
+#### Cxmath.tanh(z: number/complex)
+hyperbolic tangent
+```javascript
+Cxmath.tanh(z);
+```
+
