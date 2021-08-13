@@ -94,7 +94,7 @@ principal cube root
 Cxmath.cbrt(z);
 ```
 
-### Exponential function & Logarithm
+### Exponential Function & Logarithm
 
 #### Cxmath.exp(z: number/complex)
 exp(z)
@@ -103,7 +103,7 @@ Cxmath.exp(z);
 ```
 
 #### Cxmath.ln(z: number/complex)
-<a href="https://namu.wiki/w/복소로그함수">Log(z)</a>, natural logarithm defined in principal branch
+<a href="https://namu.wiki/w/복소로그함수#s-3">Log(z)</a>, natural logarithm defined in principal branch
 ```javascript
 Cxmath.ln(z);
 ```
@@ -174,3 +174,38 @@ hyperbolic tangent
 Cxmath.tanh(z);
 ```
 
+### Inverse Hyperbolic Functions
+
+#### Cxmath.asinh(z: number/complex)
+inverse hyperbolic sine
+```javascript
+Cxmath.asinh(z);
+```
+
+#### Cxmath.acosh(z: number/complex)
+inverse hyperbolic cosine
+```javascript
+Cxmath.acosh(z);
+```
+
+#### Cxmath.atanh(z: number/complex)
+inverse hyperbolic tangent
+```javascript
+Cxmath.atanh(z);
+```
+
+### Sign Function
+
+#### Cxmath.csgn(z: number/complex)
+<a href="https://namu.wiki/w/부호함수#s-3">csgn(z)</a>
+```javascript
+Cxmath.csgn(z);
+```
+
+### Random
+
+#### Cxmath.random()
+random complex (both real part and imaginary part are more than or equal to 0 and less than 1)
+```javascript
+Cxmath.random();
+```
