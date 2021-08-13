@@ -8,7 +8,7 @@ Javascript complex number library
 CC BY-NC-ND 4.0
 
 ## Notice
-한국어 문서 쓰실 분 구함
+<del>한국어 문서 쓰실 분 구함</del>
 
 ## Use
 
