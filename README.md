@@ -6,3 +6,9 @@ Javascript complex library
 
 ## License
 CC BY-NC-ND 4.0
+
+## Use
+
+### Declare a complex number
+```javascript
+```
