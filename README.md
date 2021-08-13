@@ -12,7 +12,7 @@ CC BY-NC-ND 4.0
 
 ## Use
 
-## Get Started
+### Get Started
 ```javascript
 const { Complex, Cxmath } = require(PATH);
 
