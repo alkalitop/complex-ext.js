@@ -80,6 +80,22 @@ p.inv(q); // 932.1391946432212+95.9465336603415i
 p.inv(6); // 117+44i
 ```
 
+### Opposite Number (Additive Inverse)
+
+#### Cxmath.opp(z: number/complex)
+opposite number (additive inverse)
+```javascript
+Cxmath.opp(z);
+```
+
+### Complex Conjugate
+
+#### Cxmath.conj(z: number/complex)
+complex conjugate
+```javascript
+Cxmath.conj(z);
+```
+
 ### Radical Roots
 
 #### Cxmath.sqrt(z: number/complex)
