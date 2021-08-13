@@ -29,7 +29,7 @@ new Complex(Math.PI, 2, 'polar'); // 2exp(iπ) = -2
 #### constructor(cx: complex)
 copy
 ```javascript
-new complex(z); // 1+2i
+new Complex(z); // 1+2i
 ```
 
 ### The four fundamental arithmetic operations & involution
