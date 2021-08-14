@@ -114,7 +114,7 @@ Cxmath.cbrt(z);
 ### Exponential Function & Logarithm
 
 #### Cxmath.exp(z: number/complex)
-exp(z)
+exp(z), natural exponential function
 ```javascript
 Cxmath.exp(z);
 ```
@@ -220,7 +220,7 @@ Cxmath.atanh(z);
 ### Sign Function
 
 #### Cxmath.csgn(z: number/complex)
-<a href="https://namu.wiki/w/부호함수#s-3">csgn(z)</a>
+<a href="https://namu.wiki/w/부호함수#s-3">csgn(z)</a>, complex sign function
 ```javascript
 Cxmath.csgn(z);
 ```
