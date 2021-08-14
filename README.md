@@ -233,10 +233,13 @@ random complex (both real part and imaginary part are more than or equal to 0 an
 Cxmath.random();
 ```
 
-## Development Note
 
-### 21.8.14
-atan2 함수 추가
+#### 21.8.14
+<ul>
+<li>atan2 function was added</li>
+</ul>
 
-### 21.8.13
-1차 개발 완료
+#### 21.8.13
+<ul>
+<li>first development was completed</li>
+</ul>
