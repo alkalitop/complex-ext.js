@@ -7,14 +7,14 @@
 ## License
 CC BY-NC-ND 4.0
 
-## 사용
+## Docs
 
 ### 시작하기
 ```javascript
 const { Complex, Cxmath } = require(PATH);
 
 ```
-### 선언하기
+### 복소수 선언하기
 #### constructor(re: number, im: number)
 직교 형식으로 선언
 ```javascript
@@ -113,7 +113,7 @@ Cxmath.cbrt(z);
 ### 지수 & 로그
 
 #### Cxmath.exp(z: number/complex)
-exp(z)
+exp(z), 자연지수함수
 ```javascript
 Cxmath.exp(z);
 ```
@@ -199,19 +199,19 @@ Cxmath.tanh(z);
 ### 역쌍곡선함수
 
 #### Cxmath.asinh(z: number/complex)
-쌍곡사인 인버스
+역쌍곡사인
 ```javascript
 Cxmath.asinh(z);
 ```
 
 #### Cxmath.acosh(z: number/complex)
-쌍곡코사인 인버스
+역쌍곡코사인
 ```javascript
 Cxmath.acosh(z);
 ```
 
 #### Cxmath.atanh(z: number/complex)
-쌍곡탄젠트 인버스
+역쌍곡탄젠트
 ```javascript
 Cxmath.atanh(z);
 ```
