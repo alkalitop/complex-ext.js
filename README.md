@@ -15,7 +15,7 @@ CC BY-NC-ND 4.0
 const { Complex, Cxmath } = require(PATH);
 
 ```
-### Declaration
+### Declaring Complex
 #### constructor(re: number, im: number)
 declare with cartesian form (if the imaginary part equals zero, you can leave it out.)
 ```javascript
