@@ -1,5 +1,5 @@
 # cpxn
-Javascript complex number library
+자바스크립트 복소수 라이브러리
 
 ## Copyright
 &copy; 2021 Sanha, all rights reserved.
@@ -119,7 +119,7 @@ Cxmath.exp(z);
 ```
 
 #### Cxmath.ln(z: number/complex)
-<a href="https://namu.wiki/w/복소로그함수#s-3">Log(z)</a>주 분지에서 정의된 자연로그
+<a href="https://namu.wiki/w/복소로그함수#s-3">Log(z)</a>, 주 분지에서 정의된 자연로그
 ```javascript
 Cxmath.ln(z);
 ```
@@ -176,7 +176,7 @@ Cxmath.atan(z);
 Cxmath.atan2(w, z);
 ```
 
-### 쌍곡선 함수
+### 쌍곡선함수
 
 #### Cxmath.sinh(z: number/complex)
 쌍곡사인
@@ -196,7 +196,7 @@ Cxmath.cosh(z);
 Cxmath.tanh(z);
 ```
 
-### Inverse Hyperbolic Functions
+### 역쌍곡선함수
 
 #### Cxmath.asinh(z: number/complex)
 쌍곡사인 인버스
@@ -216,15 +216,15 @@ Cxmath.acosh(z);
 Cxmath.atanh(z);
 ```
 
-### Sign Function
+### 부호함수
 
 #### Cxmath.csgn(z: number/complex)
-<a href="https://namu.wiki/w/부호함수#s-3">csgn(z)</a>
+<a href="https://namu.wiki/w/부호함수#s-3">csgn(z)</a>, 복소부호함수
 ```javascript
 Cxmath.csgn(z);
 ```
 
-### Random
+### 난수
 
 #### Cxmath.random()
 랜덤 복소수 (실수부와 허수부가 모두 0 이상 1 미만임)
