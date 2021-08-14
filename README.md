@@ -233,6 +233,9 @@ random complex (both real part and imaginary part are more than or equal to 0 an
 Cxmath.random();
 ```
 
+## Development Note
+
+### v1
 
 #### 21.8.14
 <ul>
