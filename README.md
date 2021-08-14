@@ -7,10 +7,8 @@ Javascript complex number library
 ## License
 CC BY-NC-ND 4.0
 
-## Notice
-<del>한국어 문서 쓰실 분 구함</del>
-
-## Use
+## Docs (English)
+<a href="https://github.com/sweetcorn1229/cpxn/README-ko.md">한국어</a>
 
 ### Get Started
 ```javascript
