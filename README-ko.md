@@ -227,7 +227,7 @@ Cxmath.csgn(z);
 ### 거리
 
 #### Cxmath.dist(w: number/complex, z: number/complex)
-distance between w and z in the complex plane
+복소평면에서의 w와 z 사이의 거리
 ```javascript
 Cxmath.dist(w, z);
 ```
