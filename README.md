@@ -238,13 +238,13 @@ Cxmath.dist(w, z);
 #### Cxmath.armean(z_1, z_2, ..., z_n: number/complex)
 arithmetic mean
 ```javascript
-Cxmath.armean(w, z);
+Cxmath.armean(z_1, z_2, ..., z_n);
 ```
 
 #### Cxmath.gemean(z_1, z_2, ..., z_n: number/complex)
 geometric mean
 ```javascript
-Cxmath.gemean(w, z);
+Cxmath.gemean(z_1, z_2, ..., z_n);
 ```
 
 ### Random
@@ -258,6 +258,12 @@ Cxmath.random();
 ## Development Note
 
 ### v1
+
+#### 21.8.16
+<ul>
+<li>dist function was added</li>
+<li>armean(arithmetic mean), gemean(geometric mean) function was added</li>
+</ul>
 
 #### 21.8.14
 <ul>
