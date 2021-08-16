@@ -401,6 +401,33 @@ cxmath.csgn = function (z) {
   else throw new Error();  
 };
 
+cxmath.armean = function () {
+  let args = Array.from(arguments);
+  let t = args.map(el => complex._typer(el));
+  if (t.includes('x')) {
+    throw new Error();
+  }
+  return args.map(el => new complex(el)).reduce((a, b) => a.add(b)).div(args.length);
+};
+
+cxmath.gemean = function () {
+  let args = Array.from(arguments);
+  let t = args.map(el => complex._typer(el));
+  if (t.includes('x')) {
+    throw new Error();
+  }
+  return args.map(el => new complex(el)).reduce((a, b) => a.mul(b)).inv(1/args.length);
+};
+
+cxmath.dist = function (w, z) {
+  let t = complex._typer(w)+complex._typer(z);
+  if (t.includes('x')) {
+    throw new Error();
+  }
+  let u = new complex(w), v = new complex(z);  
+  return new complex(Math.hypot(u.re-v.re, u.im-v.im));
+};
+
 cxmath.random = function () {
   return new complex(Math.random(), Math.random());
 };
