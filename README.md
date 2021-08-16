@@ -225,6 +225,28 @@ Cxmath.atanh(z);
 Cxmath.csgn(z);
 ```
 
+### Distance
+
+#### Cxmath.dist(w: number/complex, z: number/complex)
+distance between w and z in the complex plane
+```javascript
+Cxmath.dist(w, z);
+```
+
+### Mean
+
+#### Cxmath.armean(z_1, z_2, ..., z_n: number/complex)
+arithmetic mean
+```javascript
+Cxmath.armean(w, z);
+```
+
+#### Cxmath.gemean(z_1, z_2, ..., z_n: number/complex)
+geometric mean
+```javascript
+Cxmath.gemean(w, z);
+```
+
 ### Random
 
 #### Cxmath.random()
