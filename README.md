@@ -235,16 +235,16 @@ Cxmath.dist(w, z);
 
 ### Mean
 
-#### Cxmath.armean(z_1, z_2, ..., z_n: number/complex)
+#### Cxmath.am(z_1, z_2, ..., z_n: number/complex)
 arithmetic mean
 ```javascript
-Cxmath.armean(z_1, z_2, ..., z_n);
+Cxmath.am(z_1, z_2, ..., z_n);
 ```
 
-#### Cxmath.gemean(z_1, z_2, ..., z_n: number/complex)
+#### Cxmath.gm(z_1, z_2, ..., z_n: number/complex)
 geometric mean
 ```javascript
-Cxmath.gemean(z_1, z_2, ..., z_n);
+Cxmath.gm(z_1, z_2, ..., z_n);
 ```
 
 ### Random
