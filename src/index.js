@@ -401,7 +401,7 @@ cxmath.csgn = function (z) {
   else throw new Error();  
 };
 
-cxmath.armean = function () {
+cxmath.am = function () {
   let args = Array.from(arguments);
   let t = args.map(el => complex._typer(el));
   if (t.includes('x')) {
@@ -410,7 +410,7 @@ cxmath.armean = function () {
   return args.map(el => new complex(el)).reduce((a, b) => a.add(b)).div(args.length);
 };
 
-cxmath.gemean = function () {
+cxmath.gm = function () {
   let args = Array.from(arguments);
   let t = args.map(el => complex._typer(el));
   if (t.includes('x')) {
