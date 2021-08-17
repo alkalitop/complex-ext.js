@@ -234,16 +234,16 @@ Cxmath.dist(w, z);
 
 ### 평균
 
-#### Cxmath.armean(z_1, z_2, ..., z_n: number/complex)
+#### Cxmath.am(z_1, z_2, ..., z_n: number/complex)
 산술평균
 ```javascript
-Cxmath.armean(z_1, z_2, ..., z_n);
+Cxmath.am(z_1, z_2, ..., z_n);
 ```
 
-#### Cxmath.gemean(z_1, z_2, ..., z_n: number/complex)
+#### Cxmath.gm(z_1, z_2, ..., z_n: number/complex)
 기하평균
 ```javascript
-Cxmath.gemean(z_1, z_2, ..., z_n);
+Cxmath.gm(z_1, z_2, ..., z_n);
 ```
 
 ### 난수
@@ -261,7 +261,7 @@ Cxmath.random();
 #### 21.8.16
 <ul>
 <li>dist(거리) 함수 추가</li>
-<li>armean(산술평균), geomean(기하평균) 함수 추가</li>
+<li>am(산술평균), gm(기하평균) 함수 추가</li>
 </ul>
 
 #### 21.8.14
