@@ -260,7 +260,7 @@ cxmath.log = function (z, base) {
     }
     let s = new complex(z);
     let zb = new complex(base);
-    return new complex(Math.log(s.abs), s.arg).divide(new complex(Math.log(zb.abs), zb.arg));
+    return new complex(Math.log(s.abs), s.arg).div(new complex(Math.log(zb.abs), zb.arg));
   }
   else {
     let s = new complex(z);
