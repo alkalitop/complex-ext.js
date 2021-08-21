@@ -17,7 +17,7 @@ const { Complex, Cxmath } = require(PATH);
 ```
 ### Declaring Complex
 #### constructor(re: number, im: number)
-declare with cartesian form (if the imaginary part equals zero, you can leave it out.)
+declare with cartesian form (if the imaginary part equals zero, you may leave it out.)
 ```javascript
 let z = new Complex(1, 2); // 1+2i
 ```
@@ -119,14 +119,14 @@ exp(z), natural exponential function
 Cxmath.exp(z);
 ```
 
-#### Cxmath.ln(z: number/complex)
+#### [deleted] <del>Cxmath.ln(z: number/complex)</del>
 <a href="https://namu.wiki/w/복소로그함수#s-3">Log(z)</a>, natural logarithm defined in principal branch
 ```javascript
 Cxmath.ln(z);
 ```
 
-#### Cxmath.log(b: number/complex, a: number/complex)
-logarithm with base b and antilogarithm a (defined in principal branch)
+#### Cxmath.log(antilogarithm: number/complex, base: number/complex)
+logarithm defined in principal branch (if the base equals e, you may leave it out.)
 ```javascript
 Cxmath.log(b, a);
 ```
