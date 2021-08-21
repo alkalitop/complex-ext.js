@@ -118,16 +118,19 @@ exp(z), 자연지수함수
 Cxmath.exp(z);
 ```
 
-#### Cxmath.ln(z: number/complex)
-<a href="https://namu.wiki/w/복소로그함수#s-3">Log(z)</a>, 주 분지에서 정의된 자연로그
+#### [deleted] <del>Cxmath.ln(z: number/complex)</del>
+<del><a href="https://namu.wiki/w/복소로그함수#s-3">Log(z)</a>, 주 분지에서 정의된 자연로그</del>
 ```javascript
 Cxmath.ln(z);
 ```
 
-#### Cxmath.log(b: number/complex, a: number/complex)
-밑이 b, 진수가 a인 주 분지에서 정의된 로그
+#### Cxmath.log(antilogarithm: number/complex, base: number/complex)
+주 분지에서 정의된 로그 (밑수가 e인 경우 매개변수 생략 가능)
 ```javascript
-Cxmath.log(b, a);
+Cxmath.log(antilogarithm); // Natural Logarithm
+Cxmath.log(antilogarithm, 2); // Binary Logarithm
+Cxmath.log(antilogarithm, 10); // Decimal Logarithm
+Cxmath.log(antilogarithm, base);
 ```
 
 ### 삼각함수
