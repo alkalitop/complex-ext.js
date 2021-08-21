@@ -128,7 +128,10 @@ Cxmath.ln(z);
 #### Cxmath.log(antilogarithm: number/complex, base: number/complex)
 logarithm defined in principal branch (if the base equals e, you may leave it out.)
 ```javascript
-Cxmath.log(b, a);
+Cxmath.log(antilogarithm); // Natural Logarithm
+Cxmath.log(antilogarithm, 2); // Binary Logarithm
+Cxmath.log(antilogarithm, 10); // Decimal Logarithm
+Cxmath.log(antilogarithm, base);
 ```
 
 ### Trigonometric Functions
