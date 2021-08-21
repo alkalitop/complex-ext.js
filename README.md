@@ -120,7 +120,7 @@ Cxmath.exp(z);
 ```
 
 #### [deleted] <del>Cxmath.ln(z: number/complex)</del>
-<a href="https://namu.wiki/w/복소로그함수#s-3">Log(z)</a>, natural logarithm defined in principal branch
+<del><a href="https://namu.wiki/w/복소로그함수#s-3">Log(z)</a>, natural logarithm defined in principal branch</del>
 ```javascript
 Cxmath.ln(z);
 ```
