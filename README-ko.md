@@ -127,9 +127,9 @@ Cxmath.ln(z);
 #### Cxmath.log(antilogarithm: number/complex, base: number/complex)
 주 분지에서 정의된 로그 (밑수가 e인 경우 매개변수 생략 가능)
 ```javascript
-Cxmath.log(antilogarithm); // Natural Logarithm
-Cxmath.log(antilogarithm, 2); // Binary Logarithm
-Cxmath.log(antilogarithm, 10); // Decimal Logarithm
+Cxmath.log(antilogarithm); // 자연로그
+Cxmath.log(antilogarithm, 2); // 이진로그
+Cxmath.log(antilogarithm, 10); // 상용로그
 Cxmath.log(antilogarithm, base);
 ```
 
