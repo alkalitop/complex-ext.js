@@ -252,26 +252,25 @@ cxmath.exp = function (z) {
   return new complex(Math.E).inv(z);
 };
 
-cxmath.ln = function (z) {
-  let t = complex._typer(z);
-  if (t == 'x') {
-    throw new Error();
+cxmath.log = function (z, base) {
+  if (base) {
+    let t = complex._typer(z)+complex._typer(base);
+    if (t.includes('x')) {
+      throw new Error();
+    }
+    let s = new complex(z);
+    let zb = new complex(base);
+    return new complex(Math.log(s.abs), s.arg).divide(new complex(Math.log(zb.abs), zb.arg));
   }
-  let s = new complex(z);
-  return new complex(Math.log(s.abs), s.arg);
-};
-
-cxmath.log = function (b, a) {
-  let t = complex._typer(a) + complex._typer(b);
-  if (t.includes('x')) {
-    throw new Error();
+  else {
+    let s = new complex(z);
+    return new complex(Math.log(s.abs), s.arg);
   }
-  return cxmath.ln(a).div(cxmath.ln(b));
 };
 
 cxmath.sin = function (z) {
   let t = complex._typer(z);
-  if (t.includes('x')) {
+  if (t == 'x') {
     throw new Error();
   }
   let s = new complex(z);
