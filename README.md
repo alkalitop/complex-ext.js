@@ -275,12 +275,12 @@ Cxmath.random();
 <li>function gm(geometric mean) has been added</li>
 </ul>
 
-#### 21.8.14
+#### v1.0-beta-210814
 <ul>
 <li>function atan2 has been added</li>
 </ul>
 
-#### 21.8.13
+#### v1.0-beta-210813
 <ul>
 <li>beta release</li>
 </ul>
