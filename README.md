@@ -260,7 +260,7 @@ Cxmath.random();
 
 ## Development Note
 
-### v1
+### v1.0-beta
 
 #### 21.8.21
 <ul>
@@ -282,5 +282,5 @@ Cxmath.random();
 
 #### 21.8.13
 <ul>
-<li>first development has been completed</li>
+<li>beta release</li>
 </ul>
