@@ -261,26 +261,17 @@ Cxmath.random();
 
 ### v1.0-beta
 
-#### v1.0-beta-210821
-<ul>
-<li>ln 함수 삭제</li>
-<li>log 함수의 기능 확장 (자세한 내용은 docs 참고)</li>
-</ul>
+#### v1.0-beta.3 (210821, Unreleased)
+- ln 함수 삭제
+- log 함수의 기능 확장 (자세한 내용은 docs 참고)
 
-#### v1.0-beta-210816
-<ul>
-<li>dist(거리) 함수 추가</li>
-<li>am(산술평균) 함수 추가</li>
-<li>gm(기하평균) 함수 추가</li>
-</ul>
+#### v1.0-beta.2 (210816, Unreleased)
+- dist(거리) 함수 추가
+- am(산술평균) 함수 추가
+- gm(기하평균) 함수 추가
 
-#### v1.0-beta-210814
-<ul>
-<li>atan2 함수 추가</li>
-</ul>
+#### v1.0-beta.1 (210814, Unreleased)
+- atan2 함수 추가
 
-#### v1.0-beta-210813
-<ul>
-<li>베타</li>
-</ul>
-
+#### v1.0-beta.0 (210813, Unreleased)
+- 레포 생성
