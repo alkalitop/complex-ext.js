@@ -262,25 +262,17 @@ Cxmath.random();
 
 ### v1.0-beta
 
-#### v1.0-beta-210821
-<ul>
-<li>function ln has been deleted</li>
-<li>the role of function log has been expanded (read the docs for details)</li>
-</ul>
+#### v1.0-beta.3 (210821, Unreleased)
+- function ln has been deleted
+- the role of function log has been expanded (read the docs for details)
 
-#### v1.0-beta-210816
-<ul>
-<li>function dist(distance) has been added</li>
-<li>function am(arithmetic mean) has been added</li>
-<li>function gm(geometric mean) has been added</li>
-</ul>
+#### v1.0-beta.2 (210816, Unreleased)
+- function dist(distance) has been added
+- function am(arithmetic mean) has been added
+- function gm(geometric mean) has been added
 
-#### v1.0-beta-210814
-<ul>
-<li>function atan2 has been added</li>
-</ul>
+#### v1.0-beta.1 (210814, Unreleased)
+- function atan2 has been added
 
-#### v1.0-beta-210813
-<ul>
-<li>beta release</li>
-</ul>
+#### v1.0-beta.0 (210813, Unreleased)
+- create repo
