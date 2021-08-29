@@ -254,22 +254,3 @@ random complex (both real part and imaginary part are more than or equal to 0 an
 ```javascript
 Cxmath.random();
 ```
-
-## Development Note
-
-### v1.0-beta
-
-#### v1.0-beta.3 (210821, Unreleased)
-- function ln has been deleted
-- the role of function log has been expanded (read the docs for details)
-
-#### v1.0-beta.2 (210816, Unreleased)
-- function dist(distance) has been added
-- function am(arithmetic mean) has been added
-- function gm(geometric mean) has been added
-
-#### v1.0-beta.1 (210814, Unreleased)
-- function atan2 has been added
-
-#### v1.0-beta.0 (210813, Unreleased)
-- create repo
