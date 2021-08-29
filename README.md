@@ -4,9 +4,6 @@ Javascript complex number library
 ## Copyright
 &copy; 2021 Sanha, all rights reserved.
 
-## License
-CC BY-NC-ND 4.0
-
 ## Docs (English)
 <a href="https://github.com/sweetcorn1229/cpxn/blob/main/README-ko.md">한국어</a>
 
