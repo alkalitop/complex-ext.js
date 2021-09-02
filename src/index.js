@@ -267,6 +267,10 @@ cxmath.log = function (z, base) {
   }
 };
 
+cxmath.ln = function (z) {
+  return cxmath.log(z);
+};
+
 cxmath.sin = function (z) {
   let t = complex._typer(z);
   if (t == 'x') {
