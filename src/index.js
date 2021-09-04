@@ -306,7 +306,7 @@ cxmath.asin = function (z) {
   }
   let s = new complex(z);
   let i = new complex(0, 1);
-  return cxmath.ln(i.mul(s).add(cxmath.sqrt(cxmath.opp(s.inv(2).sub(1))))).mul(cxmath.conj(i));
+  return cxmath.log(i.mul(s).add(cxmath.sqrt(cxmath.opp(s.inv(2).sub(1))))).mul(cxmath.conj(i));
 };
 
 cxmath.acos = function (z) {
