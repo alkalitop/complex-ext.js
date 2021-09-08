@@ -1,5 +1,5 @@
 # cpxn
-Javascript complex number 
+Javascript complex number class
 
 ## Copyright
 &copy; 2021 Sanha, all rights reserved.
@@ -7,7 +7,7 @@ Javascript complex number
 ## Basic
  
 ### It's compatible with..
-- WEB(Front-end) Javascript
+- Front-end Javascript
 - Node.js
 - Rhino Javascript Engine
 
