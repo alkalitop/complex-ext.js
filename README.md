@@ -1,11 +1,17 @@
 # cpxn
-Javascript complex number class
+Javascript complex number 
 
 ## Copyright
 &copy; 2021 Sanha, all rights reserved.
 
-## Docs (English)
-<a href="https://github.com/sweetcorn1229/cpxn/blob/main/README-ko.md">한국어</a>
+## Basic
+ 
+### It's compatible with..
+- WEB(Front-end) Javascript
+- Node.js
+- Rhino Javascript Engine
+
+## Use
 
 ### Get Started
 ```javascript
