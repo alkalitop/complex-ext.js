@@ -1,5 +1,5 @@
 # cpxn
-Javascript complex number library
+Javascript complex number class
 
 ## Copyright
 &copy; 2021 Sanha, all rights reserved.
