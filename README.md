@@ -18,7 +18,7 @@ Javascript complex number class
 const { Complex, Cxmath } = require(PATH);
 
 ```
-### Declaring Complex
+### Constructor
 #### constructor(re: number, im: number)
 Declare with [cartesian form](https://en.m.wikipedia.org/wiki/Complex_plane) (if the imaginary part equals zero, you may leave it out.)
 ```javascript
