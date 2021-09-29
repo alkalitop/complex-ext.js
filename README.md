@@ -20,7 +20,7 @@ const { Complex, Cxmath } = require(PATH);
 ```
 ### Declaring Complex
 #### constructor(re: number, im: number)
-declare with cartesian form (if the imaginary part equals zero, you may leave it out.)
+declare with [cartesian form](https://en.m.wikipedia.org/wiki/Complex_plane) (if the imaginary part equals zero, you may leave it out.)
 ```javascript
 let z = new Complex(1, 2); // 1+2i
 ```
