@@ -25,7 +25,7 @@ declare with [cartesian form](https://en.m.wikipedia.org/wiki/Complex_plane) (if
 let z = new Complex(1, 2); // 1+2i
 ```
 #### constructor(abs: number, arg: number, 'polar')
-declare with polar form
+declare with [polar form](https://en.m.wikipedia.org/wiki/Complex_plane)
 ```javascript
 let z = new Complex(Math.PI, 2, 'polar'); // 2exp(iπ) = -2
 ```
