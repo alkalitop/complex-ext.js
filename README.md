@@ -175,6 +175,7 @@ Cxmath.log(a, b);
 ```
 
 ### Trigonometric Functions
+[[note]](https://en.wikipedia.org/wiki/Trigonometric_functions)
 
 #### Cxmath.sin(z: number/complex)
 Sine
@@ -185,20 +186,18 @@ Cxmath.sin(z);
 
 #### Cxmath.cos(z: number/complex)
 Cosine
-<sup>[note](https://en.wikipedia.org/wiki/Cosine)</sup>
 ```javascript
 Cxmath.cos(z);
 ```
 
 #### Cxmath.tan(z: number/complex)
 Tangent
-<sup>[note](https://en.wikipedia.org/wiki/Tangent)</sup>
 ```javascript
 Cxmath.tan(z);
 ```
 
 ### Inverse Trigonometric Functions
-[[note]](https://en.wikipedia.org/wiki/Inverse_trigonometric_functions)</sup>
+[[note]](https://en.wikipedia.org/wiki/Inverse_trigonometric_functions)
 
 #### Cxmath.asin(z: number/complex)
 Arcsine
@@ -225,41 +224,43 @@ Cxmath.atan2(w, z);
 ```
 
 ### Hyperbolic Functions
+[[note]](https://en.wikipedia.org/wiki/Hyperbolic_functions)
 
 #### Cxmath.sinh(z: number/complex)
-hyperbolic sine
+Hyperbolic sine
 ```javascript
 Cxmath.sinh(z);
 ```
 
 #### Cxmath.cosh(z: number/complex)
-hyperbolic cosine
+Hyperbolic cosine
 ```javascript
 Cxmath.cosh(z);
 ```
 
 #### Cxmath.tanh(z: number/complex)
-hyperbolic tangent
+Hyperbolic tangent
 ```javascript
 Cxmath.tanh(z);
 ```
 
 ### Inverse Hyperbolic Functions
+[[note]](https://en.wikipedia.org/wiki/Inverse_hyperbolic_functions)
 
 #### Cxmath.asinh(z: number/complex)
-inverse hyperbolic sine
+Inverse hyperbolic sine
 ```javascript
 Cxmath.asinh(z);
 ```
 
 #### Cxmath.acosh(z: number/complex)
-inverse hyperbolic cosine
+Inverse hyperbolic cosine
 ```javascript
 Cxmath.acosh(z);
 ```
 
 #### Cxmath.atanh(z: number/complex)
-inverse hyperbolic tangent
+Inverse hyperbolic tangent
 ```javascript
 Cxmath.atanh(z);
 ```
@@ -267,7 +268,8 @@ Cxmath.atanh(z);
 ### Sign Function
 
 #### Cxmath.csgn(z: number/complex)
-<a href="https://namu.wiki/w/부호함수#s-3">csgn(z)</a>, complex sign function
+Complex sign function
+<sup>[note](https://en.wikipedia.org/wiki/Sign_function#Complex_signum)</sup>
 ```javascript
 Cxmath.csgn(z);
 ```
@@ -275,7 +277,7 @@ Cxmath.csgn(z);
 ### Distance
 
 #### Cxmath.dist(w: number/complex, z: number/complex)
-distance between w and z in the complex plane
+Distance between w and z in the complex plane
 ```javascript
 Cxmath.dist(w, z);
 ```
@@ -283,13 +285,13 @@ Cxmath.dist(w, z);
 ### Mean
 
 #### Cxmath.am(z_1, z_2, ..., z_n: number/complex)
-arithmetic mean
+Arithmetic mean
 ```javascript
 Cxmath.am(z_1, z_2, ..., z_n);
 ```
 
 #### Cxmath.gm(z_1, z_2, ..., z_n: number/complex)
-geometric mean
+Geometric mean
 ```javascript
 Cxmath.gm(z_1, z_2, ..., z_n);
 ```
@@ -297,7 +299,7 @@ Cxmath.gm(z_1, z_2, ..., z_n);
 ### Random
 
 #### Cxmath.random()
-random complex (both real part and imaginary part are more than or equal to 0 and less than 1)
+Random complex (both real part and imaginary part are more than or equal to 0 and less than 1)
 ```javascript
 Cxmath.random();
 ```
