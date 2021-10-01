@@ -66,7 +66,7 @@ z.arg;
 ```
 
 
-### The four fundamental arithmetic operations & involution
+### The four fundamental arithmetic operations & Exponentiation
 ```javascript
 let p = new Complex(1, 2);
 let q = new Complex(3, -4);
