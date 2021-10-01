@@ -129,10 +129,10 @@ Cxmath.conj(z);
 ```
 
 ### Radical Roots
-#### Cxmath.sqrt(z: number/complex)
-Principal square root
 <sup>[note1](https://en.wikipedia.org/wiki/Complex_number#Square_root)</sup>
 <sup>[note2](https://en.wikipedia.org/wiki/Square_root#Square_roots_of_negative_and_complex_numbers)</sup>
+#### Cxmath.sqrt(z: number/complex)
+Principal square root
 ```javascript
 Cxmath.sqrt(z);
 ```
