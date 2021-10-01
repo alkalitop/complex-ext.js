@@ -89,7 +89,7 @@ p.sub(6); // -5+2i
 
 #### mul(z: number/complex)
 Multifunction
-<sup>[note](https://en.wikipedia.org/wiki/Complex_number#Multification_and_square)</sup>
+<sup>[note](https://en.wikipedia.org/wiki/Complex_number#Multiplication_and_square)</sup>
 ```javascript
 p.mul(q); // 11+2i
 p.mul(6); // 6+12i
