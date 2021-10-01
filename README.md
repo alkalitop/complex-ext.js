@@ -129,7 +129,7 @@ Cxmath.conj(z);
 ```
 
 ### Radical Roots
-<sup>[note](https://en.wikipedia.org/wiki/Square_root#Square_roots_of_negative_and_complex_numbers)</sup>
+[[note]](https://en.wikipedia.org/wiki/Square_root#Square_roots_of_negative_and_complex_numbers)
 #### Cxmath.sqrt(z: number/complex)
 Principal square root
 <sup>[note](https://en.wikipedia.org/wiki/Complex_number#Square_root)</sup>
