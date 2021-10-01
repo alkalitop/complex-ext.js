@@ -72,28 +72,32 @@ let p = new Complex(1, 2);
 let q = new Complex(3, -4);
 ```
 #### add(z: number/complex)
-addition
+Addition
+<sup>[note](https://en.wikipedia.org/wiki/Complex_number#Addition_and_subtraction)</sup>
 ```javascript
 p.add(q); // 4-2i
 p.add(6); // 7+2i
 ```
 
 #### sub(z: number/complex)
-subtraction
+Subtraction
+<sup>[note](https://en.wikipedia.org/wiki/Complex_number#Addition_and_subtraction)</sup>
 ```javascript
 p.sub(q); // -2+6i
 p.sub(6); // -5+2i
 ```
 
 #### mul(z: number/complex)
-multifunction
+Multifunction
+<sup>[note](https://en.wikipedia.org/wiki/Complex_number#Multification_and_square)</sup>
 ```javascript
 p.mul(q); // 11+2i
 p.mul(6); // 6+12i
 ```
 
 #### div(z: number/complex)
-division
+Division
+<sup>[note](https://en.wikipedia.org/wiki/Complex_number#Reciprocal_and_division)</sup>
 ```javascript
 p.div(q); // -0.2+0.4i
 p.div(4); // 0.25+0.5i
@@ -106,15 +110,13 @@ p.inv(q); // 932.1391946432212+95.9465336603415i
 p.inv(6); // 117+44i
 ```
 
-### Opposite Number (Additive Inverse)
+### Additive Inverse & Complex Conjugate
 
 #### Cxmath.opp(z: number/complex)
 Opposite number (Additive inverse)<sup>[note](https://en.wikipedia.org/wiki/Additive_inverse)</sup>
 ```javascript
 Cxmath.opp(z);
 ```
-
-### Complex Conjugate
 
 #### Cxmath.conj(z: number/complex)
 Complex conjugate
