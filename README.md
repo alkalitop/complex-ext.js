@@ -129,10 +129,10 @@ Cxmath.conj(z);
 ```
 
 ### Radical Roots
-<sup>[note1](https://en.wikipedia.org/wiki/Complex_number#Square_root)</sup>
-<sup>[note2](https://en.wikipedia.org/wiki/Square_root#Square_roots_of_negative_and_complex_numbers)</sup>
+<sup>[note](https://en.wikipedia.org/wiki/Square_root#Square_roots_of_negative_and_complex_numbers)</sup>
 #### Cxmath.sqrt(z: number/complex)
 Principal square root
+<sup>[note](https://en.wikipedia.org/wiki/Complex_number#Square_root)</sup>
 ```javascript
 Cxmath.sqrt(z);
 ```
@@ -146,7 +146,9 @@ Cxmath.cbrt(z);
 ### Exponential Function & Logarithm
 
 #### Cxmath.exp(z: number/complex)
-exp(z), natural exponential function
+Exponential function
+<sup>[note1](https://en.wikipedia.org/wiki/Exponential_function)</sup>
+<sup>[note2](https://en.wikipedia.org/wiki/Complex_number#Exponentiation)</sup>
 ```javascript
 Cxmath.exp(z);
 ```
@@ -157,13 +159,19 @@ Cxmath.exp(z);
 Cxmath.ln(z);
 ```
 
-#### Cxmath.log(antilogarithm: number/complex, base: number/complex)
-logarithm defined in principal branch (if the base equals e, you may leave it out.)
+#### Cxmath.log(a: number/complex, b: number/complex)
+logarithm
+<sup>[note1](https://en.wikipedia.org/wiki/Logarithm)</sup>
+<sup>[note2](https://en.wikipedia.org/wiki/Complex_number#Complex_logarithm)</sup>
+defined in principal branch
+<sup>[note1](https://en.wikipedia.org/wiki/Principal_branch)</sup>
+<sup>[note2](https://en.wikipedia.org/wiki/Branch_point#Branch_cuts)</sup>
+with base b and antilogarithm a (if the base equals e, you may leave it out.)
 ```javascript
-Cxmath.log(antilogarithm); // Natural Logarithm
-Cxmath.log(antilogarithm, 2); // Binary Logarithm
-Cxmath.log(antilogarithm, 10); // Decimal Logarithm
-Cxmath.log(antilogarithm, base);
+Cxmath.log(a); // Natural Logarithm
+Cxmath.log(a, 2); // Binary Logarithm
+Cxmath.log(a, 10); // Decimal Logarithm
+Cxmath.log(a, b);
 ```
 
 ### Trigonometric Functions
