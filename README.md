@@ -89,7 +89,8 @@ p.sub(6); // -5+2i
 
 #### mul(z: number/complex)
 Multifunction
-<sup>[note](https://en.wikipedia.org/wiki/Complex_number#Multiplication_and_square)</sup>
+<sup>[note1](https://en.wikipedia.org/wiki/Complex_number#Multiplication_and_square)</sup>
+<sup>[note2](https://en.wikipedia.org/wiki/Complex_number#Multiplication_and_division_in_polar_form)</sup>
 ```javascript
 p.mul(q); // 11+2i
 p.mul(6); // 6+12i
@@ -97,7 +98,8 @@ p.mul(6); // 6+12i
 
 #### div(z: number/complex)
 Division
-<sup>[note](https://en.wikipedia.org/wiki/Complex_number#Reciprocal_and_division)</sup>
+<sup>[note1](https://en.wikipedia.org/wiki/Complex_number#Reciprocal_and_division)</sup>
+<sup>[note2](https://en.wikipedia.org/wiki/Complex_number#Multiplication_and_division_in_polar_form)</sup>
 ```javascript
 p.div(q); // -0.2+0.4i
 p.div(4); // 0.25+0.5i
