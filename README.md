@@ -20,18 +20,18 @@ const { Complex, Cxmath } = require(PATH);
 ```
 ### Constructor
 #### constructor(re: number, im: number)
-Declare with [cartesian form](https://en.m.wikipedia.org/wiki/Complex_plane) (if the imaginary part equals zero, you may leave it out.)
+Declare in cartesian form[[note1]](https://en.m.wikipedia.org/wiki/Complex_plane) (if the imaginary part equals zero, you may leave it out.)
 ```javascript
 let z = new Complex(1, 2); // 1+2i
 ```
 #### constructor(abs: number, arg: number, 'polar')
-Declare with [polar form](https://en.m.wikipedia.org/wiki/Complex_plane)
+Declare in [polar form](https://en.m.wikipedia.org/wiki/Complex_plane)
 ```javascript
 let z = new Complex(Math.PI, 2, 'polar'); // 2exp(iπ) = -2
 ```
 
 #### constructor(cx: complex)
-Copy
+Copy complex that has already been declared
 ```javascript
 let z = new Complex(z); // 1+2i
 ```
@@ -42,12 +42,25 @@ Real part
 ```javascript
 z.re;
 ```
-#### other
+
+#### im
+Imaginary part
 ```javascript
-z.im; // imaginary part
-z.abs; // absolute value
-z.arg; // the argument
+z.re;
 ```
+
+#### abs
+Absolute value
+```javascript
+z.re;
+```
+
+#### re
+Real part
+```javascript
+z.re;
+```
+
 
 ### The four fundamental arithmetic operations & involution
 ```javascript
