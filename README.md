@@ -178,38 +178,42 @@ Cxmath.log(a, b);
 
 #### Cxmath.sin(z: number/complex)
 Sine
+<sup>[note](https://en.wikipedia.org/wiki/Sine)</sup>
 ```javascript
 Cxmath.sin(z);
 ```
 
 #### Cxmath.cos(z: number/complex)
 Cosine
+<sup>[note](https://en.wikipedia.org/wiki/Cosine)</sup>
 ```javascript
 Cxmath.cos(z);
 ```
 
 #### Cxmath.tan(z: number/complex)
 Tangent
+<sup>[note](https://en.wikipedia.org/wiki/Tangent)</sup>
 ```javascript
 Cxmath.tan(z);
 ```
 
 ### Inverse Trigonometric Functions
+[[note]](https://en.wikipedia.org/wiki/Inverse_trigonometric_functions)</sup>
 
 #### Cxmath.asin(z: number/complex)
-arcsine
+Arcsine
 ```javascript
 Cxmath.asin(z);
 ```
 
 #### Cxmath.acos(z: number/complex)
-arccosine
+Arccosine
 ```javascript
 Cxmath.acos(z);
 ```
 
 #### Cxmath.atan(z: number/complex)
-arctangent
+Arctangent
 ```javascript
 Cxmath.atan(z);
 ```
