@@ -160,7 +160,7 @@ Cxmath.ln(z);
 ```
 
 #### Cxmath.log(a: number/complex, b: number/complex)
-logarithm
+Logarithm
 <sup>[note1](https://en.wikipedia.org/wiki/Logarithm)</sup>
 <sup>[note2](https://en.wikipedia.org/wiki/Complex_number#Complex_logarithm)</sup>
 defined in principal branch
@@ -177,19 +177,19 @@ Cxmath.log(a, b);
 ### Trigonometric Functions
 
 #### Cxmath.sin(z: number/complex)
-sine
+Sine
 ```javascript
 Cxmath.sin(z);
 ```
 
 #### Cxmath.cos(z: number/complex)
-cosine
+Cosine
 ```javascript
 Cxmath.cos(z);
 ```
 
 #### Cxmath.tan(z: number/complex)
-tangent
+Tangent
 ```javascript
 Cxmath.tan(z);
 ```
