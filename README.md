@@ -88,7 +88,7 @@ p.sub(6); // -5+2i
 ```
 
 #### mul(z: number/complex)
-Multifunction
+Multiplication
 <sup>[note1](https://en.wikipedia.org/wiki/Complex_number#Multiplication_and_square)</sup>
 <sup>[note2](https://en.wikipedia.org/wiki/Complex_number#Multiplication_and_division_in_polar_form)</sup>
 ```javascript
@@ -106,7 +106,8 @@ p.div(4); // 0.25+0.5i
 ```
 
 #### inv(z: number/complex)
-involution
+Exponentiation
+<sup>[note](https://en.wikipedia.org/wiki/Complex_number#Exponentiation)</sup>
 ```javascript
 p.inv(q); // 932.1391946432212+95.9465336603415i
 p.inv(6); // 117+44i
@@ -128,15 +129,16 @@ Cxmath.conj(z);
 ```
 
 ### Radical Roots
-
 #### Cxmath.sqrt(z: number/complex)
-principal square root
+Principal square root
+<sup>[note1](https://en.wikipedia.org/wiki/Complex_number#Square_root)</sup>
+<sup>[note2](https://en.wikipedia.org/wiki/Square_root#Square_roots_of_negative_and_complex_numbers)</sup>
 ```javascript
 Cxmath.sqrt(z);
 ```
 
 #### Cxmath.cbrt(z: number/complex)
-principal cube root
+Principal cube root
 ```javascript
 Cxmath.cbrt(z);
 ```
