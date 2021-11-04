@@ -200,7 +200,7 @@ Cxmath.exp(z);
 |:---:|:---:|:---:|
 |z|number/Complex|O|
 
-#### Complex log(a, b)
+#### Complex log(a[, b=Math.E])
 Logarithm
 <sup>[note1](https://en.wikipedia.org/wiki/Logarithm)</sup>
 <sup>[note2](https://en.wikipedia.org/wiki/Complex_number#Complex_logarithm)</sup>
