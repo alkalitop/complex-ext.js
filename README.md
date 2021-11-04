@@ -292,79 +292,111 @@ Cxmath.atan2(w, z);
 ### Hyperbolic Functions
 [[note]](https://en.wikipedia.org/wiki/Hyperbolic_functions)
 
-#### Cxmath.sinh(z: number/complex)
+#### Complex sinh(z)
 Hyperbolic sine
 ```javascript
 Cxmath.sinh(z);
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
 
-#### Cxmath.cosh(z: number/complex)
+#### Complex cosh(z)
 Hyperbolic cosine
 ```javascript
 Cxmath.cosh(z);
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
 
-#### Cxmath.tanh(z: number/complex)
+#### Complex tanh(z)
 Hyperbolic tangent
 ```javascript
 Cxmath.tanh(z);
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
 
-### Inverse Hyperbolic Functions
+### Inverse(Area-) Hyperbolic Functions
 [[note]](https://en.wikipedia.org/wiki/Inverse_hyperbolic_functions)
 
-#### Cxmath.asinh(z: number/complex)
+#### Complex asinh(z)
 Inverse hyperbolic sine
 ```javascript
 Cxmath.asinh(z);
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
 
-#### Cxmath.acosh(z: number/complex)
+#### Complex acosh(z)
 Inverse hyperbolic cosine
 ```javascript
 Cxmath.acosh(z);
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
 
-#### Cxmath.atanh(z: number/complex)
+#### Complex atanh(z)
 Inverse hyperbolic tangent
 ```javascript
 Cxmath.atanh(z);
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
 
 ### Sign Function
 
-#### Cxmath.csgn(z: number/complex)
+#### Complex csgn(z)
 Complex sign function
 <sup>[note](https://en.wikipedia.org/wiki/Sign_function#Complex_signum)</sup>
 ```javascript
 Cxmath.csgn(z);
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
 
 ### Distance
 
-#### Cxmath.dist(w: number/complex, z: number/complex)
+#### Complex dist(w, z)
 Distance between w and z in the complex plane
 ```javascript
 Cxmath.dist(w, z);
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
 
 ### Mean
 
-#### Cxmath.am(z_1, z_2, ..., z_n: number/complex)
+#### Complex am(z_1[, z_2, ...])
 Arithmetic mean
 ```javascript
-Cxmath.am(z_1, z_2, ..., z_n);
+Cxmath.am(z_1, z_2);
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|z_1|number/Complex|O|
+|z_n(n>1)|number/Complex|X|
 
-#### Cxmath.gm(z_1, z_2, ..., z_n: number/complex)
+#### Complex gm(z_1[, z_2, ...])
 Geometric mean
 ```javascript
-Cxmath.gm(z_1, z_2, ..., z_n);
+Cxmath.gm(z_1, z_2);
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
+|z_n(n>1)|number/Complex|X|
 
 ### Random
 
-#### Cxmath.random()
+#### Complex random()
 Random complex (both real part and imaginary part are more than or equal to 0 and less than 1)
 ```javascript
 Cxmath.random();
