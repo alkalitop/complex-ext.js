@@ -1,4 +1,4 @@
-# cpxn
+# cplx.js
 Javascript complex number class
 
 ## Copyright
