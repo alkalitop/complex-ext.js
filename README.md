@@ -189,7 +189,7 @@ Cxmath.cbrt(z);
 
 ### Exponential Function & Logarithm
 
-#### Cxmath.exp(z)
+#### Complex exp(z)
 Exponential function
 <sup>[note1](https://en.wikipedia.org/wiki/Exponential_function)</sup>
 <sup>[note2](https://en.wikipedia.org/wiki/Complex_number#Exponentiation)</sup>
@@ -200,7 +200,7 @@ Cxmath.exp(z);
 |:---:|:---:|:---:|
 |z|number/Complex|O|
 
-#### Cxmath.log(a, b)
+#### Complex log(a, b)
 Logarithm
 <sup>[note1](https://en.wikipedia.org/wiki/Logarithm)</sup>
 <sup>[note2](https://en.wikipedia.org/wiki/Complex_number#Complex_logarithm)</sup>
@@ -222,51 +222,72 @@ Cxmath.log(a, b);
 ### Trigonometric Functions
 [[note]](https://en.wikipedia.org/wiki/Trigonometric_functions)
 
-#### Cxmath.sin(z: number/complex)
+#### Complex sin(z)
 Sine
-<sup>[note](https://en.wikipedia.org/wiki/Sine)</sup>
 ```javascript
-Cxmath.sin(z);
+sin(z);
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
 
-#### Cxmath.cos(z: number/complex)
+#### Complex cos(z)
 Cosine
 ```javascript
 Cxmath.cos(z);
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
 
-#### Cxmath.tan(z: number/complex)
+#### Complex tan(z)
 Tangent
 ```javascript
 Cxmath.tan(z);
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
 
 ### Inverse Trigonometric Functions
 [[note]](https://en.wikipedia.org/wiki/Inverse_trigonometric_functions)
 
-#### Cxmath.asin(z: number/complex)
+#### Complex asin(z)
 Arcsine
 ```javascript
 Cxmath.asin(z);
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
 
-#### Cxmath.acos(z: number/complex)
+#### Complex acos(z)
 Arccosine
 ```javascript
 Cxmath.acos(z);
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
 
-#### Cxmath.atan(z: number/complex)
+#### Complex atan(z)
 Arctangent
 ```javascript
 Cxmath.atan(z);
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
 
-#### Cxmath.atan2(w: number/complex, z: number/complex)
+#### Complex atan2(w, z)
 arctangent2
 ```javascript
 Cxmath.atan2(w, z);
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
+|w|number/Complex|O|
 
 ### Hyperbolic Functions
 [[note]](https://en.wikipedia.org/wiki/Hyperbolic_functions)
