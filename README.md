@@ -79,7 +79,6 @@ Argument
 z.arg;
 ```
 
-
 ### Operations & Exponentiation
 ```javascript
 let p = new Complex(1, 2);
@@ -142,7 +141,7 @@ p.inv(6); // 117+44i
 |:---:|:---:|:---:|
 |z|number/Complex|O|
 
-## Cxmath
+## Cxmath (Functions)
 
 ### Additive Inverse & Complex Conjugate
 
