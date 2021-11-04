@@ -11,13 +11,14 @@ Javascript complex number class
 - Node.js
 - Rhino Javascript Engine
 
-## Use
-
-### Get Started
+## Get Started
 ```javascript
 const { Complex, Cxmath } = require(PATH);
 
 ```
+
+## Complex
+
 ### Constructor
 #### constructor(re, im)
 Declare in cartesian form
@@ -130,7 +131,7 @@ p.div(4); // 0.25+0.5i
 |:---:|:---:|:---:|
 |z|number/Complex|O|
 
-#### inv(z)
+#### Complex inv(z)
 Exponentiation
 <sup>[note](https://en.wikipedia.org/wiki/Complex_number#Exponentiation)</sup>
 ```javascript
@@ -141,53 +142,65 @@ p.inv(6); // 117+44i
 |:---:|:---:|:---:|
 |z|number/Complex|O|
 
+## Cxmath
+
 ### Additive Inverse & Complex Conjugate
 
-#### Cxmath.opp(z: number/complex)
+#### Complex opp(z)
 Opposite number (Additive inverse)<sup>[note](https://en.wikipedia.org/wiki/Additive_inverse)</sup>
 ```javascript
 Cxmath.opp(z);
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
 
-#### Cxmath.conj(z: number/complex)
+#### Complex conj(z)
 Complex conjugate
 <sup>[note](https://en.wikipedia.org/wiki/Complex_conjugate)</sup>
 ```javascript
 Cxmath.conj(z);
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
 
 ### Radical Roots
 [[note]](https://en.wikipedia.org/wiki/Square_root#Square_roots_of_negative_and_complex_numbers)
-#### Cxmath.sqrt(z: number/complex)
+
+#### Complex sqrt(z)
 Principal square root
 <sup>[note](https://en.wikipedia.org/wiki/Complex_number#Square_root)</sup>
 ```javascript
 Cxmath.sqrt(z);
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
 
-#### Cxmath.cbrt(z: number/complex)
+#### Complex cbrt(z)
 Principal cube root
 ```javascript
 Cxmath.cbrt(z);
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
 
 ### Exponential Function & Logarithm
 
-#### Cxmath.exp(z: number/complex)
+#### Cxmath.exp(z)
 Exponential function
 <sup>[note1](https://en.wikipedia.org/wiki/Exponential_function)</sup>
 <sup>[note2](https://en.wikipedia.org/wiki/Complex_number#Exponentiation)</sup>
 ```javascript
 Cxmath.exp(z);
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
 
-#### [deleted] <del>Cxmath.ln(z: number/complex)</del>
-<del><a href="https://namu.wiki/w/복소로그함수#s-3">Log(z)</a>, natural logarithm defined in principal branch</del>
-```javascript
-Cxmath.ln(z);
-```
-
-#### Cxmath.log(a: number/complex, b: number/complex)
+#### Cxmath.log(a, b)
 Logarithm
 <sup>[note1](https://en.wikipedia.org/wiki/Logarithm)</sup>
 <sup>[note2](https://en.wikipedia.org/wiki/Complex_number#Complex_logarithm)</sup>
@@ -201,6 +214,10 @@ Cxmath.log(a, 2); // Binary Logarithm
 Cxmath.log(a, 10); // Decimal Logarithm
 Cxmath.log(a, b);
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|a|number/Complex|O|
+|b|numner/Complex|X|
 
 ### Trigonometric Functions
 [[note]](https://en.wikipedia.org/wiki/Trigonometric_functions)
