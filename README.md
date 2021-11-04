@@ -17,7 +17,7 @@ const { Complex, Cxmath } = require(PATH);
 
 ```
 
-## Complex
+## Complex 
 
 ### Constructor
 #### constructor(re, im)
@@ -53,30 +53,38 @@ new Complex(z);
 |cplx|Complex|O|
 
 ### Properties
-#### re
+#### number re
 Real part
 ```javascript
 z.re;
 ```
 
-#### im
+#### number im
 Imaginary part
 ```javascript
 z.im;
 ```
 
-#### abs
+#### number abs
 Absolute value (Modulus)
 <sup>[note](https://en.wikipedia.org/wiki/Complex_number#Modulus_and_argument)</sup>
 ```javascript
 z.abs;
 ```
 
-#### arg
+#### number arg
 Argument
 <sup>[note](https://en.wikipedia.org/wiki/Complex_number#Modulus_and_argument)</sup>
 ```javascript
 z.arg;
+```
+
+### String Representation
+
+#### string toString()
+String representation
+```javascript
+z.toString()
 ```
 
 ### Operations & Exponentiation
