@@ -299,6 +299,30 @@ cxmath.tan = function (z) {
   return cxmath.sin(z).div(cxmath.cos(z));
 };
 
+cxmath.csc = function (z) {
+  let t = complex._typer(z);
+  if (t.includes('x')) {
+    throw new Error();
+  }
+  return (new Complex(1)).div(cxmath.sin(z));
+};
+
+cxmath.sec = function (z) {
+  let t = complex._typer(z);
+  if (t.includes('x')) {
+    throw new Error();
+  }
+  return (new Complex(1)).div(cxmath.cos(z));
+};
+
+cxmath.cot = function (z) {
+  let t = complex._typer(z);
+  if (t.includes('x')) {
+    throw new Error();
+  }
+  return (new Complex(1)).div(cxmath.tan(z));
+};
+
 cxmath.asin = function (z) {
   let t = complex._typer(z);
   if (t.includes('x')) {
@@ -334,7 +358,31 @@ cxmath.atan2 = function (w, z) {
     throw new Error();
   }
   return cxmath.atan(new complex(w).div(new complex(z)));
-}
+};
+
+cxmath.acsc = function (z) {
+  let t = complex._typer(z);
+  if (t.includes('x')) {
+    throw new Error();
+  }
+  return cxmath.asin((new Complex(1)).div(z));
+};
+
+cxmath.asec = function (z) {
+  let t = complex._typer(z);
+  if (t.includes('x')) {
+    throw new Error();
+  }
+  return cxmath.acos((new Complex(1)).div(z));
+};
+
+cxmath.acot = function (z) {
+  let t = complex._typer(z);
+  if (t.includes('x')) {
+    throw new Error();
+  }
+  return cxmath.atan((new Complex(1)).div(z));
+};
 
 cxmath.sinh = function (z) {
   let t = complex._typer(z);
