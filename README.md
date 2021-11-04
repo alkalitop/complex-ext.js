@@ -27,21 +27,29 @@ new Complex(1, 2); // 1+2i
 ```
 |name|type|required|
 |:---:|:---:|:---:|
-|re|Number|O|
-|im|Number|X|
+|re|number|O|
+|im|number|X|
 
-#### constructor(abs: number, arg: number, 'polar')
+#### constructor(arg, abs, polarTag)
 Declare in polar form
 <sup>[note](https://en.wikipedia.org/wiki/Complex_number#Polar_complex_plane)</sup>
 ```javascript
-let z = new Complex(Math.PI, 2, 'polar'); // 2exp(iπ) = -2
+new Complex(Math.PI, 2, 'polar'); // 2exp(iπ) = -2
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|arg|number|O|
+|abs|number|O|
+|polar|string|O|
 
-#### constructor(cx: complex)
+#### constructor(cplx)
 Copy complex that has already been declared
 ```javascript
-let z = new Complex(z); // 1+2i
+new Complex(z);
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|cplx|Complex|O|
 
 ### Properties
 #### re
