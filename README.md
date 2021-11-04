@@ -232,7 +232,7 @@ Cxmath.log(a, b);
 #### Complex sin(z)
 Sine
 ```javascript
-sin(z);
+Cxmath.sin(z);
 ```
 |name|type|required|
 |:---:|:---:|:---:|
@@ -251,6 +251,33 @@ Cxmath.cos(z);
 Tangent
 ```javascript
 Cxmath.tan(z);
+```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
+
+#### Complex csc(z)
+Cosecant
+```javascript
+Cxmath.csc(z);
+```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
+
+#### Complex sec(z)
+Secant
+```javascript
+Cxmath.sec(z);
+```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
+
+#### Complex cot(z)
+Cotangent
+```javascript
+Cxmath.cot(z);
 ```
 |name|type|required|
 |:---:|:---:|:---:|
@@ -295,6 +322,33 @@ Cxmath.atan2(w, z);
 |:---:|:---:|:---:|
 |z|number/Complex|O|
 |w|number/Complex|O|
+
+#### Complex acsc(z)
+Arccosecant
+```javascript
+Cxmath.acsc(z);
+```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
+
+#### Complex asec(z)
+Arcsecant
+```javascript
+Cxmath.asec(z);
+```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
+
+#### Complex acot(z)
+Arccotangent
+```javascript
+Cxmath.acot(z);
+```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
 
 ### Hyperbolic Functions
 [[note]](https://en.wikipedia.org/wiki/Hyperbolic_functions)
