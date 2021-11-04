@@ -79,28 +79,34 @@ z.arg;
 ```
 
 
-### The four fundamental arithmetic operations & Exponentiation
+### Operations & Exponentiation
 ```javascript
 let p = new Complex(1, 2);
 let q = new Complex(3, -4);
 ```
-#### add(z: number/complex)
+#### Complex add(z)
 Addition
 <sup>[note](https://en.wikipedia.org/wiki/Complex_number#Addition_and_subtraction)</sup>
 ```javascript
 p.add(q); // 4-2i
 p.add(6); // 7+2i
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
 
-#### sub(z: number/complex)
+#### Complex sub(z)
 Subtraction
 <sup>[note](https://en.wikipedia.org/wiki/Complex_number#Addition_and_subtraction)</sup>
 ```javascript
 p.sub(q); // -2+6i
 p.sub(6); // -5+2i
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
 
-#### mul(z: number/complex)
+#### Complex mul(z)
 Multiplication
 <sup>[note1](https://en.wikipedia.org/wiki/Complex_number#Multiplication_and_square)</sup>
 <sup>[note2](https://en.wikipedia.org/wiki/Complex_number#Multiplication_and_division_in_polar_form)</sup>
@@ -108,8 +114,11 @@ Multiplication
 p.mul(q); // 11+2i
 p.mul(6); // 6+12i
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
 
-#### div(z: number/complex)
+#### Complex div(z)
 Division
 <sup>[note1](https://en.wikipedia.org/wiki/Complex_number#Reciprocal_and_division)</sup>
 <sup>[note2](https://en.wikipedia.org/wiki/Complex_number#Multiplication_and_division_in_polar_form)</sup>
@@ -117,14 +126,20 @@ Division
 p.div(q); // -0.2+0.4i
 p.div(4); // 0.25+0.5i
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
 
-#### inv(z: number/complex)
+#### inv(z)
 Exponentiation
 <sup>[note](https://en.wikipedia.org/wiki/Complex_number#Exponentiation)</sup>
 ```javascript
 p.inv(q); // 932.1391946432212+95.9465336603415i
 p.inv(6); // 117+44i
 ```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
 
 ### Additive Inverse & Complex Conjugate
 
