@@ -427,7 +427,7 @@ Cxmath.csgn(z);
 #### [UD] Complex inp(w, z)
 Inner Product
 ```javascript
-Cxmath.dist(w, z);
+Cxmath.inp(w, z);
 ```
 |name|type|required|
 |:---:|:---:|:---:|
@@ -447,7 +447,7 @@ Cxmath.xp(w, z);
 #### [UD] Complex norm(z)
 Norm
 ```javascript
-Cxmath.dist(z);
+Cxmath.norm(z);
 ```
 |name|type|required|
 |:---:|:---:|:---:|
