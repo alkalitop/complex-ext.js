@@ -162,7 +162,7 @@ Cxmath.opp(z);
 |:---:|:---:|:---:|
 |z|number/Complex|O|
 
-#### Complex conj(z)
+#### Complex con(z)
 Complex conjugate
 <sup>[note](https://en.wikipedia.org/wiki/Complex_conjugate)</sup>
 ```javascript
