@@ -462,15 +462,6 @@ Cxmath.dist(w, z);
 |:---:|:---:|:---:|
 |z|number/Complex|O|
 
-#### Complex dist(w, z)
-Distance from vector w to vector z
-```javascript
-Cxmath.dist(w, z);
-```
-|name|type|required|
-|:---:|:---:|:---:|
-|z|number/Complex|O|
-
 ### Mean
 
 #### Complex am(z_1[, z_2, ...])
