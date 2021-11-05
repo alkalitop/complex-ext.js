@@ -422,10 +422,48 @@ Cxmath.csgn(z);
 |:---:|:---:|:---:|
 |z|number/Complex|O|
 
-### Distance
+### Vector
+
+#### [UD] Complex inp(w, z)
+Inner Product
+```javascript
+Cxmath.dist(w, z);
+```
+|name|type|required|
+|:---:|:---:|:---:|
+|w|number/Complex|O|
+|z|number/Complex|O|
+
+#### [UD] Complex xp(w, z)
+Cross Product
+```javascript
+Cxmath.xp(w, z);
+```
+|name|type|required|
+|:---:|:---:|:---:|
+|w|number/Complex|O|
+|z|number/Complex|O|
+
+#### [UD] Complex norm(z)
+Norm
+```javascript
+Cxmath.dist(z);
+```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
 
 #### Complex dist(w, z)
-Distance between w and z in the complex plane
+Distance from vector w to vector z
+```javascript
+Cxmath.dist(w, z);
+```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
+
+#### Complex dist(w, z)
+Distance from vector w to vector z
 ```javascript
 Cxmath.dist(w, z);
 ```
