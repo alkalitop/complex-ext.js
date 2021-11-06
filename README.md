@@ -229,6 +229,16 @@ Cxmath.log(a, b);
 ### Trigonometric Functions
 [[note]](https://en.wikipedia.org/wiki/Trigonometric_functions)
 
+```javascript
+Cxmath.sin(z);
+Cxmath.cos(z);
+Cxmath.tan(z);
+
+Cxmath.csc(z);
+Cxmath.sec(z);
+Cxmath.cot(z);
+```
+
 **Function**
 |name|description|return type|
 |:---:|:---:|:---:|
@@ -247,66 +257,27 @@ Cxmath.log(a, b);
 ### Inverse Trigonometric Functions
 [[note]](https://en.wikipedia.org/wiki/Inverse_trigonometric_functions)
 
-#### Complex asin(z)
-Arcsine
 ```javascript
 Cxmath.asin(z);
-```
-|name|type|required|
-|:---:|:---:|:---:|
-|z|number/Complex|O|
-
-#### Complex acos(z)
-Arccosine
-```javascript
 Cxmath.acos(z);
-```
-|name|type|required|
-|:---:|:---:|:---:|
-|z|number/Complex|O|
-
-#### Complex atan(z)
-Arctangent
-```javascript
 Cxmath.atan(z);
-```
-|name|type|required|
-|:---:|:---:|:---:|
-|z|number/Complex|O|
 
-#### Complex atan2(w, z)
-arctangent2
-```javascript
-Cxmath.atan2(w, z);
-```
-|name|type|required|
-|:---:|:---:|:---:|
-|z|number/Complex|O|
-|w|number/Complex|O|
-
-#### Complex acsc(z)
-Arccosecant
-```javascript
 Cxmath.acsc(z);
-```
-|name|type|required|
-|:---:|:---:|:---:|
-|z|number/Complex|O|
-
-#### Complex asec(z)
-Arcsecant
-```javascript
 Cxmath.asec(z);
-```
-|name|type|required|
-|:---:|:---:|:---:|
-|z|number/Complex|O|
-
-#### Complex acot(z)
-Arccotangent
-```javascript
 Cxmath.acot(z);
 ```
+
+**Function**
+|name|description|return type|
+|:---:|:---:|:---:|
+|asin|Arcsine|Complex|
+|acos|Arccosine|Complex|
+|atan|Arctangent|Complex|
+|acsc|Arccosecant|Complex|
+|asec|Arcsecant|Complex|
+|acot|Arccotangent|Complex|
+
+**Arguments**
 |name|type|required|
 |:---:|:---:|:---:|
 |z|number/Complex|O|
