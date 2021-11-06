@@ -229,7 +229,7 @@ Cxmath.log(a, b);
 ### Trigonometric Functions
 [[note]](https://en.wikipedia.org/wiki/Trigonometric_functions)
 
-#### Function List
+#### Common Trigonometric Functions
 
 ```javascript
 Cxmath.sin(z);
@@ -259,7 +259,7 @@ Cxmath.cot(z);
 ### Inverse Trigonometric Functions
 [[note]](https://en.wikipedia.org/wiki/Inverse_trigonometric_functions)
 
-#### Function List
+#### Common Inverse Trigonometric Functions
 
 ```javascript
 Cxmath.asin(z);
