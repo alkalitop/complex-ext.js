@@ -294,6 +294,7 @@ Cxmath.atan2(w, z);
 |name|type|required|
 |:---:|:---:|:---:|
 |z|number/Complex|O|
+|w|number/Complex|O|
 
 ### Hyperbolic Functions
 [[note]](https://en.wikipedia.org/wiki/Hyperbolic_functions)
