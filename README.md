@@ -229,56 +229,17 @@ Cxmath.log(a, b);
 ### Trigonometric Functions
 [[note]](https://en.wikipedia.org/wiki/Trigonometric_functions)
 
-#### Complex sin(z)
-Sine
-```javascript
-Cxmath.sin(z);
-```
-|name|type|required|
+**Function**
+|name|description|return type|
 |:---:|:---:|:---:|
-|z|number/Complex|O|
+|sin|Sine|Complex|
+|cos|Cosine|Complex|
+|tan|Tangent|Complex|
+|csc|Cosecant|Complex|
+|sec|Secant|Complex|
+|cot|Cotangent|Complex|
 
-#### Complex cos(z)
-Cosine
-```javascript
-Cxmath.cos(z);
-```
-|name|type|required|
-|:---:|:---:|:---:|
-|z|number/Complex|O|
-
-#### Complex tan(z)
-Tangent
-```javascript
-Cxmath.tan(z);
-```
-|name|type|required|
-|:---:|:---:|:---:|
-|z|number/Complex|O|
-
-#### Complex csc(z)
-Cosecant
-```javascript
-Cxmath.csc(z);
-```
-|name|type|required|
-|:---:|:---:|:---:|
-|z|number/Complex|O|
-
-#### Complex sec(z)
-Secant
-```javascript
-Cxmath.sec(z);
-```
-|name|type|required|
-|:---:|:---:|:---:|
-|z|number/Complex|O|
-
-#### Complex cot(z)
-Cotangent
-```javascript
-Cxmath.cot(z);
-```
+**Arguments**
 |name|type|required|
 |:---:|:---:|:---:|
 |z|number/Complex|O|
