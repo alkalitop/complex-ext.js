@@ -281,6 +281,23 @@ cxmath.sin = function (z) {
   return cxmath.exp(s.mul(i)).sub(cxmath.exp(cxmath.opp(s).mul(i))).div(i.mul(2));
 };
 
+cxmath.sa = function (z) {
+  let t = complex._typer(z);
+  if (t == 'x') {
+    throw new Error();
+  }
+  return cxmath.sin(z).div(z);
+};
+
+cxmath.sinc = function (z) {
+  let t = complex._typer(z);
+  if (t == 'x') {
+    throw new Error();
+  }
+  let piz = (new Complex(z)).mul(Math.PI);
+  return cxmath.sa(piz);
+};
+
 cxmath.cos = function (z) {
   let t = complex._typer(z);
   if (t.includes('x')) {
