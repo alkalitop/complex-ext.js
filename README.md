@@ -256,6 +256,25 @@ Cxmath.cot(z);
 |:---:|:---:|:---:|
 |z|number/Complex|O|
 
+
+#### Complex sa(z)
+Unnormalized Sinc Function
+```javascript
+Cxmath.sa(z);
+```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
+
+#### Complex sinc(z)
+Normalized Sinc Function
+```javascript
+Cxmath.sinc(z);
+```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
+
 ### Inverse Trigonometric Functions
 [[note]](https://en.wikipedia.org/wiki/Inverse_trigonometric_functions)
 
@@ -293,8 +312,8 @@ Cxmath.atan2(w, z);
 ```
 |name|type|required|
 |:---:|:---:|:---:|
-|z|number/Complex|O|
 |w|number/Complex|O|
+|z|number/Complex|O|
 
 ### Hyperbolic Functions
 [[note]](https://en.wikipedia.org/wiki/Hyperbolic_functions)
