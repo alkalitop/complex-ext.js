@@ -229,6 +229,8 @@ Cxmath.log(a, b);
 ### Trigonometric Functions
 [[note]](https://en.wikipedia.org/wiki/Trigonometric_functions)
 
+#### Function List
+
 ```javascript
 Cxmath.sin(z);
 Cxmath.cos(z);
@@ -257,6 +259,8 @@ Cxmath.cot(z);
 ### Inverse Trigonometric Functions
 [[note]](https://en.wikipedia.org/wiki/Inverse_trigonometric_functions)
 
+#### Function List
+
 ```javascript
 Cxmath.asin(z);
 Cxmath.acos(z);
@@ -278,6 +282,15 @@ Cxmath.acot(z);
 |acot|Arccotangent|Complex|
 
 **Arguments**
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
+
+#### Complex atan2(w, z)
+Arctangent2
+```javascript
+Cxmath.atan2(w, z);
+```
 |name|type|required|
 |:---:|:---:|:---:|
 |z|number/Complex|O|
