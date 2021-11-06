@@ -241,7 +241,7 @@ Cxmath.sec(z);
 Cxmath.cot(z);
 ```
 
-**Function**
+Function
 |name|description|return type|
 |:---:|:---:|:---:|
 |sin|Sine|Complex|
@@ -251,7 +251,7 @@ Cxmath.cot(z);
 |sec|Secant|Complex|
 |cot|Cotangent|Complex|
 
-**Arguments**
+Arguments
 |name|type|required|
 |:---:|:---:|:---:|
 |z|number/Complex|O|
@@ -290,7 +290,7 @@ Cxmath.asec(z);
 Cxmath.acot(z);
 ```
 
-**Function**
+Function
 |name|description|return type|
 |:---:|:---:|:---:|
 |asin|Arcsine|Complex|
@@ -300,7 +300,7 @@ Cxmath.acot(z);
 |asec|Arcsecant|Complex|
 |acot|Arccotangent|Complex|
 
-**Arguments**
+Arguments
 |name|type|required|
 |:---:|:---:|:---:|
 |z|number/Complex|O|
