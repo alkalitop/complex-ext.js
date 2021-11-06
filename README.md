@@ -226,7 +226,7 @@ Cxmath.log(a, b);
 |a|number/Complex|O|
 |b|numner/Complex|X|
 
-### Trigonometric Functions
+### Trigonometric Functions, etc.
 [[note]](https://en.wikipedia.org/wiki/Trigonometric_functions)
 
 #### Common Trigonometric Functions
