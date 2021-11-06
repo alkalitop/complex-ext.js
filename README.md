@@ -259,6 +259,7 @@ Arguments
 
 #### Complex sa(z)
 Unnormalized Sinc Function
+<sup>[note](https://en.wikipedia.org/wiki/Sinc_function)</sup>
 ```javascript
 Cxmath.sa(z);
 ```
@@ -268,6 +269,7 @@ Cxmath.sa(z);
 
 #### Complex sinc(z)
 Normalized Sinc Function
+<sup>[note](https://en.wikipedia.org/wiki/Sinc_function)</sup>
 ```javascript
 Cxmath.sinc(z);
 ```
