@@ -226,7 +226,7 @@ Cxmath.log(a, b);
 |a|number/Complex|O|
 |b|numner/Complex|X|
 
-### Trigonometric Functions, etc.
+### Trigonometric Functions
 [[note]](https://en.wikipedia.org/wiki/Trigonometric_functions)
 
 #### Common Trigonometric Functions
@@ -241,7 +241,7 @@ Cxmath.sec(z);
 Cxmath.cot(z);
 ```
 
-Function
+Functions
 |name|description|return type|
 |:---:|:---:|:---:|
 |sin|Sine|Complex|
@@ -256,7 +256,7 @@ Arguments
 |:---:|:---:|:---:|
 |z|number/Complex|O|
 
-#### Sinc Function
+### Sinc Function
 
 #### Complex sa(z)
 Unnormalized Sinc Function
@@ -293,7 +293,7 @@ Cxmath.asec(z);
 Cxmath.acot(z);
 ```
 
-Function
+Functions
 |name|description|return type|
 |:---:|:---:|:---:|
 |asin|Arcsine|Complex|
