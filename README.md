@@ -172,8 +172,7 @@ Cxmath.con(z);
 |:---:|:---:|:---:|
 |z|number/Complex|O|
 
-### Radical Roots
-[[note]](https://en.wikipedia.org/wiki/Square_root#Square_roots_of_negative_and_complex_numbers)
+### [Radical Roots](https://en.wikipedia.org/wiki/Square_root#Square_roots_of_negative_and_complex_numbers)
 
 #### Complex sqrt(z)
 Principal square root
