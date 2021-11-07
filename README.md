@@ -166,7 +166,7 @@ Cxmath.opp(z);
 Complex conjugate
 <sup>[note](https://en.wikipedia.org/wiki/Complex_conjugate)</sup>
 ```javascript
-Cxmath.conj(z);
+Cxmath.con(z);
 ```
 |name|type|required|
 |:---:|:---:|:---:|
@@ -428,6 +428,7 @@ Cxmath.dist(w, z);
 ```
 |name|type|required|
 |:---:|:---:|:---:|
+|w|number/Complex|O|
 |z|number/Complex|O|
 
 ### Mean
