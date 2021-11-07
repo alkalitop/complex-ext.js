@@ -256,6 +256,7 @@ Arguments
 |:---:|:---:|:---:|
 |z|number/Complex|O|
 
+#### Sinc Function
 
 #### Complex sa(z)
 Unnormalized Sinc Function
