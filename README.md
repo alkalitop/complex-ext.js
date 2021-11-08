@@ -225,8 +225,7 @@ Cxmath.log(a, b);
 |a|number/Complex|O|
 |b|numner/Complex|X|
 
-### Trigonometric Functions
-[[note]](https://en.wikipedia.org/wiki/Trigonometric_functions)
+### [Trigonometric Functions](https://en.wikipedia.org/wiki/Trigonometric_functions)
 
 #### Common Trigonometric Functions
 
@@ -277,8 +276,7 @@ Cxmath.sinc(z);
 |:---:|:---:|:---:|
 |z|number/Complex|O|
 
-### Inverse Trigonometric Functions
-[[note]](https://en.wikipedia.org/wiki/Inverse_trigonometric_functions)
+### [Inverse Trigonometric Functions](https://en.wikipedia.org/wiki/Inverse_trigonometric_functions)
 
 #### Common Inverse Trigonometric Functions
 
@@ -317,8 +315,7 @@ Cxmath.atan2(w, z);
 |w|number/Complex|O|
 |z|number/Complex|O|
 
-### Hyperbolic Functions
-[[note]](https://en.wikipedia.org/wiki/Hyperbolic_functions)
+### [Hyperbolic Functions](https://en.wikipedia.org/wiki/Hyperbolic_functions)
 
 #### Complex sinh(z)
 Hyperbolic sine
@@ -347,8 +344,7 @@ Cxmath.tanh(z);
 |:---:|:---:|:---:|
 |z|number/Complex|O|
 
-### Inverse(Area-) Hyperbolic Functions
-[[note]](https://en.wikipedia.org/wiki/Inverse_hyperbolic_functions)
+### [Inverse(Area-) Hyperbolic Functions](https://en.wikipedia.org/wiki/Inverse_hyperbolic_functions)
 
 #### Complex asinh(z)
 Inverse hyperbolic sine
