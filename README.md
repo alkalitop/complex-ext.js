@@ -52,8 +52,8 @@ z = new Complex(z);
 |:---:|:---:|:---:|
 |cplx|Complex|O|
 
-#### cf) Complex Cxcalc(s)
-Declaring complex using Cxcalc
+#### cf) Complex [Cxcalc(s)](https://github.com/sweetcorn1229/cplx.js/blob/main/README.md#cxcalc)
+Declaring complex using [Cxcalc](https://github.com/sweetcorn1229/cplx.js/blob/main/README.md#cxcalc)
 ```javascript
 z = Cxcalc('1+2j')
 ```
