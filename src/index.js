@@ -117,7 +117,7 @@ Object.defineProperty(complex.prototype, 'arg', {
 });
 
 complex.prototype.toString = function () {
-  return this.re+((Math.sign(this.im)+1)?'+':'')+this.im+'i';
+  return this.re+((Math.sign(this.im)+1)?'+':'')+this.im+'j';
 };
 
 complex.prototype.add = function (z) {
@@ -499,7 +499,123 @@ cxmath.random = function () {
   return new complex(Math.random(), Math.random());
 };
 
+/* ----- ----- ----- */
+
+function _precedence (operator, line, left, right) {
+  let validIndex = [];
+  let lineCopy = line;
+  
+  let sep = [];
+  
+  let cursor = lineCopy.indexOf(operator);
+  while (cursor >= 0) {
+    lineCopy = lineCopy.replace(operator, '\0'.repeat(operator.length));
+    validIndex.push(cursor);
+    cursor = lineCopy.indexOf(operator);
+  }
+  
+  for (let ind of validIndex) {
+    let cursorL = ind - 1, depthL = 1;
+    let cursorR = ind + operator.length, depthR = 1;
+    
+    if (left) {
+      while (depthL > 0) {
+        cursorL--;
+        if (line[cursorL] == '(') {
+          depthL--;
+        }
+        else if (line[cursorL] == ')') {
+          depthL++;
+        }
+      }
+    }
+    
+    if (right) {
+      while (depthR > 0) {
+        cursorR++;
+        if (line[cursorR] == '(') {
+          depthR++;
+        }
+        else if (line[cursorR] == ')') {
+          depthR--;
+        }
+      }
+    }
+    
+    sep.push([cursorL, cursorR]);
+  }
+  
+  let lineSplit = line.split('');
+  
+  sep.forEach(el => {
+    if (left) lineSplit[el[0]] = '((';
+    if (right) lineSplit[el[1]] = '))';
+  });
+  
+  return lineSplit.join('');
+}
+
+const funcNames = [
+  'opp', 'con',
+  'sqrt', 'cbrt',
+  'exp', 'log',
+  'asinh', 'acosh', 'atanh',
+  'sinh', 'cosh', 'tanh',
+  'asin', 'acos', 'atan', 'acsc', 'asec', 'acot',
+  'sinc', 'sa',
+  'sin', 'cos', 'tan', 'csc', 'sec', 'cot',
+  'csgn',
+  'inp', 'xp', 'norm', 'dist', 
+  'am', 'gm',
+  'random'
+];
+  
+function cxcalc (s) {
+
+  s = s.replace(/\s/g, '');
+  
+  let filter = new RegExp('\\d|Math.PI|Math.E|Infinity|j|\\+|\\-|\\*|\\/|\\^|\\(|\\)' + '|' + funcNames.join('|'), 'g');
+  if (s.replace(filter, '').trim()) {
+    throw new Error();
+  }
+  
+  // 숫자, 상수, 허수단위, 코드 처리
+  s = s.replace(/(\d+)|Math.PI|Math.E|Infinity/g, '(new Complex($1))');  
+  s = s.replace(/j/g, '*(new Complex(0, 1))');
+  
+  // 함수 선행 & 코드 처리
+  for (let funcName of funcNames) {
+    let rex = new RegExp(funcName, 'g');
+    s = _precedence(funcName, s, 0, 1);
+    s = s.replace(rex, '(Cxmath.' + funcName);
+  }
+  
+  // 연산자 선행 처리
+  s = _precedence('^', s, 1, 1);
+  s = _precedence('*', s, 1, 1);
+  s = _precedence('/', s, 1, 1);
+  s = _precedence('+', s, 1, 1);
+  s = _precedence('-', s, 1, 1);
+  
+  // 연산자 코드 처리
+  _s = s
+  .replace(/\+/g, '.add')
+  .replace(/\-/g, '.sub')
+  .replace(/\*/g, '.mul')
+  .replace(/\//g, '.div')
+  .replace(/\^/g, '.inv');
+  
+  try {
+    let result = eval(s);
+    return result;
+  }
+  catch (err) {
+    throw new Error();
+  }
+}
+
 module.exports = {
   Complex: complex,
-  Cxmath: cxmath
+  Cxmath: cxmath,
+  Cxcalc: cxcalc
 };
