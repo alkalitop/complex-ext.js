@@ -13,11 +13,10 @@ Javascript complex number class
 
 ## Get Started
 ```javascript
-const { Complex, Cxmath } = require(PATH);
-
+const { Complex, Cxmath, Cxcalc } = require(PATH);
 ```
 
-## class Complex
+## Complex
 Generating complex numbers
 
 ### Constructor
