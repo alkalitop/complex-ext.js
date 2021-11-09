@@ -24,7 +24,7 @@ const { Complex, Cxmath } = require(PATH);
 Declare in cartesian form
 <sup>[note](https://en.wikipedia.org/wiki/Complex_number#Cartesian_complex_plane)</sup> (if the imaginary part equals zero, you may leave it out.)
 ```javascript
-new Complex(1, 2); // 1+2i
+new Complex(1, 2); // 1+2j
 ```
 |name|type|required|
 |:---:|:---:|:---:|
@@ -35,7 +35,7 @@ new Complex(1, 2); // 1+2i
 Declare in polar form
 <sup>[note](https://en.wikipedia.org/wiki/Complex_number#Polar_complex_plane)</sup>
 ```javascript
-new Complex(Math.PI, 2, 'polar'); // 2exp(iπ) = -2
+new Complex(Math.PI, 2, 'polar'); // 2exp(jπ) = -2
 ```
 |name|type|required|
 |:---:|:---:|:---:|
@@ -96,8 +96,8 @@ let q = new Complex(3, -4);
 Addition
 <sup>[note](https://en.wikipedia.org/wiki/Complex_number#Addition_and_subtraction)</sup>
 ```javascript
-p.add(q); // 4-2i
-p.add(6); // 7+2i
+p.add(q); // 4-2j
+p.add(6); // 7+2j
 ```
 |name|type|required|
 |:---:|:---:|:---:|
@@ -107,8 +107,8 @@ p.add(6); // 7+2i
 Subtraction
 <sup>[note](https://en.wikipedia.org/wiki/Complex_number#Addition_and_subtraction)</sup>
 ```javascript
-p.sub(q); // -2+6i
-p.sub(6); // -5+2i
+p.sub(q); // -2+6j
+p.sub(6); // -5+2j
 ```
 |name|type|required|
 |:---:|:---:|:---:|
@@ -119,8 +119,8 @@ Multiplication
 <sup>[note1](https://en.wikipedia.org/wiki/Complex_number#Multiplication_and_square)</sup>
 <sup>[note2](https://en.wikipedia.org/wiki/Complex_number#Multiplication_and_division_in_polar_form)</sup>
 ```javascript
-p.mul(q); // 11+2i
-p.mul(6); // 6+12i
+p.mul(q); // 11+2j
+p.mul(6); // 6+12j
 ```
 |name|type|required|
 |:---:|:---:|:---:|
@@ -131,8 +131,8 @@ Division
 <sup>[note1](https://en.wikipedia.org/wiki/Complex_number#Reciprocal_and_division)</sup>
 <sup>[note2](https://en.wikipedia.org/wiki/Complex_number#Multiplication_and_division_in_polar_form)</sup>
 ```javascript
-p.div(q); // -0.2+0.4i
-p.div(4); // 0.25+0.5i
+p.div(q); // -0.2+0.4j
+p.div(4); // 0.25+0.5j
 ```
 |name|type|required|
 |:---:|:---:|:---:|
@@ -142,8 +142,8 @@ p.div(4); // 0.25+0.5i
 Exponentiation
 <sup>[note](https://en.wikipedia.org/wiki/Complex_number#Exponentiation)</sup>
 ```javascript
-p.inv(q); // 932.1391946432212+95.9465336603415i
-p.inv(6); // 117+44i
+p.inv(q); // 932.1391946432212+95.9465336603415j
+p.inv(6); // 117+44j
 ```
 |name|type|required|
 |:---:|:---:|:---:|
