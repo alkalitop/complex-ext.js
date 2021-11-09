@@ -24,7 +24,7 @@ const { Complex, Cxmath } = require(PATH);
 Declare in cartesian form
 <sup>[note](https://en.wikipedia.org/wiki/Complex_number#Cartesian_complex_plane)</sup> (if the imaginary part equals zero, you may leave it out.)
 ```javascript
-new Complex(1, 2); // 1+2j
+z = new Complex(1, 2); // 1+2j
 ```
 |name|type|required|
 |:---:|:---:|:---:|
@@ -35,7 +35,7 @@ new Complex(1, 2); // 1+2j
 Declare in polar form
 <sup>[note](https://en.wikipedia.org/wiki/Complex_number#Polar_complex_plane)</sup>
 ```javascript
-new Complex(Math.PI, 2, 'polar'); // 2exp(jπ) = -2
+z = new Complex(Math.PI, 2, 'polar'); // 2exp(jπ) = -2
 ```
 |name|type|required|
 |:---:|:---:|:---:|
@@ -46,11 +46,17 @@ new Complex(Math.PI, 2, 'polar'); // 2exp(jπ) = -2
 #### constructor(cplx)
 Copy complex that has already been declared
 ```javascript
-new Complex(z);
+z = new Complex(z);
 ```
 |name|type|required|
 |:---:|:---:|:---:|
 |cplx|Complex|O|
+
+#### cf) Complex Cxcalc(s)
+Declaring complex using Cxcalc
+```javascript
+z = Cxcalc('1+2j')
+```
 
 ### Properties
 #### number re
