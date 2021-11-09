@@ -598,7 +598,7 @@ function cxcalc (s) {
   s = _precedence('-', s, 1, 1);
   
   // 연산자 코드 처리
-  _s = s
+  s = s
   .replace(/\+/g, '.add')
   .replace(/\-/g, '.sub')
   .replace(/\*/g, '.mul')
