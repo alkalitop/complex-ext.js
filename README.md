@@ -458,7 +458,9 @@ Cxmath.random();
 
 ## Cxcalc
 
-### Complex Cxcalc(s)
+### Calculation
+
+#### Complex Cxcalc(s)
 Calculation
 <br/>
 <br/>
