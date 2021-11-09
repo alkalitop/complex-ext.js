@@ -17,11 +17,12 @@ const { Complex, Cxmath } = require(PATH);
 
 ```
 
-## Complex 
+## class Complex
+Generating complex numbers
 
 ### Constructor
 #### constructor(re, im)
-Declare in cartesian form
+Generate complex number in cartesian form
 <sup>[note](https://en.wikipedia.org/wiki/Complex_number#Cartesian_complex_plane)</sup> (if the imaginary part equals zero, you may leave it out.)
 ```javascript
 z = new Complex(1, 2); // 1+2j
@@ -32,7 +33,7 @@ z = new Complex(1, 2); // 1+2j
 |im|number|X|
 
 #### constructor(arg, abs, polarTag)
-Declare in polar form
+Generate complex number in polar form
 <sup>[note](https://en.wikipedia.org/wiki/Complex_number#Polar_complex_plane)</sup>
 ```javascript
 z = new Complex(Math.PI, 2, 'polar'); // 2exp(jπ) = -2
@@ -44,7 +45,7 @@ z = new Complex(Math.PI, 2, 'polar'); // 2exp(jπ) = -2
 |polar|string|O|
 
 #### constructor(cplx)
-Copy complex that has already been declared
+Copy a complex that has already been declared
 ```javascript
 z = new Complex(z);
 ```
@@ -52,10 +53,10 @@ z = new Complex(z);
 |:---:|:---:|:---:|
 |cplx|Complex|O|
 
-#### cf) Complex [Cxcalc(s)](https://github.com/sweetcorn1229/cplx.js/blob/main/README.md#cxcalc)
-Declaring complex using [Cxcalc](https://github.com/sweetcorn1229/cplx.js/blob/main/README.md#cxcalc)
+#### cf) Complex Cxcalc(s)
+Generate complex number using [Cxcalc](https://github.com/sweetcorn1229/cplx.js/blob/main/README.md#cxcalc)
 ```javascript
-z = Cxcalc('1+2j')
+z = Cxcalc('1+2j'); // 1+2j
 ```
 
 ### Properties
