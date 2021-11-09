@@ -459,8 +459,11 @@ Cxmath.random();
 ## Cxcalc
 
 ### Complex Cxcalc(s)
-Calculation<br/>
+Calculation
+<br/>
+<br/>
 **Warning: complex -z ((Re z = 0, Im z < 0) or (Re z < 0, Im z = 0), e.g. -2j, -3...) and -func(z) (e.g. -sin(z), -acosh(z)...) must be written in the form of zero minus that like 0-2j, 0-3, 0-sin(z).**
+<br/>
 **Warning: 1 in the imaginary part must not be omitted.**
 ```javascript
 Cxcalc('1+2j'); // 1+2j
