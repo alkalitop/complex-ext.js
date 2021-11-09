@@ -17,7 +17,6 @@ const { Complex, Cxmath, Cxcalc } = require(PATH);
 ```
 
 ## Complex
-Generating complex numbers
 
 ### Constructor
 #### constructor(re, im)
