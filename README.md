@@ -455,3 +455,19 @@ Random complex (both real part and imaginary part are more than or equal to 0 an
 ```javascript
 Cxmath.random();
 ```
+
+## Cxcalc
+
+### Complex Cxcalc(s)
+Calculation<br/>
+**Warning: complex -z ((Re z = 0, Im z < 0) or (Re z < 0, Im z = 0), e.g. -2j, -3...) and -func(z) (e.g. -sin(z), -acosh(z)...) must be written in the form of zero minus that like 0-2j, 0-3, 0-sin(z).**
+```javascript
+Cxcalc('1+2j'); // 1+2j
+Cxcalc('sin(1j) + cos(2j)');
+...
+```
+
+
+|name|type|required|
+|:---:|:---:|:---:|
+|s|String|O|
