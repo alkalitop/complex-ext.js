@@ -2,7 +2,7 @@
 Javascript complex number library
 
 ## Copyright
-&copy; 2021 Sanha, all rights reserved.
+ⓒ 2021 Sanha(sweetcorn1229), all rights reserved.
 
 ## Basic
  
