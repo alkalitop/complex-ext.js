@@ -614,10 +614,8 @@ function cxcalc (s) {
   }
 }
 
-if (module) {
-  module.exports = {
-    Complex: complex,
-    Cxmath: cxmath,
-    Cxcalc: cxcalc
-  };
-}
+module.exports = {
+  Complex: complex,
+  Cxmath: cxmath,
+  Cxcalc: cxcalc
+};
