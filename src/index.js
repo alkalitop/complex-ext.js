@@ -231,7 +231,7 @@ complex.prototype.inv = function (z) {
   }
 };
 
-complex.prototype.eqto = function (z) {
+complex.prototype.equiv = function (z) {
   let t = complex._typer(z);
   if (t == 'n') {
     return (Math.abs(this.re - z) < complex.EPSILON.re) && (Math.abs(this.im) < complex.EPSILON.re);
