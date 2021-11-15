@@ -87,31 +87,31 @@ z.arg;
 ### Constants
 
 #### Complex EPSILON
-```
+```javascript
 Complex.EPSILON := new complex(Number.EPSILON)
 ```
 
 #### Complex PI
 Pi
-```
+```javascript
 Complex.PI := new complex(Math.PI)
 ```
 
 #### Complex E
 Base of the natural logarithm
-```
+```javascript
 Complex.E := new complex(Math.E)
 ```
 
 #### Complex ONE
 1
-```
+```javascript
 Complex.ONE := new complex(1)
 ```
 
 #### Complex UNIT
 Imaginary unit
-```
+```javascript
 Complex.UNIT := new complex(0, 1)
 ```
 
@@ -123,7 +123,19 @@ String representation
 z.toString()
 ```
 
-### Operations & Exponentiation
+### Equivalence
+
+#### boolean equiv(z)
+Equivalence
+```javascript
+w.equiv(z)
+```
+
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
+
+### Basic 4 Operations
 ```javascript
 let p = new Complex(1, 2);
 let q = new Complex(3, -4);
@@ -174,6 +186,8 @@ p.div(4); // 0.25+0.5j
 |:---:|:---:|:---:|
 |z|number/Complex|O|
 
+### Exponentiation
+
 #### Complex inv(z)
 Exponentiation
 <sup>[note](https://en.wikipedia.org/wiki/Complex_number#Exponentiation)</sup>
@@ -187,7 +201,7 @@ p.inv(6); // 117+44j
 
 ## Cxmath (Functions)
 
-### Additive Inverse & Complex Conjugate
+### Advanced Operations
 
 #### Complex opp(z)
 Opposite number (Additive inverse)<sup>[note](https://en.wikipedia.org/wiki/Additive_inverse)</sup>
@@ -198,11 +212,24 @@ Cxmath.opp(z);
 |:---:|:---:|:---:|
 |z|number/Complex|O|
 
+### Complex Conjugate
+
 #### Complex con(z)
 Complex conjugate
 <sup>[note](https://en.wikipedia.org/wiki/Complex_conjugate)</sup>
 ```javascript
 Cxmath.con(z);
+```
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/Complex|O|
+
+### Reciprocal
+
+#### Complex rec(z)
+Reciprocal
+```javascript
+Cxmath.rec(z);
 ```
 |name|type|required|
 |:---:|:---:|:---:|
@@ -443,10 +470,10 @@ Cxmath.xp(w, z);
 |w|number/Complex|O|
 |z|number/Complex|O|
 
-#### [UD] Complex norm(z)
+#### Complex norm(z)
 Norm
 ```javascript
-Cxmath.norm(z);
+Cxmath.norm(z) := z.abs()
 ```
 |name|type|required|
 |:---:|:---:|:---:|
