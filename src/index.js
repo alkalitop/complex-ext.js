@@ -2,6 +2,8 @@
 © 2021 Sanha, all rights reserved.
 */
 
+// constructor
+
 function complex () {
   let t = complex._typer(arguments[0])+complex._typer(arguments[1]);
   switch (arguments.length) {
@@ -92,7 +94,21 @@ function complex () {
   }
 }
 
-complex._typer=c=>(typeof c=='number'||typeof c=='string')&&!Number.isNaN(c)?'n':(c instanceof complex?'c':'x');
+// type disc
+
+complex._typer = function (z) {
+  if ((typeof z == 'number' || typeof z == 'string') && !Number.isNaN(z)) {
+    return 'n';
+  }
+  else {
+    if (z instanceof complex) {
+      return 'c';
+    }
+    else {
+      return 'x';
+    }
+  }
+}
 
 Object.defineProperty(complex.prototype, 'abs', {
   get() {
@@ -119,6 +135,16 @@ Object.defineProperty(complex.prototype, 'arg', {
 complex.prototype.toString = function () {
   return this.re+((Math.sign(this.im)+1)?'+':'')+this.im+'j';
 };
+
+// constants
+
+complex.ONE = new complex(1);
+complex.UNIT = new complex(0, 1);
+complex.PI = new complex(Math.PI);
+complex.E = new complex(Math.E);
+complex.EPSILON = new complex(2.220446049250313e-16);
+
+// arithmetic
 
 complex.prototype.add = function (z) {
   let t = complex._typer(z);
@@ -205,6 +231,16 @@ complex.prototype.inv = function (z) {
   }
 };
 
+complex.eqto = function (z) {
+  let t = complex._typer(z);
+  if (t == 'n') {
+    return (Math.abs(this.re - z) < complex.EPSILON.re) && (Math.abs(this.im) < complex.EPSILON.re);
+  }
+  else if (t == 'c') {
+    return (Math.abs(this.re - z.re) < complex.EPSILON.re) && (Math.abs(this.im - z.im) < complex.EPSILON.re);
+  }
+}
+    
 function cxmath () {
   
 }
