@@ -84,6 +84,37 @@ Argument
 z.arg;
 ```
 
+### Constants
+
+#### Complex EPSILON
+```
+Complex.EPSILON := new complex(Number.EPSILON)
+```
+
+#### Complex PI
+Pi
+```
+Complex.PI := new complex(Math.PI)
+```
+
+#### Complex E
+Base of the natural logarithm
+```
+Complex.E := new complex(Math.E)
+```
+
+#### Complex ONE
+1
+```
+Complex.ONE := new complex(1)
+```
+
+#### Complex UNIT
+Imaginary unit
+```
+Complex.UNIT := new complex(0, 1)
+```
+
 ### String Representation
 
 #### string toString()
