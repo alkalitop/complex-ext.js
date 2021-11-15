@@ -212,8 +212,6 @@ Cxmath.opp(z);
 |:---:|:---:|:---:|
 |z|number/Complex|O|
 
-### Complex Conjugate
-
 #### Complex con(z)
 Complex conjugate
 <sup>[note](https://en.wikipedia.org/wiki/Complex_conjugate)</sup>
@@ -223,8 +221,6 @@ Cxmath.con(z);
 |name|type|required|
 |:---:|:---:|:---:|
 |z|number/Complex|O|
-
-### Reciprocal
 
 #### Complex rec(z)
 Reciprocal
