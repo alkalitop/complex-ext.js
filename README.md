@@ -487,20 +487,20 @@ Cxmath.dist(w, z);
 
 ### Mean
 
-#### Complex am(z_1[, z_2, ...])
+#### Complex arim(z_1[, z_2, ...])
 Arithmetic mean
 ```javascript
-Cxmath.am(z_1, z_2);
+Cxmath.arim(z_1, z_2);
 ```
 |name|type|required|
 |:---:|:---:|:---:|
 |z_1|number/Complex|O|
 |z_n(n>1)|number/Complex|X|
 
-#### Complex gm(z_1[, z_2, ...])
+#### Complex geom(z_1[, z_2, ...])
 Geometric mean
 ```javascript
-Cxmath.gm(z_1, z_2);
+Cxmath.geom(z_1, z_2);
 ```
 |name|type|required|
 |:---:|:---:|:---:|
