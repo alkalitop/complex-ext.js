@@ -284,7 +284,7 @@ cxmath.exp = function (z) {
   if (t == 'x') {
     throw new Error();
   }
-  return new complex(Math.E).inv(z);
+  return complex.E.inv(z);
 };
 
 cxmath.log = function (z, base) {
@@ -313,8 +313,7 @@ cxmath.sin = function (z) {
     throw new Error();
   }
   let s = new complex(z);
-  let i = new complex(0, 1);
-  return cxmath.exp(s.mul(i)).sub(cxmath.exp(cxmath.opp(s).mul(i))).div(i.mul(2));
+  return cxmath.exp(s.mul(complex.UNIT)).sub(cxmath.exp(cxmath.opp(s).mul(complex.UNIT))).div(complex.UNIT.mul(2));
 };
 
 cxmath.sa = function (z) {
@@ -340,8 +339,7 @@ cxmath.cos = function (z) {
     throw new Error();
   }
   let s = new complex(z);
-  let i = new complex(0, 1);
-  return cxmath.exp(s.mul(i)).add(cxmath.exp(cxmath.opp(s).mul(i))).div(2);
+  return cxmath.exp(s.mul(complex.UNIT)).add(cxmath.exp(cxmath.opp(s).mul(complex.UNIT))).div(2);
 };
 
 cxmath.tan = function (z) {
