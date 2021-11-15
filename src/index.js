@@ -231,7 +231,7 @@ complex.prototype.inv = function (z) {
   }
 };
 
-complex.eqto = function (z) {
+complex.prototype.eqto = function (z) {
   let t = complex._typer(z);
   if (t == 'n') {
     return (Math.abs(this.re - z) < complex.EPSILON.re) && (Math.abs(this.im) < complex.EPSILON.re);
@@ -259,9 +259,17 @@ cxmath.opp = function (z) {
   if (t == 'x') {
     throw new Error();
   }
-  let tmp = new complex(z);
-  return tmp.sub(new complex(2*tmp.re, 2*tmp.im));
+  let s = new complex(z);
+  return new complex(-s.re, -s.im);
 };
+
+cxmath.rec = function (z) {
+  let t = complex._typer(z);
+  if (t == 'x') {
+    throw new Error();
+  }
+  return complex.ONE.div(z);
+}
 
 cxmath.sqrt = function (z) {
   let t = complex._typer(z);
@@ -355,7 +363,7 @@ cxmath.csc = function (z) {
   if (t.includes('x')) {
     throw new Error();
   }
-  return (new Complex(1)).div(cxmath.sin(z));
+  return complex.ONE.div(cxmath.sin(z));
 };
 
 cxmath.sec = function (z) {
@@ -363,7 +371,7 @@ cxmath.sec = function (z) {
   if (t.includes('x')) {
     throw new Error();
   }
-  return (new Complex(1)).div(cxmath.cos(z));
+  return complex.ONE.div(cxmath.cos(z));
 };
 
 cxmath.cot = function (z) {
@@ -371,7 +379,7 @@ cxmath.cot = function (z) {
   if (t.includes('x')) {
     throw new Error();
   }
-  return (new Complex(1)).div(cxmath.tan(z));
+  return complex.ONE.div(cxmath.tan(z));
 };
 
 cxmath.asin = function (z) {
@@ -380,8 +388,7 @@ cxmath.asin = function (z) {
     throw new Error();
   }
   let s = new complex(z);
-  let i = new complex(0, 1);
-  return cxmath.log(i.mul(s).add(cxmath.sqrt(cxmath.opp(s.inv(2).sub(1))))).mul(cxmath.con(i));
+  return cxmath.log(complex.UNIT.mul(s).add(cxmath.sqrt(cxmath.opp(s.inv(2).sub(1))))).mul(cxmath.con(complex.UNIT));
 };
 
 cxmath.acos = function (z) {
@@ -389,8 +396,7 @@ cxmath.acos = function (z) {
   if (t.includes('x')) {
     throw new Error();
   }
-  let PI = new complex(Math.PI);
-  return PI.sub(cxmath.asin(z)).sub(2);
+  return complex.PI.sub(cxmath.asin(z)).sub(2);
 };
 
 cxmath.atan = function (z) {
@@ -399,8 +405,7 @@ cxmath.atan = function (z) {
     throw new Error();
   }
   let s = new complex(z);
-  let i = new complex(0, 1);
-  return i.div(2).mul(cxmath.log(i.add(s).div(i.sub(s))));
+  return complex.UNIT.div(2).mul(cxmath.log(complex.UNIT.add(s).div(complex.UNIT.sub(s))));
 };
 
 cxmath.atan2 = function (w, z) {
@@ -416,7 +421,7 @@ cxmath.acsc = function (z) {
   if (t.includes('x')) {
     throw new Error();
   }
-  return cxmath.asin((new Complex(1)).div(z));
+  return cxmath.asin(complex.ONE.div(z));
 };
 
 cxmath.asec = function (z) {
@@ -424,7 +429,7 @@ cxmath.asec = function (z) {
   if (t.includes('x')) {
     throw new Error();
   }
-  return cxmath.acos((new Complex(1)).div(z));
+  return cxmath.acos(complex.ONE.div(z));
 };
 
 cxmath.acot = function (z) {
@@ -432,7 +437,7 @@ cxmath.acot = function (z) {
   if (t.includes('x')) {
     throw new Error();
   }
-  return cxmath.atan((new Complex(1)).div(z));
+  return cxmath.atan(complex.ONE.div(z));
 };
 
 cxmath.sinh = function (z) {
@@ -482,8 +487,7 @@ cxmath.atanh = function (z) {
   if (t.includes('x')) {
     throw new Error();
   }
-  let one = new complex(1, 0);
-  return cxmath.log(one.add(z).div(one.sub(z))).div(2);
+  return cxmath.log(complex.ONE.add(z).div(complex.ONE.sub(z))).div(2);
 };
 
 cxmath.csgn = function (z) {
@@ -502,7 +506,9 @@ cxmath.csgn = function (z) {
   else throw new Error();  
 };
 
-cxmath.am = function () {
+// mean
+
+cxmath.arim = function () {
   let args = Array.from(arguments);
   let t = args.map(el => complex._typer(el));
   if (t.includes('x')) {
@@ -511,7 +517,7 @@ cxmath.am = function () {
   return args.map(el => new complex(el)).reduce((a, b) => a.add(b)).div(args.length);
 };
 
-cxmath.gm = function () {
+cxmath.geom = function () {
   let args = Array.from(arguments);
   let t = args.map(el => complex._typer(el));
   if (t.includes('x')) {
@@ -519,6 +525,16 @@ cxmath.gm = function () {
   }
   return args.map(el => new complex(el)).reduce((a, b) => a.mul(b)).inv(1/args.length);
 };
+
+// vector
+
+cxmath.norm = function (z) {
+  let t = complex._typer(w)+complex._typer(z);
+  if (t.includes('x')) {
+    throw new Error();
+  }
+  return new complex(z).abs();
+}
 
 cxmath.dist = function (w, z) {
   let t = complex._typer(w)+complex._typer(z);
