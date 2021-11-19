@@ -509,8 +509,8 @@ Random complex (both real part and imaginary part are more than or equal to 0 an
 Cxmath.random();
 ```
 
-## [Experimental] Cxcalc
-Do not use it until the error occurred from it get fixed.
+## [Experimental, Unstable] Cxcalc
+Warning: This is experimental and unstable
 
 ### Calculation
 
@@ -524,7 +524,3 @@ Cxcalc('sin(1j) + cos(2j)');
 |name|type|required|
 |:---:|:---:|:---:|
 |s|String|O|
-
-Warning: 
-- **complex -z** (**(Re z = 0, Im z < 0) or (Re z < 0, Im z = 0)**, e.g. -2j, -3...) and **-func(z)** (e.g. -sin(z), -acosh(z)...) **must be written in the form of zero minus that** like 0-2j, 0-3, 0-sin(z).
-- 1 or -1 in the imaginary part must not be omitted.
