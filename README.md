@@ -509,7 +509,8 @@ Random complex (both real part and imaginary part are more than or equal to 0 an
 Cxmath.random();
 ```
 
-## <del>Cxcalc</del> Do not use it until the error occurred from it get fixed.
+## <del>Cxcalc</del>
+Do not use it until the error occurred from it get fixed.
 
 ### Calculation
 
