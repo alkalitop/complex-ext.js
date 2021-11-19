@@ -51,12 +51,6 @@ z = new Complex(z);
 |:---:|:---:|:---:|
 |cplx|Complex|O|
 
-#### cf) Complex Cxcalc(s)
-Generate complex number using [Cxcalc](https://github.com/sweetcorn1229/cplx.js/blob/main/README.md#cxcalc)
-```javascript
-z = Cxcalc('1+2j'); // 1+2j
-```
-
 ### Properties
 #### number re
 Real part
@@ -515,7 +509,7 @@ Random complex (both real part and imaginary part are more than or equal to 0 an
 Cxmath.random();
 ```
 
-## Cxcalc
+## <del>Cxcalc</del> Do not use it until the error occurred from it get fixed.
 
 ### Calculation
 
