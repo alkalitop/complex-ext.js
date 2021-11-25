@@ -359,7 +359,8 @@ Arguments
 |z|number/Complex|O|
 
 #### Complex atan2(w, z)
-Arctangent2
+2-argument-arctangent
+<sup>[Note](https://en.m.wikipedia.org/wiki/Atan2)</sup>
 ```javascript
 Cxmath.atan2(w, z);
 ```
