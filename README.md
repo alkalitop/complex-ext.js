@@ -13,7 +13,7 @@ Javascript complex number library
 
 ## Get Started
 ```javascript
-const { Complex, Cxmath, Cxcalc } = require(PATH);
+const { Complex, Cxmath } = require(PATH);
 ```
 
 ## Complex
