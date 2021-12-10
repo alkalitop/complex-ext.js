@@ -429,7 +429,7 @@ Cxmath.atanh(z);
 
 ### Sign Function
 
-#### Complex csgn(z)
+#### number csgn(z)
 Complex sign function
 <sup>[note](https://en.wikipedia.org/wiki/Sign_function#Complex_signum)</sup>
 ```javascript
@@ -441,27 +441,7 @@ Cxmath.csgn(z);
 
 ### Vector
 
-#### [UD] Complex inp(w, z)
-Inner Product
-```javascript
-Cxmath.inp(w, z);
-```
-|name|type|required|
-|:---:|:---:|:---:|
-|w|number/Complex|O|
-|z|number/Complex|O|
-
-#### [UD] Complex xp(w, z)
-Cross Product
-```javascript
-Cxmath.xp(w, z);
-```
-|name|type|required|
-|:---:|:---:|:---:|
-|w|number/Complex|O|
-|z|number/Complex|O|
-
-#### Complex norm(z)
+#### number norm(z)
 Norm
 ```javascript
 Cxmath.norm(z) := z.abs()
@@ -470,37 +450,25 @@ Cxmath.norm(z) := z.abs()
 |:---:|:---:|:---:|
 |z|number/Complex|O|
 
-#### Complex dist(w, z)
-Distance from vector w to vector z
+#### number inp(a, b)
+Inner Product
 ```javascript
-Cxmath.dist(w, z);
+Cxmath.inp(a, b);
 ```
 |name|type|required|
 |:---:|:---:|:---:|
-|w|number/Complex|O|
-|z|number/Complex|O|
+|a|number/Complex|O|
+|b|number/Complex|O|
 
-### Mean
-
-#### Complex arim(z_1[, z_2, ...])
-Arithmetic mean
+#### number dist(a, b)
+Distance from point a to point b
 ```javascript
-Cxmath.arim(z_1, z_2);
+Cxmath.dist(a, b);
 ```
 |name|type|required|
 |:---:|:---:|:---:|
-|z_1|number/Complex|O|
-|z_n(n>1)|number/Complex|X|
-
-#### Complex geom(z_1[, z_2, ...])
-Geometric mean
-```javascript
-Cxmath.geom(z_1, z_2);
-```
-|name|type|required|
-|:---:|:---:|:---:|
-|z|number/Complex|O|
-|z_n(n>1)|number/Complex|X|
+|a|number/Complex|O|
+|b|number/omplex|O|
 
 ### Random
 
@@ -509,19 +477,3 @@ Random complex (both real part and imaginary part are more than or equal to 0 an
 ```javascript
 Cxmath.random();
 ```
-
-## [Experimental, Unstable] Cxcalc
-Warning: This is experimental and unstable
-
-### Calculation
-
-#### Complex Cxcalc(s)
-Calculation
-```javascript
-Cxcalc('1+2j'); // 1+2j
-Cxcalc('sin(1j) + cos(2j)');
-...
-```
-|name|type|required|
-|:---:|:---:|:---:|
-|s|String|O|
