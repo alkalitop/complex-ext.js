@@ -5,9 +5,9 @@
 // constructor
 
 function complex () {
-  let t = complex._typer(arguments[0])+complex._typer(arguments[1]);
+  let t = typedis(arguments[0]) + typedis(arguments[1]);
   switch (arguments.length) {
-    case 1:   
+    case 1:
       if (t == 'nx') {
         this.re = arguments[0], this.im = 0;
       }
@@ -15,7 +15,11 @@ function complex () {
         this.re = arguments[0].re, this.im = arguments[0].im;
       }
       else {
-        throw new Error();
+        let pc = strparse(arguments[0]);
+        if (pc) {
+          this.re = pc.re, this.im = pc.im;
+        }
+        else throw new Error();
       }
     break;
     case 2:
@@ -94,10 +98,34 @@ function complex () {
   }
 }
 
-// type disc
+// string parser
 
-complex._typer = function (z) {
-  if ((typeof z == 'number' || typeof z == 'string') && !Number.isNaN(z)) {
+function strparse (str) {
+  let sig1 = str.trim().match(/^(\+|\-)/)
+  sig1 = sig1 ? String(sig1).slice(0, 1) : String()
+  let spt = str.replace(/^(\+|\-)/g, '').split(/\+|\-/);
+  
+  let re, im;
+  if (spt.length == 1) {
+    re = 0, im = Number(sig1+spt[0].replace('j', ''));
+  }
+  else {
+    let sig2 = String(str.replace(sig1, '').match(/(\+|\-)/)).slice(0, 1);
+    Log.d('sig1: ' + sig1 + '\nsig2: ' + sig2);
+    re = Number(sig1+spt[0]), im = Number(sig2+spt[1].replace('j', ''));    
+  }
+  if (Number.isNaN(re) || Number.isNaN(im)) {
+    return null;
+  }
+  else {
+    return { re: re, im: im };
+  }
+}
+	
+// type discriminator
+
+function typedis (z) {
+  if (!Number.isNaN(Number(z))) {
     return 'n';
   }
   else {
@@ -147,7 +175,7 @@ complex.EPSILON = new complex(2.220446049250313e-16);
 // arithmetic
 
 complex.prototype.add = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t == 'n') {
     return new complex(this.re + z, this.im);
   }
@@ -160,7 +188,7 @@ complex.prototype.add = function (z) {
 };
 
 complex.prototype.sub = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t == 'n') {
     return new complex(this.re - z, this.im);
   }
@@ -173,7 +201,7 @@ complex.prototype.sub = function (z) {
 };
 
 complex.prototype.mul = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t == 'n') {
     return new complex(this.re * z, this.im * z);
   }
@@ -186,7 +214,7 @@ complex.prototype.mul = function (z) {
 };
 
 complex.prototype.div = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t == 'n') {
     return new complex(this.re / z, this.im / z);
   }
@@ -200,7 +228,7 @@ complex.prototype.div = function (z) {
 };
 
 complex.prototype.inv = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t == 'n') {
     if (Number.isInteger(z)) {
       let tmp = new complex(1);
@@ -231,8 +259,8 @@ complex.prototype.inv = function (z) {
   }
 };
 
-complex.prototype.equiv = function (z) {
-  let t = complex._typer(z);
+complex.prototype.eqto = function (z) {
+  let t = typedis(z);
   if (t == 'n') {
     return (Math.abs(this.re - z) < complex.EPSILON.re) && (Math.abs(this.im) < complex.EPSILON.re);
   }
@@ -246,7 +274,7 @@ function cxmath () {
 }
 
 cxmath.con = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t == 'x') {
     throw new Error();
   }
@@ -255,7 +283,7 @@ cxmath.con = function (z) {
 };
 
 cxmath.opp = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t == 'x') {
     throw new Error();
   }
@@ -264,7 +292,7 @@ cxmath.opp = function (z) {
 };
 
 cxmath.rec = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t == 'x') {
     throw new Error();
   }
@@ -272,7 +300,7 @@ cxmath.rec = function (z) {
 }
 
 cxmath.sqrt = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t == 'x') {
     throw new Error();
   }
@@ -280,7 +308,7 @@ cxmath.sqrt = function (z) {
 };
 
 cxmath.cbrt = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t == 'x') {
     throw new Error();
   }
@@ -288,7 +316,7 @@ cxmath.cbrt = function (z) {
 };
 
 cxmath.exp = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t == 'x') {
     throw new Error();
   }
@@ -297,7 +325,7 @@ cxmath.exp = function (z) {
 
 cxmath.log = function (z, base) {
   if (base) {
-    let t = complex._typer(z)+complex._typer(base);
+    let t = typedis(z)+typedis(base);
     if (t.includes('x')) {
       throw new Error();
     }
@@ -316,7 +344,7 @@ cxmath.ln = function (z) {
 };
 
 cxmath.sin = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t == 'x') {
     throw new Error();
   }
@@ -325,7 +353,7 @@ cxmath.sin = function (z) {
 };
 
 cxmath.sa = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t == 'x') {
     throw new Error();
   }
@@ -333,7 +361,7 @@ cxmath.sa = function (z) {
 };
 
 cxmath.sinc = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t == 'x') {
     throw new Error();
   }
@@ -342,7 +370,7 @@ cxmath.sinc = function (z) {
 };
 
 cxmath.cos = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t.includes('x')) {
     throw new Error();
   }
@@ -351,7 +379,7 @@ cxmath.cos = function (z) {
 };
 
 cxmath.tan = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t.includes('x')) {
     throw new Error();
   }
@@ -359,7 +387,7 @@ cxmath.tan = function (z) {
 };
 
 cxmath.csc = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t.includes('x')) {
     throw new Error();
   }
@@ -367,7 +395,7 @@ cxmath.csc = function (z) {
 };
 
 cxmath.sec = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t.includes('x')) {
     throw new Error();
   }
@@ -375,7 +403,7 @@ cxmath.sec = function (z) {
 };
 
 cxmath.cot = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t.includes('x')) {
     throw new Error();
   }
@@ -383,7 +411,7 @@ cxmath.cot = function (z) {
 };
 
 cxmath.asin = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t.includes('x')) {
     throw new Error();
   }
@@ -392,7 +420,7 @@ cxmath.asin = function (z) {
 };
 
 cxmath.acos = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t.includes('x')) {
     throw new Error();
   }
@@ -400,7 +428,7 @@ cxmath.acos = function (z) {
 };
 
 cxmath.atan = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t.includes('x')) {
     throw new Error();
   }
@@ -409,7 +437,7 @@ cxmath.atan = function (z) {
 };
 
 cxmath.atan2 = function (w, z) {
-  let t = complex._typer(w)+complex._typer(z);
+  let t = typedis(w)+typedis(z);
   if (t.includes('x')) {
     throw new Error();
   }
@@ -417,7 +445,7 @@ cxmath.atan2 = function (w, z) {
 };
 
 cxmath.acsc = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t.includes('x')) {
     throw new Error();
   }
@@ -425,7 +453,7 @@ cxmath.acsc = function (z) {
 };
 
 cxmath.asec = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t.includes('x')) {
     throw new Error();
   }
@@ -433,7 +461,7 @@ cxmath.asec = function (z) {
 };
 
 cxmath.acot = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t.includes('x')) {
     throw new Error();
   }
@@ -441,7 +469,7 @@ cxmath.acot = function (z) {
 };
 
 cxmath.sinh = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t.includes('x')) {
     throw new Error();
   }
@@ -449,7 +477,7 @@ cxmath.sinh = function (z) {
 };
 
 cxmath.cosh = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t.includes('x')) {
     throw new Error();
   }
@@ -457,7 +485,7 @@ cxmath.cosh = function (z) {
 };
 
 cxmath.tanh = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t.includes('x')) {
     throw new Error();
   }
@@ -465,7 +493,7 @@ cxmath.tanh = function (z) {
 };
 
 cxmath.asinh = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t.includes('x')) {
     throw new Error();
   }
@@ -474,7 +502,7 @@ cxmath.asinh = function (z) {
 };
 
 cxmath.acosh = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t.includes('x')) {
     throw new Error();
   }
@@ -483,7 +511,7 @@ cxmath.acosh = function (z) {
 };
 
 cxmath.atanh = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t.includes('x')) {
     throw new Error();
   }
@@ -491,178 +519,52 @@ cxmath.atanh = function (z) {
 };
 
 cxmath.csgn = function (z) {
-  let t = complex._typer(z);
+  let t = typedis(z);
   if (t == 'n') {
-    return new complex(Math.sign(z));
+    return Math.sign(z);
   }
   else if (t == 'c') {
     if (z.re) {
-      return new complex(Math.sign(z.re));
+      return Math.sign(z.re);
     }
     else {
-      return new complex(Math.sign(z.im));
+      return Math.sign(z.im);
     }
   }
   else throw new Error();  
 };
 
-// mean
-
-cxmath.arim = function () {
-  let args = Array.from(arguments);
-  let t = args.map(el => complex._typer(el));
-  if (t.includes('x')) {
-    throw new Error();
-  }
-  return args.map(el => new complex(el)).reduce((a, b) => a.add(b)).div(args.length);
-};
-
-cxmath.geom = function () {
-  let args = Array.from(arguments);
-  let t = args.map(el => complex._typer(el));
-  if (t.includes('x')) {
-    throw new Error();
-  }
-  return args.map(el => new complex(el)).reduce((a, b) => a.mul(b)).inv(1/args.length);
-};
-
 // vector
 
 cxmath.norm = function (z) {
-  let t = complex._typer(w)+complex._typer(z);
+  let t = typedis(w)+typedis(z);
   if (t.includes('x')) {
     throw new Error();
   }
   return new complex(z).abs();
 }
 
-cxmath.dist = function (w, z) {
-  let t = complex._typer(w)+complex._typer(z);
+cxmath.inp = function (a, b) {
+  let t = typedis(a) + typedis(b);
   if (t.includes('x')) {
     throw new Error();
   }
-  let u = new complex(w), v = new complex(z);  
-  return new complex(Math.hypot(u.re-v.re, u.im-v.im));
+  let u = new complex(a), v = new complex(b);  
+  return u.abs()*v.abs()*Math.cos(u.arg()-v.arg());
+}
+
+cxmath.dist = function (a, b) {
+  let t = typedis(a) + typedis(b);
+  if (t.includes('x')) {
+    throw new Error();
+  }
+  let u = new complex(a), v = new complex(b);  
+  return Math.hypot(u.re-v.re, u.im-v.im);
 };
 
 cxmath.random = function () {
   return new complex(Math.random(), Math.random());
 };
-
-/* ----- ----- ----- */
-
-function _precedence (operator, line, left, right) {
-  let validIndex = [];
-  let lineCopy = line;
-  
-  let sep = [];
-  
-  let cursor = lineCopy.indexOf(operator);
-  while (cursor >= 0) {
-    lineCopy = lineCopy.replace(operator, '\0'.repeat(operator.length));
-    validIndex.push(cursor);
-    cursor = lineCopy.indexOf(operator);
-  }
-  
-  for (let ind of validIndex) {
-    let cursorL = ind - 1, depthL = 1;
-    let cursorR = ind + operator.length, depthR = 1;
-    
-    if (left) {
-      while (depthL > 0) {
-        cursorL--;
-        if (line[cursorL] == '(') {
-          depthL--;
-        }
-        else if (line[cursorL] == ')') {
-          depthL++;
-        }
-      }
-    }
-    
-    if (right) {
-      while (depthR > 0) {
-        cursorR++;
-        if (line[cursorR] == '(') {
-          depthR++;
-        }
-        else if (line[cursorR] == ')') {
-          depthR--;
-        }
-      }
-    }
-    
-    sep.push([cursorL, cursorR]);
-  }
-  
-  let lineSplit = line.split('');
-  
-  sep.forEach(el => {
-    if (left) lineSplit[el[0]] = '((';
-    if (right) lineSplit[el[1]] = '))';
-  });
-  
-  return lineSplit.join('');
-}
-
-const funcNames = [
-  'opp', 'con',
-  'sqrt', 'cbrt',
-  'exp', 'log',
-  'asinh', 'acosh', 'atanh',
-  'sinh', 'cosh', 'tanh',
-  'asin', 'acos', 'atan', 'acsc', 'asec', 'acot',
-  'sinc', 'sa',
-  'sin', 'cos', 'tan', 'csc', 'sec', 'cot',
-  'csgn',
-  'inp', 'xp', 'norm', 'dist', 
-  'am', 'gm',
-  'random'
-];
-  
-function cxcalc (s) {
-
-  s = s.replace(/\s/g, '');
-  
-  let filter = new RegExp('\\d|Math.PI|Math.E|Infinity|j|\\+|\\-|\\*|\\/|\\^|\\(|\\)' + '|' + funcNames.join('|'), 'g');
-  if (s.replace(filter, '').trim()) {
-    throw new Error();
-  }
-  
-  // 숫자, 상수, 허수단위, 코드 처리
-  s = s.replace(/(\d+)|Math.PI|Math.E|Infinity/g, '(new Complex($1))');  
-  s = s.replace(/j/g, '*(new Complex(0, 1))');
-  
-  // 함수 선행 & 코드 처리
-  for (let funcName of funcNames) {
-    let rex = new RegExp(funcName, 'g');
-    s = _precedence(funcName, s, 0, 1);
-    s = s.replace(rex, '(Cxmath.' + funcName);
-  }
-  
-  // 연산자 선행 처리
-  s = _precedence('^', s, 1, 1);
-  s = _precedence('*', s, 1, 1);
-  s = _precedence('/', s, 1, 1);
-  s = _precedence('+', s, 1, 1);
-  s = _precedence('-', s, 1, 1);
-  
-  // 연산자 코드 처리
-  s = s
-  .replace(/\+/g, '.add')
-  .replace(/\-/g, '.sub')
-  .replace(/\*/g, '.mul')
-  .replace(/\//g, '.div')
-  .replace(/\^/g, '.inv');
-  
-  try {
-    let result = eval(s);
-    return result;
-  }
-  catch (err) {
-    throw new Error();
-  }
-}
 
 module.exports = {
   Complex: complex,
