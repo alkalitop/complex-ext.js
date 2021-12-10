@@ -19,7 +19,8 @@ const { Complex, Cxmath } = require(PATH);
 ## Complex
 
 ### Constructor
-#### constructor(re, im)
+
+#### constructor(re[, im])
 Generate complex number in cartesian form
 <sup>[note](https://en.wikipedia.org/wiki/Complex_number#Cartesian_complex_plane)</sup> (if the imaginary part equals zero, you may leave it out.)
 ```javascript
@@ -41,6 +42,17 @@ z = new Complex(Math.PI, 2, 'polar'); // 2exp(jπ) = -2
 |arg|number|O|
 |abs|number|O|
 |polar|string|O|
+
+### constructor(str)
+Parse string
+```javascript
+z = new Complex('1+3j'); // 1+3j
+z = new Complex('-7j'); // -7j
+z = new Complex('-6-1j'); // -6-1j
+```
+|name|type|required|
+|:---:|:---:|:---:|
+|str|string|O|
 
 #### constructor(cplx)
 Copy a complex that has already been declared
