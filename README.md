@@ -304,7 +304,7 @@ Cxmath.sec(z);
 Cxmath.cot(z);
 ```
 
-Functions
+Static functions
 |name|description|return type|
 |:---:|:---:|:---:|
 |sin|Sine|Complex|
@@ -333,7 +333,7 @@ Cxmath.asec(z);
 Cxmath.acot(z);
 ```
 
-Functions
+Static functions
 |name|description|return type|
 |:---:|:---:|:---:|
 |asin|Arcsine|Complex|
@@ -348,7 +348,7 @@ Arguments
 |:---:|:---:|:---:|
 |z|number/Complex|O|
 
-#### Complex atan2(w, z)
+#### Complex static atan2(w, z)
 2-argument-arctangent
 <sup>[Note](https://en.m.wikipedia.org/wiki/Atan2)</sup>
 ```javascript
