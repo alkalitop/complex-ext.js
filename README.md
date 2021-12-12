@@ -333,7 +333,8 @@ Cxmath.asec(z);
 Cxmath.acot(z);
 ```
 
-Static functions
+<br/>
+**Static functions**
 |name|description|return type|
 |:---:|:---:|:---:|
 |asin|Arcsine|Complex|
@@ -343,7 +344,8 @@ Static functions
 |asec|Arcsecant|Complex|
 |acot|Arccotangent|Complex|
 
-Arguments
+<br/>
+**Arguments**
 |name|type|required|
 |:---:|:---:|:---:|
 |z|number/Complex|O|
@@ -361,29 +363,16 @@ Cxmath.atan2(w, z);
 
 ### [Hyperbolic Functions](https://en.wikipedia.org/wiki/Hyperbolic_functions)
 
-#### Complex sinh(z)
-Hyperbolic sine
-```javascript
-Cxmath.sinh(z);
-```
-|name|type|required|
+<br/>
+**Static functions**
+|name|description|return type|
 |:---:|:---:|:---:|
-|z|number/Complex|O|
+|sinh|Hyperbolic-sine|Complex|
+|cosh|Hyperbolic-cosine|Complex|
+|tanh|Hyperbolic-tangent|Complex|
 
-#### Complex cosh(z)
-Hyperbolic cosine
-```javascript
-Cxmath.cosh(z);
-```
-|name|type|required|
-|:---:|:---:|:---:|
-|z|number/Complex|O|
-
-#### Complex tanh(z)
-Hyperbolic tangent
-```javascript
-Cxmath.tanh(z);
-```
+<br/>
+**Arguments**
 |name|type|required|
 |:---:|:---:|:---:|
 |z|number/Complex|O|
