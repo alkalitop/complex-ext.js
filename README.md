@@ -333,7 +333,7 @@ Cxmath.asec(z);
 Cxmath.acot(z);
 ```
 
-**Static functions**
+<strong>Static functions</strong>
 |name|description|return type|
 |:---:|:---:|:---:|
 |asin|Arcsine|Complex|
@@ -343,7 +343,7 @@ Cxmath.acot(z);
 |asec|Arcsecant|Complex|
 |acot|Arccotangent|Complex|
 
-**Arguments**
+Arguments
 |name|type|required|
 |:---:|:---:|:---:|
 |z|number/Complex|O|
@@ -362,7 +362,7 @@ Cxmath.atan2(w, z);
 ### [Hyperbolic Functions](https://en.wikipedia.org/wiki/Hyperbolic_functions)
 
 <br/>
-**Static functions**
+Static functions
 |name|description|return type|
 |:---:|:---:|:---:|
 |sinh|Hyperbolic-sine|Complex|
@@ -370,7 +370,7 @@ Cxmath.atan2(w, z);
 |tanh|Hyperbolic-tangent|Complex|
 
 <br/>
-**Arguments**
+Arguments
 |name|type|required|
 |:---:|:---:|:---:|
 |z|number/Complex|O|
