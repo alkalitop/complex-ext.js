@@ -395,18 +395,18 @@ Cxmath.tanh(z);
 #### Common Inverse Hyperbolic Functions (static)
 
 ```javascript
-Cxmath.sinh(z);
-Cxmath.cosh(z);
-Cxmath.tanh(z);
+Cxmath.asinh(z);
+Cxmath.acosh(z);
+Cxmath.atanh(z);
 ```
 
 > Functions
 
 |name|description|return type|
 |:---:|:---:|:---:|
-|sinh|Inverse-hyperbolic-sine|Complex|
-|cosh|Inverse-hyperbolic-cosine|Complex|
-|tanh|Inverse-hyperbolic-tangent|Complex|
+|asinh|Inverse-hyperbolic-sine|Complex|
+|acosh|Inverse-hyperbolic-cosine|Complex|
+|atanh|Inverse-hyperbolic-tangent|Complex|
 
 > Parameters
 
