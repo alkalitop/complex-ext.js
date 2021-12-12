@@ -209,7 +209,7 @@ p.inv(6); // 117+44j
 
 ### Advanced Operations
 
-#### Complex opp(z)
+#### Complex static opp(z)
 Opposite number (Additive inverse)<sup>[note](https://en.wikipedia.org/wiki/Additive_inverse)</sup>
 ```javascript
 Cxmath.opp(z);
@@ -218,7 +218,7 @@ Cxmath.opp(z);
 |:---:|:---:|:---:|
 |z|number/Complex|O|
 
-#### Complex con(z)
+#### Complex static con(z)
 Complex conjugate
 <sup>[note](https://en.wikipedia.org/wiki/Complex_conjugate)</sup>
 ```javascript
@@ -228,7 +228,7 @@ Cxmath.con(z);
 |:---:|:---:|:---:|
 |z|number/Complex|O|
 
-#### Complex rec(z)
+#### Complex static rec(z)
 Reciprocal
 ```javascript
 Cxmath.rec(z);
@@ -239,7 +239,7 @@ Cxmath.rec(z);
 
 ### [Radical Roots](https://en.wikipedia.org/wiki/Square_root#Square_roots_of_negative_and_complex_numbers)
 
-#### Complex sqrt(z)
+#### Complex static sqrt(z)
 Principal square root
 <sup>[note](https://en.wikipedia.org/wiki/Complex_number#Square_root)</sup>
 ```javascript
@@ -249,7 +249,7 @@ Cxmath.sqrt(z);
 |:---:|:---:|:---:|
 |z|number/Complex|O|
 
-#### Complex cbrt(z)
+#### Complex static cbrt(z)
 Principal cube root
 ```javascript
 Cxmath.cbrt(z);
@@ -260,7 +260,7 @@ Cxmath.cbrt(z);
 
 ### Exponential Function & Logarithm
 
-#### Complex exp(z)
+#### Complex static exp(z)
 Exponential function
 <sup>[note1](https://en.wikipedia.org/wiki/Exponential_function)</sup>
 <sup>[note2](https://en.wikipedia.org/wiki/Complex_number#Exponentiation)</sup>
@@ -271,7 +271,7 @@ Cxmath.exp(z);
 |:---:|:---:|:---:|
 |z|number/Complex|O|
 
-#### Complex log(a[, b=Math.E])
+#### Complex static log(a[, b=Math.E])
 Logarithm
 <sup>[note1](https://en.wikipedia.org/wiki/Logarithm)</sup>
 <sup>[note2](https://en.wikipedia.org/wiki/Complex_number#Complex_logarithm)</sup>
@@ -315,28 +315,6 @@ Functions
 |cot|Cotangent|Complex|
 
 Arguments
-|name|type|required|
-|:---:|:---:|:---:|
-|z|number/Complex|O|
-
-### Sinc Function
-
-#### Complex sa(z)
-Unnormalized Sinc Function
-<sup>[note](https://en.wikipedia.org/wiki/Sinc_function)</sup>
-```javascript
-Cxmath.sa(z);
-```
-|name|type|required|
-|:---:|:---:|:---:|
-|z|number/Complex|O|
-
-#### Complex sinc(z)
-Normalized Sinc Function
-<sup>[note](https://en.wikipedia.org/wiki/Sinc_function)</sup>
-```javascript
-Cxmath.sinc(z);
-```
 |name|type|required|
 |:---:|:---:|:---:|
 |z|number/Complex|O|
