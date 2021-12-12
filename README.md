@@ -285,6 +285,9 @@ Cxmath.log(a, 2); // Binary Logarithm
 Cxmath.log(a, 10); // Decimal Logarithm
 Cxmath.log(a, b);
 ```
+
+> Parameters
+
 |name|type|required|
 |:---:|:---:|:---:|
 |a|number/Complex|O|
@@ -292,7 +295,7 @@ Cxmath.log(a, b);
 
 ### [Trigonometric Functions](https://en.wikipedia.org/wiki/Trigonometric_functions)
 
-#### Common Trigonometric Functions
+#### Common Trigonometric Functions (static)
 
 ```javascript
 Cxmath.sin(z);
@@ -304,7 +307,7 @@ Cxmath.sec(z);
 Cxmath.cot(z);
 ```
 
-> Static functions
+> Functions
 
 |name|description|return type|
 |:---:|:---:|:---:|
@@ -315,7 +318,7 @@ Cxmath.cot(z);
 |sec|Secant|Complex|
 |cot|Cotangent|Complex|
 
-> Arguments
+> Parameters
 
 |name|type|required|
 |:---:|:---:|:---:|
@@ -323,7 +326,7 @@ Cxmath.cot(z);
 
 ### [Inverse Trigonometric Functions](https://en.wikipedia.org/wiki/Inverse_trigonometric_functions)
 
-#### Common Inverse Trigonometric Functions
+#### Common Inverse Trigonometric Functions (static)
 
 ```javascript
 Cxmath.asin(z);
@@ -335,7 +338,7 @@ Cxmath.asec(z);
 Cxmath.acot(z);
 ```
 
-> Static functions
+> Functions
 
 |name|description|return type|
 |:---:|:---:|:---:|
@@ -346,7 +349,8 @@ Cxmath.acot(z);
 |asec|Arcsecant|Complex|
 |acot|Arccotangent|Complex|
 
-Arguments
+> Parameters
+
 |name|type|required|
 |:---:|:---:|:---:|
 |z|number/Complex|O|
@@ -364,16 +368,24 @@ Cxmath.atan2(w, z);
 
 ### [Hyperbolic Functions](https://en.wikipedia.org/wiki/Hyperbolic_functions)
 
-<br/>
-Static functions
+#### Common Hyperbolic Functions (static)
+
+```javascript
+Cxmath.sinh(z);
+Cxmath.cosh(z);
+Cxmath.tanh(z);
+```
+
+> Functions
+
 |name|description|return type|
 |:---:|:---:|:---:|
 |sinh|Hyperbolic-sine|Complex|
 |cosh|Hyperbolic-cosine|Complex|
 |tanh|Hyperbolic-tangent|Complex|
 
-<br/>
-Arguments
+> Parameters
+
 |name|type|required|
 |:---:|:---:|:---:|
 |z|number/Complex|O|
