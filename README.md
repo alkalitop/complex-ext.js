@@ -333,7 +333,6 @@ Cxmath.asec(z);
 Cxmath.acot(z);
 ```
 
-<br/>
 **Static functions**
 |name|description|return type|
 |:---:|:---:|:---:|
@@ -344,7 +343,6 @@ Cxmath.acot(z);
 |asec|Arcsecant|Complex|
 |acot|Arccotangent|Complex|
 
-<br/>
 **Arguments**
 |name|type|required|
 |:---:|:---:|:---:|
