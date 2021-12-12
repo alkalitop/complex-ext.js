@@ -305,6 +305,7 @@ Cxmath.cot(z);
 ```
 
 > Static functions
+
 |name|description|return type|
 |:---:|:---:|:---:|
 |sin|Sine|Complex|
@@ -315,6 +316,7 @@ Cxmath.cot(z);
 |cot|Cotangent|Complex|
 
 > Arguments
+
 |name|type|required|
 |:---:|:---:|:---:|
 |z|number/Complex|O|
@@ -334,6 +336,7 @@ Cxmath.acot(z);
 ```
 
 > Static functions
+
 |name|description|return type|
 |:---:|:---:|:---:|
 |asin|Arcsine|Complex|
