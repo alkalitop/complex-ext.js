@@ -304,7 +304,7 @@ Cxmath.sec(z);
 Cxmath.cot(z);
 ```
 
-Static functions
+> Static functions
 |name|description|return type|
 |:---:|:---:|:---:|
 |sin|Sine|Complex|
@@ -314,7 +314,7 @@ Static functions
 |sec|Secant|Complex|
 |cot|Cotangent|Complex|
 
-Arguments
+> Arguments
 |name|type|required|
 |:---:|:---:|:---:|
 |z|number/Complex|O|
@@ -333,7 +333,7 @@ Cxmath.asec(z);
 Cxmath.acot(z);
 ```
 
-<strong>Static functions</strong>
+> Static functions
 |name|description|return type|
 |:---:|:---:|:---:|
 |asin|Arcsine|Complex|
