@@ -392,36 +392,31 @@ Cxmath.tanh(z);
 
 ### [Inverse(Area-) Hyperbolic Functions](https://en.wikipedia.org/wiki/Inverse_hyperbolic_functions)
 
-#### Complex asinh(z)
-Inverse hyperbolic sine
-```javascript
-Cxmath.asinh(z);
-```
-|name|type|required|
-|:---:|:---:|:---:|
-|z|number/Complex|O|
+#### Common Inverse Hyperbolic Functions (static)
 
-#### Complex acosh(z)
-Inverse hyperbolic cosine
 ```javascript
-Cxmath.acosh(z);
+Cxmath.sinh(z);
+Cxmath.cosh(z);
+Cxmath.tanh(z);
 ```
-|name|type|required|
-|:---:|:---:|:---:|
-|z|number/Complex|O|
 
-#### Complex atanh(z)
-Inverse hyperbolic tangent
-```javascript
-Cxmath.atanh(z);
-```
+> Functions
+
+|name|description|return type|
+|:---:|:---:|:---:|
+|sinh|Inverse-hyperbolic-sine|Complex|
+|cosh|Inverse-hyperbolic-cosine|Complex|
+|tanh|Inverse-hyperbolic-tangent|Complex|
+
+> Parameters
+
 |name|type|required|
 |:---:|:---:|:---:|
 |z|number/Complex|O|
 
 ### Sign Function
 
-#### number csgn(z)
+#### number static csgn(z)
 Complex sign function
 <sup>[note](https://en.wikipedia.org/wiki/Sign_function#Complex_signum)</sup>
 ```javascript
@@ -433,7 +428,7 @@ Cxmath.csgn(z);
 
 ### Vector
 
-#### number norm(z)
+#### number static norm(z)
 Norm
 ```javascript
 Cxmath.norm(z) := z.abs()
@@ -442,7 +437,7 @@ Cxmath.norm(z) := z.abs()
 |:---:|:---:|:---:|
 |z|number/Complex|O|
 
-#### number inp(a, b)
+#### number static inp(a, b)
 Inner Product
 ```javascript
 Cxmath.inp(a, b);
@@ -452,7 +447,7 @@ Cxmath.inp(a, b);
 |a|number/Complex|O|
 |b|number/Complex|O|
 
-#### number dist(a, b)
+#### number static dist(a, b)
 Distance from point a to point b
 ```javascript
 Cxmath.dist(a, b);
@@ -464,7 +459,7 @@ Cxmath.dist(a, b);
 
 ### Random
 
-#### Complex random()
+#### Complex static random()
 Random complex (both real part and imaginary part are more than or equal to 0 and less than 1)
 ```javascript
 Cxmath.random();
