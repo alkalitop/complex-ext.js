@@ -43,7 +43,7 @@ z = new Complex(Math.PI, 2, 'polar'); // 2exp(jπ) = -2
 |abs|number|O|
 |polar|string|O|
 
-### constructor(str)
+#### constructor(str)
 Parse string
 ```javascript
 z = new Complex('1+3j'); // 1+3j
