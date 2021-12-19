@@ -4,12 +4,8 @@ Javascript complex number library
 ## Copyright
 © 2021 Sanha(sweetcorn1229), all rights reserved.
 
-## Basic
- 
-### It's compatible with..
-- Front-end Javascript
-- Node.js
-- Rhino Javascript Engine
+## Notice
+This project hasn't been completed yet.
 
 ## Get Started
 ```javascript
