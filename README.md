@@ -7,7 +7,7 @@ Javascript complex number library
 ## Notice
 This project is semi-completed/semi-ongoing project.
 
-## How-to-use
+## Docs
 
 ### Get Started
 Require(Import) module to start.
