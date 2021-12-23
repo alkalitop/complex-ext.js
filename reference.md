@@ -339,16 +339,16 @@ Cxmath.acot(z);
 |:---:|:---:|:---:|
 |z|number/Complex|O|
 
-#### Complex static atan2(w, z)
+#### Complex static atan2(z1, z2)
 2-argument-arctangent
 <sup>[Note](https://en.m.wikipedia.org/wiki/Atan2)</sup>
 ```javascript
-Cxmath.atan2(w, z);
+Cxmath.atan2(z1, z2);
 ```
 |name|type|required|
 |:---:|:---:|:---:|
-|w|number/Complex|O|
-|z|number/Complex|O|
+|z1|number/Complex|O|
+|z2|number/Complex|O|
 
 ### [Hyperbolic Functions](https://en.wikipedia.org/wiki/Hyperbolic_functions)
 
