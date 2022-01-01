@@ -23,6 +23,7 @@ const { Complex, Cxmath } = require(PATH);
 - https://blog.naver.com/jsrhim516/221672531124
 - https://blog.naver.com/jsrhim516/221672753890
 - https://j1w2k3.tistory.com/627
+- https://ko.wikipedia.org/wiki/극좌표계
 - https://ko.wikipedia.org/wiki/로그_(수학)
 - https://ko.wikipedia.org/wiki/복소수
 - https://ko.wikipedia.org/wiki/복소평면
@@ -33,6 +34,7 @@ const { Complex, Cxmath } = require(PATH);
 - https://ko.wikipedia.org/wiki/자연로그
 - https://ko.wikipedia.org/wiki/지수_함수
 - https://ko.wikipedia.org/wiki/테일러_급수
+- https://namu.wiki/w/노름(수학)
 - https://namu.wiki/w/로그(수학)
 - https://namu.wiki/w/복소로그함수
 - https://namu.wiki/w/복소수
@@ -41,5 +43,6 @@ const { Complex, Cxmath } = require(PATH);
 - https://namu.wiki/w/오일러%20공식
 - https://namu.wiki/w/자연로그
 - https://namu.wiki/w/절댓값
+- https://namu.wiki/w/좌표계
 - https://namu.wiki/w/지수함수
 - https://namu.wiki/w/테일러%20급수
