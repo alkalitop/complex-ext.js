@@ -22,6 +22,7 @@ const { Complex, Cxmath } = require(PATH);
 
 - https://blog.naver.com/jsrhim516/221672531124
 - https://blog.naver.com/jsrhim516/221672753890
+- https://j1w2k3.tistory.com/627
 - https://ko.wikipedia.org/wiki/복소수
 - https://ko.wikipedia.org/wiki/복소평면
 - https://ko.wikipedia.org/wiki/오일러_공식
@@ -30,4 +31,4 @@ const { Complex, Cxmath } = require(PATH);
 - https://ko.wikipedia.org/wiki/삼각함수
 - https://ko.wikipedia.org/wiki/역삼각함수
 - https://ko.wikipedia.org/wiki/쌍곡선_함수
-
+- https://namu.wiki/w/삼각함수
