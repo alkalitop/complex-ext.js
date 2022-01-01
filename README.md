@@ -19,7 +19,6 @@ const { Complex, Cxmath } = require(PATH);
 ### [Ref](https://github.com/sweetcorn1229/cplx.js/blob/main/reference.md)
 
 ## Referenced Articles
-
 - https://blog.naver.com/jsrhim516/221672531124
 - https://blog.naver.com/jsrhim516/221672753890
 - https://j1w2k3.tistory.com/627
@@ -46,3 +45,4 @@ const { Complex, Cxmath } = require(PATH);
 - https://namu.wiki/w/좌표계
 - https://namu.wiki/w/지수함수
 - https://namu.wiki/w/테일러%20급수
+- https://spiralmoon.tistory.com/entry/프로그래밍-이론-두-점-사이의-절대각도를-재는-atan2
