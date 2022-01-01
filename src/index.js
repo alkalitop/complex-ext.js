@@ -568,6 +568,5 @@ cxmath.random = function () {
 
 module.exports = {
   Complex: complex,
-  Cxmath: cxmath,
-  Cxcalc: cxcalc
+  Cxmath: cxmath
 };
