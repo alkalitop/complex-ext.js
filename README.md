@@ -21,12 +21,16 @@ const { Complex, Cxmath } = require(PATH);
 ## Referenced Articles
 
 ### Blog
+#### Naver Blog: jsrhim516
 - https://blog.naver.com/jsrhim516/221672531124
 - https://blog.naver.com/jsrhim516/221672753890
+#### Tistory: j1w2k3
 - https://j1w2k3.tistory.com/627
+#### Tistory: spiralmoon
 - https://spiralmoon.tistory.com/entry/프로그래밍-이론-두-점-사이의-절대각도를-재는-atan2
 
 ### Wiki
+#### Wikipedia
 - https://ko.wikipedia.org/wiki/극좌표계
 - https://ko.wikipedia.org/wiki/로그_(수학)
 - https://ko.wikipedia.org/wiki/복소수
@@ -38,6 +42,7 @@ const { Complex, Cxmath } = require(PATH);
 - https://ko.wikipedia.org/wiki/자연로그
 - https://ko.wikipedia.org/wiki/지수_함수
 - https://ko.wikipedia.org/wiki/테일러_급수
+#### Namu Wiki
 - https://namu.wiki/w/노름(수학)
 - https://namu.wiki/w/로그(수학)
 - https://namu.wiki/w/복소로그함수
