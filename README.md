@@ -42,16 +42,18 @@ const { Complex, Cxmath } = require(PATH);
 - [자연로그](https://ko.wikipedia.org/wiki/자연로그)
 - [지수 함수](https://ko.wikipedia.org/wiki/지수_함수)
 - [테일러 급수](https://ko.wikipedia.org/wiki/테일러_급수)
+#### Libre Wiki
+- [복소수](https://librewiki.net/wiki/복소수)
 #### Namu Wiki
 - [노름\(수학\)](https://namu.wiki/w/노름\(수학\))
 - [로그\(수학\)](https://namu.wiki/w/로그\(수학\))
 - [복소로그함수](https://namu.wiki/w/복소로그함수)
-- https://namu.wiki/w/복소수
-- https://namu.wiki/w/복소평면
-- https://namu.wiki/w/삼각함수
-- https://namu.wiki/w/오일러%20공식
-- https://namu.wiki/w/자연로그
-- https://namu.wiki/w/절댓값
-- https://namu.wiki/w/좌표계
-- https://namu.wiki/w/지수함수
-- https://namu.wiki/w/테일러%20급수
+- [복소수](https://namu.wiki/w/복소수)
+- [복소평면](https://namu.wiki/w/복소평면)
+- [삼각함수](https://namu.wiki/w/삼각함수)
+- [오일러 공식](https://namu.wiki/w/오일러%20공식)
+- [자연로그](https://namu.wiki/w/자연로그)
+- [절댓값](https://namu.wiki/w/절댓값)
+- [좌표계](https://namu.wiki/w/좌표계)
+- [지수함수](https://namu.wiki/w/지수함수)
+- [테일러 급수](https://namu.wiki/w/테일러%20급수)
