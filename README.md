@@ -27,7 +27,7 @@ const { Complex, Cxmath } = require(PATH);
 #### Tistory: j1w2k3
 - [\[기하와 벡터 이론 10탄\] 벡터의 내적](https://j1w2k3.tistory.com/627)
 #### Tistory: spiralmoon
-- [\[프로그래밍 이론\] 두 점 사이의 절대각도를 재는 atan2]https://spiralmoon.tistory.com/entry/프로그래밍-이론-두-점-사이의-절대각도를-재는-atan2
+- [\[프로그래밍 이론\] 두 점 사이의 절대각도를 재는 atan2](https://spiralmoon.tistory.com/entry/프로그래밍-이론-두-점-사이의-절대각도를-재는-atan2)
 
 ### Wiki
 #### Wikipedia
