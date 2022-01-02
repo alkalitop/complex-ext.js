@@ -22,8 +22,8 @@ const { Complex, Cxmath } = require(PATH);
 
 ### Blog
 #### Naver Blog: jsrhim516
-- https://blog.naver.com/jsrhim516/221672531124
-- https://blog.naver.com/jsrhim516/221672753890
+- [12. 복소수와 벡터(1/2)](https://blog.naver.com/jsrhim516/221672531124)
+- [12. 복소수와 벡터(2/2)](https://blog.naver.com/jsrhim516/221672753890)
 #### Tistory: j1w2k3
 - https://j1w2k3.tistory.com/627
 #### Tistory: spiralmoon
