@@ -42,8 +42,10 @@ const { Complex, Cxmath } = require(PATH);
 - [자연로그](https://ko.wikipedia.org/wiki/자연로그)
 - [지수 함수](https://ko.wikipedia.org/wiki/지수_함수)
 - [테일러 급수](https://ko.wikipedia.org/wiki/테일러_급수)
-#### Libre Wiki
-- [복소수](https://librewiki.net/wiki/복소수)
+#### Wikipedia EN
+- [Inverse hyperbolic functions](https://en.wikipedia.org/wiki/Inverse_hyperbolic_functions)
+- [Pythagorean addition](https://en.wikipedia.org/wiki/Pythagorean_addition)
+- [Principal branch](https://en.wikipedia.org/wiki/Principal_branch)
 #### Namu Wiki
 - [노름\(수학\)](https://namu.wiki/w/노름\(수학\))
 - [로그\(수학\)](https://namu.wiki/w/로그\(수학\))
