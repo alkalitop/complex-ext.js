@@ -19,7 +19,7 @@ const { Complex, Cxmath } = require(PATH);
 ### [Reference](https://github.com/sweetcorn1229/cplx.js/blob/main/reference.md)
 
 ## Referenced Articles
-수학 하<sup>下</sup>까지 배우고 나머지는 독학으로 커버하기
+수학 I까지 배우고 나머지는 독학으로 커버하기
 
 ### Blog
 #### Naver Blog: jsrhim516
@@ -60,3 +60,6 @@ const { Complex, Cxmath } = require(PATH);
 - [좌표계](https://namu.wiki/w/좌표계)
 - [지수함수](https://namu.wiki/w/지수함수)
 - [테일러 급수](https://namu.wiki/w/테일러%20급수)
+
+### Books
+#### 개념원리 수학 I
