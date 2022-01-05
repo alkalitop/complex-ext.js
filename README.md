@@ -16,9 +16,10 @@ const { Complex, Cxmath } = require(PATH);
 // If this project get completed, you will able to find it in npm!
 ```
 
-### [Ref](https://github.com/sweetcorn1229/cplx.js/blob/main/reference.md)
+### [Reference](https://github.com/sweetcorn1229/cplx.js/blob/main/reference.md)
 
 ## Referenced Articles
+<del>수학 하<sup>下</sup>까지 배운다음에 독학으로 커버하기</del>
 
 ### Blog
 #### Naver Blog: jsrhim516
