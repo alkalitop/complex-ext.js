@@ -19,7 +19,7 @@ const { Complex, Cxmath } = require(PATH);
 ### [Reference](https://github.com/sweetcorn1229/cplx.js/blob/main/reference.md)
 
 ## Referenced Articles
-<del>수학 하<sup>下</sup>까지 배운다음에 독학으로 커버하기</del>
+<del>수학 하</del><sup>下</sup><del>까지 배운다음에 독학으로 커버하기</del>
 
 ### Blog
 #### Naver Blog: jsrhim516
