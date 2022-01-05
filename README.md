@@ -60,6 +60,3 @@ const { Complex, Cxmath } = require(PATH);
 - [좌표계](https://namu.wiki/w/좌표계)
 - [지수함수](https://namu.wiki/w/지수함수)
 - [테일러 급수](https://namu.wiki/w/테일러%20급수)
-
-### Books
-#### 개념원리 수학 I
