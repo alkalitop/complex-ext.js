@@ -19,7 +19,7 @@ const { Complex, Cxmath } = require(PATH);
 ### [Reference](https://github.com/sweetcorn1229/cplx.js/blob/main/reference.md)
 
 ## Referenced Articles
-Learning up to Mathematics II(Korean high school curriculum), teaching myself the rest
+Learning up to Mathematics II(Korean high school curriculum), teaching myself the rest through Wiki, blog posts, etc.
 
 ### Blog
 #### Naver Blog: jsrhim516
