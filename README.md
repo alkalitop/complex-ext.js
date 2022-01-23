@@ -5,7 +5,7 @@ Javascript complex number library
 © 2021-2022 Sanha(sweetcorn1229), all rights reserved.
 
 ## Notice
-This project is ongoing project.
+This project is ongoing project. First version hasn't yet released.
 
 ## Docs
 
