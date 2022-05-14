@@ -179,27 +179,22 @@ Cxmath.cbrt(z); // 1.21961...+0.47171...j
 |:---:|:---:|:---:|
 |z|number/string/Complex|O|
 
-### Exponential Function & Logarithm
+### Static Method: Exponential Function & Logarithm
 
 #### Complex static exp(z)
 Exponential function
-<sup>[note1](https://en.wikipedia.org/wiki/Exponential_function)</sup>
-<sup>[note2](https://en.wikipedia.org/wiki/Complex_number#Exponentiation)</sup>
 ```javascript
 Cxmath.exp(z);
 ```
+
+> Parameters
+
 |name|type|required|
 |:---:|:---:|:---:|
-|z|number/Complex|O|
+|z|number/string/Complex|O|
 
 #### Complex static log(a[, b=Math.E])
-Logarithm
-<sup>[note1](https://en.wikipedia.org/wiki/Logarithm)</sup>
-<sup>[note2](https://en.wikipedia.org/wiki/Complex_number#Complex_logarithm)</sup>
-defined in principal branch
-<sup>[note1](https://en.wikipedia.org/wiki/Principal_branch)</sup>
-<sup>[note2](https://en.wikipedia.org/wiki/Branch_point#Branch_cuts)</sup>
-with base b and antilogarithm a (if the base equals e, you may leave it out.)
+Logarithm (defined in principal branch) with base b and antilogarithm a (if the base equals e, you can leave it out.)
 ```javascript
 Cxmath.log(a); // Natural Logarithm
 Cxmath.log(a, 2); // Binary Logarithm
@@ -211,12 +206,12 @@ Cxmath.log(a, b);
 
 |name|type|required|
 |:---:|:---:|:---:|
-|a|number/Complex|O|
-|b|numner/Complex|X|
+|a|number/string/Complex|O|
+|b|numner/string/Complex|X|
 
-### [Trigonometric Functions](https://en.wikipedia.org/wiki/Trigonometric_functions)
+### Static Method: Trigonometric Functions
 
-#### Common Trigonometric Functions (static)
+#### Trigonometric Functions
 
 ```javascript
 Cxmath.sin(z);
@@ -243,11 +238,9 @@ Cxmath.cot(z);
 
 |name|type|required|
 |:---:|:---:|:---:|
-|z|number/Complex|O|
+|z|number/string/Complex|O|
 
-### [Inverse Trigonometric Functions](https://en.wikipedia.org/wiki/Inverse_trigonometric_functions)
-
-#### Common Inverse Trigonometric Functions (static)
+#### Inverse Trigonometric Functions
 
 ```javascript
 Cxmath.asin(z);
@@ -274,22 +267,21 @@ Cxmath.acot(z);
 
 |name|type|required|
 |:---:|:---:|:---:|
-|z|number/Complex|O|
+|z|number/string/Complex|O|
 
 #### Complex static atan2(z1, z2)
 2-argument-arctangent
-<sup>[Note](https://en.m.wikipedia.org/wiki/Atan2)</sup>
 ```javascript
 Cxmath.atan2(z1, z2);
 ```
 |name|type|required|
 |:---:|:---:|:---:|
-|z1|number/Complex|O|
-|z2|number/Complex|O|
+|z1|number/string/Complex|O|
+|z2|number/string/Complex|O|
 
-### [Hyperbolic Functions](https://en.wikipedia.org/wiki/Hyperbolic_functions)
+### Static Method: Hyperbolic Functions
 
-#### Common Hyperbolic Functions (static)
+#### Hyperbolic Functions
 
 ```javascript
 Cxmath.sinh(z);
@@ -309,11 +301,9 @@ Cxmath.tanh(z);
 
 |name|type|required|
 |:---:|:---:|:---:|
-|z|number/Complex|O|
+|z|number/string/Complex|O|
 
-### [Inverse(Area-) Hyperbolic Functions](https://en.wikipedia.org/wiki/Inverse_hyperbolic_functions)
-
-#### Common Inverse Hyperbolic Functions (static)
+#### Inverse Hyperbolic Functions
 
 ```javascript
 Cxmath.asinh(z);
@@ -325,15 +315,15 @@ Cxmath.atanh(z);
 
 |name|description|return type|
 |:---:|:---:|:---:|
-|asinh|Inverse-hyperbolic-sine|Complex|
-|acosh|Inverse-hyperbolic-cosine|Complex|
-|atanh|Inverse-hyperbolic-tangent|Complex|
+|asinh|Inverse-hyperbolic-sine (arsinh)|Complex|
+|acosh|Inverse-hyperbolic-cosine (arcosh)|Complex|
+|atanh|Inverse-hyperbolic-tangent (artanh)|Complex|
 
 > Parameters
 
 |name|type|required|
 |:---:|:---:|:---:|
-|z|number/Complex|O|
+|z|number/string/Complex|O|
 
 ### Sign Function
 
