@@ -1,5 +1,5 @@
 /*
-© 2021-2022 Sanha, all rights reserved.
+© 2021-2022 sanha1229 (Sanha), all rights reserved.
 */
 
 function typedis (z) {
