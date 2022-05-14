@@ -49,31 +49,19 @@ z = new Complex(z);
 |cplx|Complex|O|
 
 ### Properties
-#### number re
-Real part
 ```javascript
-z.re;
+let z = new Complex('1+2j');
+z.re; // 1
+z.im; // 2
+z.abs; // 2.23606...
+z.arg; // 1.10714...
 ```
-
-#### number im
-Imaginary part
-```javascript
-z.im;
-```
-
-#### number abs
-Absolute value (Modulus)
-<sup>[note](https://en.wikipedia.org/wiki/Complex_number#Modulus_and_argument)</sup>
-```javascript
-z.abs;
-```
-
-#### number arg
-Argument
-<sup>[note](https://en.wikipedia.org/wiki/Complex_number#Modulus_and_argument)</sup>
-```javascript
-z.arg;
-```
+|name|description|type|
+|:---:|:---:|:---:|
+|re|real part|Complex|
+|im|imaginary part|Complex|
+|abs|modulus|Complex|
+|arg|argument|Complex|
 
 ### Constants
 ```javascript
@@ -83,6 +71,7 @@ Complex.E; // 2.718281...
 Complex.ONE; // 1
 Complex.UNIT; // 1j
 ```
+
 |name|description|type|
 |:---:|:---:|:---:|
 |EPSILON|2^-52|Complex|
@@ -116,7 +105,7 @@ z.equals(w); // false
 |:---:|:---:|:---:|
 |z|number/string/Complex|O|
 
-### Method: Operations
+### Method: Basic Operations
 ```javascript
 let z = new Complex('3+2j');
 let w = new Complex('1-2j');
@@ -144,58 +133,51 @@ z.inv('13+9j');
 |:---:|:---:|:---:|
 |z|number/string/Complex|O|
 
-## class Cxmath (Mathematical Functions)
+## class Cxmath
 
-### Advanced Operations
-
-#### Complex static opp(z)
-Opposite number (Additive inverse)<sup>[note](https://en.wikipedia.org/wiki/Additive_inverse)</sup>
+### Static Method: Advanced Operations
 ```javascript
-Cxmath.opp(z);
+let z = new Complex('1+2j');
+
+Cxmath.conj(z); // 1-2j
+Cxmath.opp(z); // -1-2j
+Cxmath.rec(z); // 0.19999...-0.39999...j
 ```
+
+> Functions
+
+|name|description|return type|
+|:---:|:---:|:---:|
+|conj|complex conjugate|Complex|
+|opp|opposite number (additive inverse)|Complex|
+|rec|reciprocal|Complex|
+
+> Parameters
+
 |name|type|required|
 |:---:|:---:|:---:|
-|z|number/Complex|O|
+|z|number/string/Complex|O|
 
-#### Complex static con(z)
-Complex conjugate
-<sup>[note](https://en.wikipedia.org/wiki/Complex_conjugate)</sup>
+### Static Method: Radical Roots
 ```javascript
-Cxmath.con(z);
+let z = new Complex('1+2j');
+
+Cxmath.sqrt(z); // 1.27201...+0.78615...j
+Cxmath.cbrt(z); // 1.21961...+0.47171...j
 ```
+
+> Functions
+
+|name|description|return type|
+|:---:|:---:|:---:|
+|sqrt|square root|Complex|
+|cbrt|cube root|Complex|
+
+> Parameters
+
 |name|type|required|
 |:---:|:---:|:---:|
-|z|number/Complex|O|
-
-#### Complex static rec(z)
-Reciprocal
-```javascript
-Cxmath.rec(z);
-```
-|name|type|required|
-|:---:|:---:|:---:|
-|z|number/Complex|O|
-
-### [Radical Roots](https://en.wikipedia.org/wiki/Square_root#Square_roots_of_negative_and_complex_numbers)
-
-#### Complex static sqrt(z)
-Principal square root
-<sup>[note](https://en.wikipedia.org/wiki/Complex_number#Square_root)</sup>
-```javascript
-Cxmath.sqrt(z);
-```
-|name|type|required|
-|:---:|:---:|:---:|
-|z|number/Complex|O|
-
-#### Complex static cbrt(z)
-Principal cube root
-```javascript
-Cxmath.cbrt(z);
-```
-|name|type|required|
-|:---:|:---:|:---:|
-|z|number/Complex|O|
+|z|number/string/Complex|O|
 
 ### Exponential Function & Logarithm
 
