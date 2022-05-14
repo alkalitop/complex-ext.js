@@ -10,6 +10,9 @@ Generate complex number in cartesian form
 ```javascript
 z = new Complex(1, 2); // 1+2j
 ```
+
+> Parameters
+
 |name|type|required|
 |:---:|:---:|:---:|
 |re|number|O|
@@ -22,6 +25,9 @@ Generate complex number in polar form
 ```javascript
 z = new Complex(Math.PI, 2, { polar: true }); // 2exp(jπ) = -2
 ```
+
+> Parameters
+
 |name|type|required|
 |:---:|:---:|:---:|
 |arg|number|O|
@@ -35,6 +41,9 @@ z = new Complex('1+3j'); // 1+3j
 z = new Complex('-7j'); // -7j
 z = new Complex('-6-1j'); // -6-1j
 ```
+
+> Parameters
+
 |name|type|required|
 |:---:|:---:|:---:|
 |str|string|O|
@@ -44,6 +53,9 @@ Copy a complex that has already been declared
 ```javascript
 z = new Complex(z);
 ```
+
+> Parameters
+
 |name|type|required|
 |:---:|:---:|:---:|
 |cplx|Complex|O|
@@ -56,6 +68,7 @@ z.im; // 2
 z.abs; // 2.23606...
 z.arg; // 1.10714...
 ```
+
 |name|description|type|
 |:---:|:---:|:---:|
 |re|real part|Complex|
@@ -91,7 +104,7 @@ z.toString()
 ### Method: Equal
 
 #### boolean equals(z)
-Equality
+Equal
 ```javascript
 let z = new Complex('3+2j');
 let w = new Complex('5-4j');
@@ -325,9 +338,9 @@ Cxmath.atanh(z);
 |:---:|:---:|:---:|
 |z|number/string/Complex|O|
 
-### Sign Function
+### Static Method: Sign Function
 
-#### number static csgn(z)
+#### Complex static csgn(z)
 Complex sign function
 <sup>[note](https://en.wikipedia.org/wiki/Sign_function#Complex_signum)</sup>
 ```javascript
@@ -335,43 +348,56 @@ Cxmath.csgn(z);
 ```
 |name|type|required|
 |:---:|:---:|:---:|
-|z|number/Complex|O|
+|z|number/string/Complex|O|
 
-### Vector
+### Static Method: Vector
 
-#### number static norm(z)
-Norm
-```javascript
-Cxmath.norm(z) := z.abs()
-```
-|name|type|required|
-|:---:|:---:|:---:|
-|z|number/Complex|O|
-
-#### number static inp(a, b)
+#### Complex static inprod(a, b)
 Inner Product
 ```javascript
 Cxmath.inp(a, b);
 ```
 |name|type|required|
 |:---:|:---:|:---:|
-|a|number/Complex|O|
-|b|number/Complex|O|
+|a|number/string/Complex|O|
+|b|number/string/Complex|O|
 
-#### number static dist(a, b)
+#### Complex static dist(a, b)
 Distance from point a to point b
 ```javascript
 Cxmath.dist(a, b);
 ```
 |name|type|required|
 |:---:|:---:|:---:|
-|a|number/Complex|O|
-|b|number/omplex|O|
+|a|number/string/Complex|O|
+|b|number/string/Complex|O|
 
-### Random
+### Static Method: Random
 
 #### Complex static random()
 Random complex (both real part and imaginary part are more than or equal to 0 and less than 1)
 ```javascript
 Cxmath.random();
 ```
+
+### Static Method: Floor & Ceil
+```javascript
+Cxmath.floor(z);
+Cxmath.ceil(z);
+Cxmath.round(z);
+Cxmath.trunc(z);
+```
+> Functions
+
+|name|description|return type|
+|:---:|:---:|:---:|
+|floor|-|Complex|
+|ceil|-|Complex|
+|round|-|Complex|
+|trunc|-|Complex|
+
+> Parameters
+
+|name|type|required|
+|:---:|:---:|:---:|
+|z|number/string/Complex|O|
