@@ -355,7 +355,7 @@ Cxmath.csgn(z);
 #### Complex static inprod(a, b)
 Inner Product
 ```javascript
-Cxmath.inp(a, b);
+Cxmath.inprod(a, b);
 ```
 |name|type|required|
 |:---:|:---:|:---:|
