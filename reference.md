@@ -4,7 +4,7 @@
 
 ### Constructor
 
-#### constructor(re[, im])
+#### constructor(re[, im, option])
 Generate complex number in cartesian form
 <sup>[note](https://en.wikipedia.org/wiki/Complex_number#Cartesian_complex_plane)</sup> (if the imaginary part equals zero, you may leave it out.)
 ```javascript
@@ -14,18 +14,19 @@ z = new Complex(1, 2); // 1+2j
 |:---:|:---:|:---:|
 |re|number|O|
 |im|number|X|
+|option|object|X|
 
-#### constructor(arg, abs, polarTag)
+#### constructor(arg, abs, option)
 Generate complex number in polar form
 <sup>[note](https://en.wikipedia.org/wiki/Complex_number#Polar_complex_plane)</sup>
 ```javascript
-z = new Complex(Math.PI, 2, 'polar'); // 2exp(jπ) = -2
+z = new Complex(Math.PI, 2, { polar: true }); // 2exp(jπ) = -2
 ```
 |name|type|required|
 |:---:|:---:|:---:|
 |arg|number|O|
 |abs|number|O|
-|polar|string|O|
+|option|object|O|
 
 #### constructor(str)
 Parse string
@@ -38,7 +39,7 @@ z = new Complex('-6-1j'); // -6-1j
 |:---:|:---:|:---:|
 |str|string|O|
 
-#### constructor(cplx)
+#### constructor(complex)
 Copy a complex that has already been declared
 ```javascript
 z = new Complex(z);
@@ -113,81 +114,50 @@ String representation
 z.toString()
 ```
 
-### Equivalence
+### Method: Equal
 
-#### boolean equiv(z)
-Equivalence
+#### boolean equals(z)
+Equality
 ```javascript
-w.equiv(z)
+let z = new Complex('3+2j');
+let w = new Complex('5-4j');
+
+z.equals(1); // false
+z.equals('3+2j'); // true
+z.equals(w); // false
 ```
 
 |name|type|required|
 |:---:|:---:|:---:|
-|z|number/Complex|O|
+|z|number/string/Complex|O|
 
-### Basic 4 Operations
+### Method: Operations
 ```javascript
-let p = new Complex(1, 2);
-let q = new Complex(3, -4);
+let z = new Complex('3+2j');
+let w = new Complex('1-2j');
+
+z.add(3);
+z.sub('6-2j');
+z.mul(w);
+z.div(Complex.UNIT);
+z.inv('13+9j');
 ```
-#### Complex add(z)
-Addition
-<sup>[note](https://en.wikipedia.org/wiki/Complex_number#Addition_and_subtraction)</sup>
-```javascript
-p.add(q); // 4-2j
-p.add(6); // 7+2j
-```
+
+> Functions
+
+|name|description|return type|
+|:---:|:---:|:---:|
+|add|addition|Complex|
+|sub|subtraction|Complex|
+|mul|multiplication|Complex|
+|div|division|Complex|
+|inv|exponentiation|Complex|
+
+> Parameters
+
 |name|type|required|
 |:---:|:---:|:---:|
-|z|number/Complex|O|
-
-#### Complex sub(z)
-Subtraction
-<sup>[note](https://en.wikipedia.org/wiki/Complex_number#Addition_and_subtraction)</sup>
-```javascript
-p.sub(q); // -2+6j
-p.sub(6); // -5+2j
-```
-|name|type|required|
-|:---:|:---:|:---:|
-|z|number/Complex|O|
-
-#### Complex mul(z)
-Multiplication
-<sup>[note1](https://en.wikipedia.org/wiki/Complex_number#Multiplication_and_square)</sup>
-<sup>[note2](https://en.wikipedia.org/wiki/Complex_number#Multiplication_and_division_in_polar_form)</sup>
-```javascript
-p.mul(q); // 11+2j
-p.mul(6); // 6+12j
-```
-|name|type|required|
-|:---:|:---:|:---:|
-|z|number/Complex|O|
-
-#### Complex div(z)
-Division
-<sup>[note1](https://en.wikipedia.org/wiki/Complex_number#Reciprocal_and_division)</sup>
-<sup>[note2](https://en.wikipedia.org/wiki/Complex_number#Multiplication_and_division_in_polar_form)</sup>
-```javascript
-p.div(q); // -0.2+0.4j
-p.div(4); // 0.25+0.5j
-```
-|name|type|required|
-|:---:|:---:|:---:|
-|z|number/Complex|O|
-
-### Exponentiation
-
-#### Complex inv(z)
-Exponentiation
-<sup>[note](https://en.wikipedia.org/wiki/Complex_number#Exponentiation)</sup>
-```javascript
-p.inv(q); // 932.1391946432212+95.9465336603415j
-p.inv(6); // 117+44j
-```
-|name|type|required|
-|:---:|:---:|:---:|
-|z|number/Complex|O|
+|z|number/string/Complex|O|
 
 ## class Cxmath (Mathematical Functions)
 
