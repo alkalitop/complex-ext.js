@@ -2,571 +2,533 @@
 © 2021-2022 Sanha, all rights reserved.
 */
 
-// constructor
-
-function complex () {
-  let t = typedis(arguments[0]) + typedis(arguments[1]);
-  switch (arguments.length) {
-    case 1:
-      if (t == 'nx') {
-        this.re = arguments[0], this.im = 0;
-      }
-      else if (t == 'cx') {
-        this.re = arguments[0].re, this.im = arguments[0].im;
-      }
-      else {
-        let pc = strparse(arguments[0]);
-        if (pc) {
-          this.re = pc.re, this.im = pc.im;
-        }
-        else throw new Error();
-      }
-    break;
-    case 2:
-      if (t == 'nn') {
-        this.re = arguments[0], this.im = arguments[1];
-      }
-      else if (t == 'cn') {
-        if (arguments[0].im) {
-          throw new Error();
-        }
-        else {
-          this.re = arguments[0].re, this.im = arguments[1];
-        }
-      }
-      else if (t == 'nc') {
-        if (arguments[1].im) {
-          throw new Error();
-        }
-        else {
-          this.re = arguments[0], this.im = arguments[1].re;
-        }
-      }
-      else if (t == 'cc') {
-        if (arguments[0].im || arguments[1].im) {
-          throw new Error();
-        }
-        else {
-          this.re = arguments[0].re, this.im = arguments[1].re;
-        }
-      }
-      else {
-        throw new Error();
-      }
-    break;
-    case 3:      
-      if (arguments[2] == 'polar') {
-        if (t == 'nn') {
-          this.re = arguments[0]*Math.cos(arguments[1]);
-          this.im = arguments[0]*Math.sin(arguments[1]);
-        }
-        else if (t == 'cn') {
-          if (arguments[0].im) {
-            throw new Error();
-          }
-          else {
-            this.re = arguments[0].re*Math.cos(arguments[1]);
-            this.im = arguments[0]*reMath.sin(arguments[1]);
-          }
-        }
-        else if (t == 'nc') {
-          if (arguments[1].im) {
-            throw new Error();
-          }
-          else {
-            this.re = arguments[0]*Math.cos(arguments[1].re);
-            this.im = arguments[0]*Math.sin(arguments[1].re);
-          }
-        }
-        else if (t == 'cc') {
-          if (arguments[0].im || arguments[1].im) {
-            throw new Error();
-          }
-          else {
-            this.re = arguments[0].re*Math.cos(arguments[1].re);
-            this.im = arguments[0].re*Math.sin(arguments[1].re);
-          }
-        }
-        else {
-          throw new Error();
-        }
-      }
-      else {
-        throw new Error();
-      }
-    break;
-  }
-}
-
-// string parser
-
-function strparse (str) {
-  let sig1 = str.trim().match(/^(\+|\-)/)
-  sig1 = sig1 ? String(sig1).slice(0, 1) : String()
-  let spt = str.replace(/^(\+|\-)/g, '').split(/\+|\-/);
-  
-  let re, im;
-  if (spt.length == 1) {
-    re = 0, im = Number(sig1+spt[0].replace('j', ''));
-  }
-  else {
-    let sig2 = String(str.replace(sig1, '').match(/(\+|\-)/)).slice(0, 1);
-    Log.d('sig1: ' + sig1 + '\nsig2: ' + sig2);
-    re = Number(sig1+spt[0]), im = Number(sig2+spt[1].replace('j', ''));    
-  }
-  if (Number.isNaN(re) || Number.isNaN(im)) {
-    return null;
-  }
-  else {
-    return { re: re, im: im };
-  }
-}
-	
-// type discriminator
-
 function typedis (z) {
-  if (!Number.isNaN(Number(z))) {
-    return 'n';
-  }
-  else {
-    if (z instanceof complex) {
-      return 'c';
+    if (!Number.isNaN(Number(z))) {
+        return 'n';
     }
     else {
-      return 'x';
+        if (z instanceof Complex) {
+            return 'c';
+        }
+        else if (typeof z == 'string' && Number.isNaN(Number(z))) {
+            return 's';
+        }
+        else if (z == undefined) {
+            return 'u';
+        }
+        else {
+            return 'x';
+        }
     }
-  }
 }
 
-Object.defineProperty(complex.prototype, 'abs', {
-  get() {
-    return Math.hypot(this.re, this.im);
-  },
-  set(value) {
-    let prevAbs = Number(this.abs);
-    this.re = this.re*value/prevAbs;
-    this.im = this.im*value/prevAbs;
-  }
-});
+function strparse (str) {
+    let sig1 = str.trim().match(/^(\+|\-)/)
+    sig1 = sig1 ? String(sig1).slice(0, 1) : String()
+    let spt = str.replace(/^(\+|\-)/g, '').split(/\+|\-/);
+  
+    let re, im;
+    if (spt.length == 1) {
+        re = 0
+        im = Number(sig1+spt[0].replace('j', ''));
+    }
+    else {
+        let sig2 = String(str.replace(sig1, '').match(/(\+|\-)/)).slice(0, 1);
+        re = Number(sig1+spt[0])
+        im = Number(sig2+spt[1].replace('j', ''));     }
+    if (Number.isNaN(re) || Number.isNaN(im)) {
+        return null;
+    }
+    else {
+        return { re: re, im: im };
+    }
+}
 
-Object.defineProperty(complex.prototype, 'arg', {
-  get() {
-    return Math.atan2(this.im, this.re);
-  },
-  set(value) {
-    let prevAbs = Number(this.abs);
-    this.re = Math.cos(value)*prevAbs;
-    this.im = Math.sin(value)*prevAbs;
-  }
-});
+class Complex {
+    constructor () {
+        let arg = arguments;
+        let t = typedis(arg[0])+typedis(arg[1]);
+        switch (arg.length) {
+            case 1:
+                if (t == 'nu') {
+                    this.re = arg[0]-0;
+                    this.im = 0;
+                }
+                else if (t == 'cu') {
+                    this.re = arg[0].re;
+                    this.im = arg[0].im;
+                }
+                else if (t == 'su') {
+                    let p = strparse(arg[0]); // parsed string
+                    if (p) {
+                        this.re = p.re;
+                        this.im = p.im;
+                    }
+                    else throw new Error('Cannot parse the string while given (string, ...)');
+                }
+                else {
+                    throw new Error('Invalid parameter; unknown case');
+                }
+            break;
+            case 2:
+                if (t == 'nn') {
+                    this.re = arg[0]-0;
+                    this.im = arg[1]-0;
+                }
+                else if (t == 'cn') {
+                    if (arg[0].im) {
+                        throw new Error('Invalid parameter; the imaginary part of the first parameter should be equal to ZERO when given (complex, number) in constructor');
+                    }
+                    else {
+                        this.re = arg[0].re;
+                        this.im = arg[1]-0;
+                    }
+                }
+                else if (t == 'nc') {
+                    if (arg[1].im) {
+                        throw new TypeError('Invalid parameter; the imaginary part of the second parameter should be equal to ZERO when given (number, complex) in constructor');
+                    }
+                    else {
+                        this.re = arg[0]-0;
+                        this.im = arg[1].re;
+                    }
+                }
+                else if (t == 'cc') {
+                    if (arg[0].im || arg[1].im) {
+                        throw new TypeError('Invalid parameter; the imaginary part of both the first and the second parameter should be equal to ZERO when given (complex, complex) in constructor');
+                    }
+                    else {
+                        this.re = arg[0].re;
+                        this.im = arg[1].re;
+                    }
+                }
+                else {
+                    throw new TypeError('Invalid parameter; unknown case');
+                }
+            break;
+            case 3:
+                if (typeof arg[2] != 'object') {
+                    throw new TypeError('Invalid parameter; the type of the third parameter should be object or undefined in constructor');
+                }
+                if (arg[2].polar) {
+                    if (t == 'nn') {
+                        this.re = arg[0]*Math.cos(arg[1]);
+                        this.im = arg[0]*Math.sin(arg[1]);
+                    }
+                    else if (t == 'cn') {
+                        if (arg[0].im) {
+                            throw new Error('Invalid parameter; the imaginary part of the first parameter should be equal to ZERO when given (complex, number) in constructor');
+                        }
+                        else {
+                            this.re = arg[0].re*Math.cos(arg[1]);
+                            this.im = arg[0].re*Math.sin(arg[1]);
+                        }
+                    }
+                    else if (t == 'nc') {
+                        if (arg[1].im) {
+                            throw new TypeError('Invalid parameter; the imaginary part of the second parameter should be equal to ZERO when given (number, complex) in constructor');
+                        }
+                        else {
+                            this.re = arg[0]*Math.cos(arg[1].re);
+                            this.im = arg[0]*Math.sin(arg[1].re);
+                        }
+                    }
+                    else if (t == 'cc') {
+                        if (arg[0].im || arg[1].im) {
+                            throw new TypeError('Invalid parameter; the imaginary part of both the first and the second parameter should be equal to ZERO when given (complex, complex) in constructor');
+                        }
+                        else {
+                            this.re = arg[0].re*Math.cos(arg[1].re);
+                            this.im = arg[0].re*Math.sin(arg[1].re);
+                        }
+                    }
+                    else {
+                        throw new TypeError('Invalid parameter; unknown case');
+                    }
+                }
+                else {
+                    throw new TypeError('Invalid parameter; the third parameter doesn\'t have to be used in this case in constructor')
+                }
+            break;
+        }
+    }
 
-complex.prototype.toString = function () {
-  return this.re+((Math.sign(this.im)+1)?'+':'')+this.im+'j';
-};
+    get abs () {
+        return Math.hypot(this.re, this.im);
+    }
+
+    set abs (value) {
+        let prevAbs = Number(this.abs);
+        this.re = this.re*value/prevAbs
+        this.im = this.im*value/prevAbs
+    }
+
+    get arg () {
+        return Math.atan2(this.im, this.re);
+    }
+
+    set (value) {
+        let prevAbs = Number(this.abs);
+        this.re = Math.cos(value)*prevAbs;
+        this.im = Math.sin(value)*prevAbs;
+    }
+
+    get [Symbol.toStringTag] () {
+        return 'Complex';
+    }
+
+    toString () {
+        return this.re+((Math.sign(this.im)+1)?'+':'')+this.im+'j';
+    }
+}
 
 // constants
 
-complex.ONE = new complex(1);
-complex.UNIT = new complex(0, 1);
-complex.PI = new complex(Math.PI);
-complex.E = new complex(Math.E);
-complex.EPSILON = new complex(2.220446049250313e-16);
+Complex.ONE = new Complex(1);
+Complex.UNIT = new Complex(0, 1);
+Complex.PI = new Complex(Math.PI);
+Complex.E = new Complex(Math.E);
+Complex.EPSILON = new Complex(Number.EPSILON);
 
 // arithmetic
 
-complex.prototype.add = function (z) {
-  let t = typedis(z);
-  if (t == 'n') {
-    return new complex(this.re + z, this.im);
-  }
-  else if (t == 'c') {
-    return new complex(this.re + z.re, this.im + z.im);
-  }
-  else {
-    throw new Error();
-  }
-};
-
-complex.prototype.sub = function (z) {
-  let t = typedis(z);
-  if (t == 'n') {
-    return new complex(this.re - z, this.im);
-  }
-  else if (t == 'c') {
-    return new complex(this.re - z.re, this.im - z.im);
-  }
-  else {
-    throw new Error();
-  }
-};
-
-complex.prototype.mul = function (z) {
-  let t = typedis(z);
-  if (t == 'n') {
-    return new complex(this.re * z, this.im * z);
-  }
-  else if (t == 'c') {
-    return new complex(this.re*z.re - this.im*z.im, this.re*z.im + this.im*z.re);
-  }
-  else {
-    throw new Error();
-  }
-};
-
-complex.prototype.div = function (z) {
-  let t = typedis(z);
-  if (t == 'n') {
-    return new complex(this.re / z, this.im / z);
-  }
-  else if (t == 'c') {
-    let deno = Math.pow(z.abs, 2);
-    return new complex((this.re*z.re + this.im*z.im)/deno, (-this.re*z.im + this.im*z.re)/deno);
-  }
-  else {
-    throw new Error();
-  }
-};
-
-complex.prototype.inv = function (z) {
-  let t = typedis(z);
-  if (t == 'n') {
-    if (Number.isInteger(z)) {
-      let tmp = new complex(1);
-      let copy = new complex(this.re, this.im);
-      if (z >= 0) {
-        for (let i = 0; i < z; i++) {
-          tmp = tmp.mul(copy);
+Complex.prototype.add = function (z) {
+    let t = typedis(z);
+    if (t == 'n') {
+        return new Complex(this.re + z, this.im);
+    }
+    else if (t == 'c') {
+        return new Complex(this.re + z.re, this.im + z.im);
+    }
+    else if (t == 's') {
+        let p = strparse(z);
+        if (p) {
+            return new Complex(this.re + p.re, this.im + p.im);
         }
-      }
-      else {
-        for (let i = 0; i > z; i--) {
-          tmp = tmp.div(copy);
+        else {
+            throw new Error('Cannot parse the string while given (string, ...)');
         }
-      }
-      return tmp;
     }
     else {
-      return new complex(Math.pow(this.abs, z), this.arg * z, 'polar');
+        throw new TypeError('Invalid parameter; unknown case');
     }
-  }
-  else if (t == 'c') {
-    let abs = Math.pow(this.abs, z.re) * Math.exp(-z.im*this.arg);
-    let arg = z.re*this.arg + z.im*Math.log(this.abs);
-    return new complex(abs, arg, 'polar');
-  }
-  else {
-    throw new Error();
-  }
 };
 
-complex.prototype.eqto = function (z) {
-  let t = typedis(z);
-  if (t == 'n') {
-    return (Math.abs(this.re - z) < complex.EPSILON.re) && (Math.abs(this.im) < complex.EPSILON.re);
-  }
-  else if (t == 'c') {
-    return (Math.abs(this.re - z.re) < complex.EPSILON.re) && (Math.abs(this.im - z.im) < complex.EPSILON.re);
-  }
+Complex.prototype.sub = function (z) {
+    let t = typedis(z);
+    if (t == 'n') {
+        return new Complex(this.re - z, this.im);
+    }
+    else if (t == 'c') {
+        return new Complex(this.re - z.re, this.im - z.im);
+    }
+    else if (t == 's') {
+        let p = strparse(z);
+        if (p) {
+            return new Complex(this.re - p.re, this.im - p.im);
+        }
+        else {
+            throw new Error('Cannot parse the string while given (string, ...)');
+        }
+    }
+    else {
+        throw new TypeError('Invalid parameter; unknown case');
+    }
+};
+
+Complex.prototype.mul = function (z) {
+    let t = typedis(z);
+    if (t == 'n') {
+        return new Complex(this.re * z, this.im * z);
+    }
+    else if (t == 'c') {
+        return new Complex(this.re*z.re - this.im*z.im, this.re*z.im + this.im*z.re);
+    }
+    else if (t == 's') {
+        let p = strparse(z);
+        if (p) {
+            return new Complex(this.re*p.re - this.im*p.im, this.re*p.im + this.im*p.re);
+        }
+        else {
+            throw new Error('Cannot parse the string while given (string, ...)');
+        }
+    }
+    else {
+        throw new TypeError('Invalid parameter; unknown case');
+    }
+};
+
+Complex.prototype.div = function (z) {
+    let t = typedis(z);
+    if (t == 'n') {
+        return new Complex(this.re / z, this.im / z);
+    }
+    else if (t == 'c') {
+        let deno = Math.pow(z.abs, 2);
+        return new Complex((this.re*z.re + this.im*z.im)/deno, (-this.re*z.im + this.im*z.re)/deno);
+    }
+    else if (t == 's') {
+        let p = strparse(z);
+        if (p) {
+            let deno = Math.pow(p.abs, 2);
+            return new Complex((this.re*p.re + this.im*p.im)/deno, (-this.re*p.im + this.im*p.re)/deno);
+        }
+        else {
+            throw new Error('Cannot parse the string while given (string, ...)');
+        }
+    }
+    else {
+        throw new TypeError('Invalid parameter; unknown case');
+    }
+};
+
+function dcpow (a, n) {
+    if (n == 0) return new Complex(1);
+    t = dcpow(a, n/2|0);
+    if (n % 2) {
+        if (n > 0) {
+            return t.mul(t).mul(a);
+        }
+        else {
+            return t.div(t).div(a);
+        }
+    }
+    else {
+        if (n > 0) {
+            return t.mul(t);
+        }
+        else {
+            return t.div(t);
+        }
+    }
+}
+
+Complex.prototype.inv = function (z) {
+    let t = typedis(z);
+    if (t == 'n') {
+        if (Number.isInteger(z)) {
+            return dcpow(this, z);
+        }
+        else {
+            return new Complex(Math.pow(this.abs, z), this.arg * z, { polar: true });
+        }
+    }
+    else if (t == 'c') {
+        let abs = Math.pow(this.abs, z.re) * Math.exp(-z.im*this.arg);
+        let arg = z.re*this.arg + z.im*Math.log(this.abs);
+        return new Complex(abs, arg, { polar: true });
+    }
+    else if (t == 's') {
+        let p = strparse(z);
+        if (p) {
+            let abs = Math.pow(this.abs, p.re) * Math.exp(-p.im*this.arg);
+            let arg = p.re*this.arg + p.im*Math.log(this.abs);
+            return new Complex(abs, arg, { polar: true });
+        }
+        else {
+            throw new Error('Cannot parse the string while given (string, ...)');
+        }
+    }
+    else {
+        throw new TypeError('Invalid parameter; unknown case');
+    }
+};
+
+Complex.prototype.equals = function (z) {
+    let t = typedis(z);
+    if (t == 'n') {
+        return (Math.abs(this.re - z) < Complex.EPSILON.re) && (Math.abs(this.im) < Complex.EPSILON.re);
+    }
+    else if (t == 'c') {
+        return (Math.abs(this.re - z.re) < Complex.EPSILON.re) && (Math.abs(this.im - z.im) < Complex.EPSILON.re);
+    }
+    else if (t == 's') {
+        let p = strparse(z);
+        if (p) {
+            return (Math.abs(this.re - p.re) < Complex.EPSILON.re) && (Math.abs(this.im - p.im) < Complex.EPSILON.re);
+        }
+        else {
+            throw new Error('Cannot parse the string while given (string, ...)');
+        }
+    }
+    else {
+        throw new TypeError('Invalid parameter; unknown case');
+    }
 }
     
-function cxmath () {
-  
+class Cxmath { }
+
+Cxmath.conj = function (z) {
+    let s = new Complex(z);
+    return s.sub(new Complex(0, 2*s.im));
+};
+
+Cxmath.opp = function (z) {
+    let s = new Complex(z);
+    return new Complex(-s.re, -s.im);
+};
+
+Cxmath.rec = function (z) {
+    return Complex.ONE.div(z);
 }
 
-cxmath.con = function (z) {
-  let t = typedis(z);
-  if (t == 'x') {
-    throw new Error();
-  }
-  let tmp = new complex(z);
-  return tmp.sub(new complex(0, 2*tmp.im));
+Cxmath.sqrt = function (z) {
+    return (new Complex(z)).inv(0.5);
 };
 
-cxmath.opp = function (z) {
-  let t = typedis(z);
-  if (t == 'x') {
-    throw new Error();
-  }
-  let s = new complex(z);
-  return new complex(-s.re, -s.im);
+Cxmath.cbrt = function (z) {
+    return (new Complex(z)).inv(1/3);
 };
 
-cxmath.rec = function (z) {
-  let t = typedis(z);
-  if (t == 'x') {
-    throw new Error();
-  }
-  return complex.ONE.div(z);
-}
-
-cxmath.sqrt = function (z) {
-  let t = typedis(z);
-  if (t == 'x') {
-    throw new Error();
-  }
-  return new complex(z).inv(1/2);
+Cxmath.exp = function (z) {
+    return Complex.E.inv(z);
 };
 
-cxmath.cbrt = function (z) {
-  let t = typedis(z);
-  if (t == 'x') {
-    throw new Error();
-  }
-  return new complex(z).inv(1/3);
-};
-
-cxmath.exp = function (z) {
-  let t = typedis(z);
-  if (t == 'x') {
-    throw new Error();
-  }
-  return complex.E.inv(z);
-};
-
-cxmath.log = function (z, base) {
-  if (base) {
-    let t = typedis(z)+typedis(base);
-    if (t.includes('x')) {
-      throw new Error();
-    }
-    let s = new complex(z);
-    let zb = new complex(base);
-    return new complex(Math.log(s.abs), s.arg).div(new complex(Math.log(zb.abs), zb.arg));
-  }
-  else {
-    let s = new complex(z);
-    return new complex(Math.log(s.abs), s.arg);
-  }
-};
-
-cxmath.ln = function (z) {
-  return cxmath.log(z);
-};
-
-cxmath.sin = function (z) {
-  let t = typedis(z);
-  if (t == 'x') {
-    throw new Error();
-  }
-  let s = new complex(z);
-  return cxmath.exp(s.mul(complex.UNIT)).sub(cxmath.exp(cxmath.opp(s).mul(complex.UNIT))).div(complex.UNIT.mul(2));
-};
-
-cxmath.sa = function (z) {
-  let t = typedis(z);
-  if (t == 'x') {
-    throw new Error();
-  }
-  return cxmath.sin(z).div(z);
-};
-
-cxmath.sinc = function (z) {
-  let t = typedis(z);
-  if (t == 'x') {
-    throw new Error();
-  }
-  let piz = (new Complex(z)).mul(Math.PI);
-  return cxmath.sa(piz);
-};
-
-cxmath.cos = function (z) {
-  let t = typedis(z);
-  if (t.includes('x')) {
-    throw new Error();
-  }
-  let s = new complex(z);
-  return cxmath.exp(s.mul(complex.UNIT)).add(cxmath.exp(cxmath.opp(s).mul(complex.UNIT))).div(2);
-};
-
-cxmath.tan = function (z) {
-  let t = typedis(z);
-  if (t.includes('x')) {
-    throw new Error();
-  }
-  return cxmath.sin(z).div(cxmath.cos(z));
-};
-
-cxmath.csc = function (z) {
-  let t = typedis(z);
-  if (t.includes('x')) {
-    throw new Error();
-  }
-  return complex.ONE.div(cxmath.sin(z));
-};
-
-cxmath.sec = function (z) {
-  let t = typedis(z);
-  if (t.includes('x')) {
-    throw new Error();
-  }
-  return complex.ONE.div(cxmath.cos(z));
-};
-
-cxmath.cot = function (z) {
-  let t = typedis(z);
-  if (t.includes('x')) {
-    throw new Error();
-  }
-  return complex.ONE.div(cxmath.tan(z));
-};
-
-cxmath.asin = function (z) {
-  let t = typedis(z);
-  if (t.includes('x')) {
-    throw new Error();
-  }
-  let s = new complex(z);
-  return cxmath.log(complex.UNIT.mul(s).add(cxmath.sqrt(cxmath.opp(s.inv(2).sub(1))))).mul(cxmath.con(complex.UNIT));
-};
-
-cxmath.acos = function (z) {
-  let t = typedis(z);
-  if (t.includes('x')) {
-    throw new Error();
-  }
-  return complex.PI.sub(cxmath.asin(z)).sub(2);
-};
-
-cxmath.atan = function (z) {
-  let t = typedis(z);
-  if (t.includes('x')) {
-    throw new Error();
-  }
-  let s = new complex(z);
-  return complex.UNIT.div(2).mul(cxmath.log(complex.UNIT.add(s).div(complex.UNIT.sub(s))));
-};
-
-cxmath.atan2 = function (w, z) {
-  let t = typedis(w)+typedis(z);
-  if (t.includes('x')) {
-    throw new Error();
-  }
-  return cxmath.atan(new complex(w).div(new complex(z)));
-};
-
-cxmath.acsc = function (z) {
-  let t = typedis(z);
-  if (t.includes('x')) {
-    throw new Error();
-  }
-  return cxmath.asin(complex.ONE.div(z));
-};
-
-cxmath.asec = function (z) {
-  let t = typedis(z);
-  if (t.includes('x')) {
-    throw new Error();
-  }
-  return cxmath.acos(complex.ONE.div(z));
-};
-
-cxmath.acot = function (z) {
-  let t = typedis(z);
-  if (t.includes('x')) {
-    throw new Error();
-  }
-  return cxmath.atan(complex.ONE.div(z));
-};
-
-cxmath.sinh = function (z) {
-  let t = typedis(z);
-  if (t.includes('x')) {
-    throw new Error();
-  }
-  return cxmath.exp(z).sub(cxmath.exp(cxmath.opp(z))).div(2);
-};
-
-cxmath.cosh = function (z) {
-  let t = typedis(z);
-  if (t.includes('x')) {
-    throw new Error();
-  }
-  return cxmath.exp(z).add(cxmath.exp(cxmath.opp(z))).div(2);
-};
-
-cxmath.tanh = function (z) {
-  let t = typedis(z);
-  if (t.includes('x')) {
-    throw new Error();
-  }
-  return cxmath.sinh(z).div(cxmath.cosh(z));
-};
-
-cxmath.asinh = function (z) {
-  let t = typedis(z);
-  if (t.includes('x')) {
-    throw new Error();
-  }
-  let s = new complex(z);
-  return cxmath.log(s.add(cxmath.sqrt(s.inv(2).add(1))));
-};
-
-cxmath.acosh = function (z) {
-  let t = typedis(z);
-  if (t.includes('x')) {
-    throw new Error();
-  }
-  let s = new complex(z);
-  return cxmath.log(s.add(cxmath.sqrt(s.inv(2).sub(1))));
-};
-
-cxmath.atanh = function (z) {
-  let t = typedis(z);
-  if (t.includes('x')) {
-    throw new Error();
-  }
-  return cxmath.log(complex.ONE.add(z).div(complex.ONE.sub(z))).div(2);
-};
-
-cxmath.csgn = function (z) {
-  let t = typedis(z);
-  if (t == 'n') {
-    return Math.sign(z);
-  }
-  else if (t == 'c') {
-    if (z.re) {
-      return Math.sign(z.re);
+Cxmath.log = function (z, base) {
+    let s = new Complex(z);
+    if (base) {
+        let b = new Complex(base);
+        return new Complex(Math.log(s.abs), s.arg).div(new Complex(Math.log(b.abs), b.arg));
     }
     else {
-      return Math.sign(z.im);
+        return new Complex(Math.log(s.abs), s.arg);
     }
-  }
-  else throw new Error();  
+};
+
+// trigonometric
+
+Cxmath.sin = function (z) {
+    let s = new Complex(z);
+    return Cxmath.exp(s.mul(Complex.UNIT)).sub(Cxmath.exp(Cxmath.opp(s).mul(Complex.UNIT))).div(Complex.UNIT.mul(2));
+};
+
+Cxmath.cos = function (z) {
+    let s = new Complex(z);
+    return Cxmath.exp(s.mul(Complex.UNIT)).add(Cxmath.exp(Cxmath.opp(s).mul(Complex.UNIT))).div(2);
+};
+
+Cxmath.tan = function (z) {
+    return Cxmath.sin(z).div(Cxmath.cos(z));
+};
+
+Cxmath.csc = function (z) {
+    return Complex.ONE.div(Cxmath.sin(z));
+};
+
+Cxmath.sec = function (z) {
+    return Complex.ONE.div(Cxmath.cos(z));
+};
+
+Cxmath.cot = function (z) {
+    return Complex.ONE.div(Cxmath.tan(z));
+};
+
+Cxmath.asin = function (z) {
+    let s = new Complex(z);
+    return Cxmath.log(Complex.UNIT.mul(s).add(Cxmath.sqrt(Cxmath.opp(s.inv(2).sub(1))))).mul(Cxmath.conj(Complex.UNIT));
+};
+
+Cxmath.acos = function (z) {
+    return Complex.PI.div(2).sub(Cxmath.asin(z));
+};
+
+Cxmath.atan = function (z) {
+    let s = new Complex(z);
+    return Complex.UNIT.div(2).mul(Cxmath.log(Complex.UNIT.add(s).div(Complex.UNIT.sub(s))));
+};
+
+Cxmath.atan2 = function (w, z) {
+    return Cxmath.atan(new Complex(w).div(new Complex(z)));
+};
+
+Cxmath.acsc = function (z) {
+    return Cxmath.asin(Complex.ONE.div(z));
+};
+
+Cxmath.asec = function (z) {
+    return Cxmath.acos(Complex.ONE.div(z));
+};
+
+Cxmath.acot = function (z) {
+    return Cxmath.atan(Complex.ONE.div(z));
+};
+
+// hyperbolic
+
+Cxmath.sinh = function (z) {
+    return Cxmath.exp(z).sub(Cxmath.exp(Cxmath.opp(z))).div(2);
+};
+
+Cxmath.cosh = function (z) {
+    return Cxmath.exp(z).add(Cxmath.exp(Cxmath.opp(z))).div(2);
+};
+
+Cxmath.tanh = function (z) {
+    return Cxmath.sinh(z).div(Cxmath.cosh(z));
+};
+
+Cxmath.asinh = function (z) {
+    let s = new Complex(z);
+    return Cxmath.log(s.add(Cxmath.sqrt(s.inv(2).add(1))));
+};
+
+Cxmath.acosh = function (z) {
+    let s = new Complex(z);
+    return Cxmath.log(s.add(Cxmath.sqrt(s.inv(2).sub(1))));
+};
+
+Cxmath.atanh = function (z) {
+    return Cxmath.log(Complex.ONE.add(z).div(Complex.ONE.sub(z))).div(2);
+};
+
+Cxmath.csgn = function (z) {
+    let s = new Complex(z);
+    if (s.re) {
+        return new Complex(Math.sign(s.re));
+    }
+    else {
+        return new Complex(Math.sign(s.im));
+    }
 };
 
 // vector
 
-cxmath.norm = function (z) {
-  let t = typedis(w)+typedis(z);
-  if (t.includes('x')) {
-    throw new Error();
-  }
-  return new complex(z).abs();
-}
-
-cxmath.inp = function (a, b) {
-  let t = typedis(a) + typedis(b);
-  if (t.includes('x')) {
-    throw new Error();
-  }
-  let u = new complex(a), v = new complex(b);  
-  return u.abs()*v.abs()*Math.cos(u.arg()-v.arg());
-}
-
-cxmath.dist = function (a, b) {
-  let t = typedis(a) + typedis(b);
-  if (t.includes('x')) {
-    throw new Error();
-  }
-  let u = new complex(a), v = new complex(b);  
-  return Math.hypot(u.re-v.re, u.im-v.im);
+Cxmath.inprod = function (a, b) {
+    let u = new Complex(a);
+    let v = new Complex(b);  
+    return new Complex(u.abs()*v.abs()*Math.cos(u.arg()-v.arg()));
 };
 
-cxmath.random = function () {
-  return new complex(Math.random(), Math.random());
+Cxmath.dist = function (a, b) {
+    let u = new Complex(a)
+    let v = new Complex(b);  
+    return new Complex(Math.hypot(u.re-v.re, u.im-v.im));
 };
 
-module.exports = {
-  Complex: complex,
-  Cxmath: cxmath
+// Z
+
+Cxmath.floor = function (z) {
+    let s = new Complex(z);
+    return new Complex(Math.floor(s.re), Math.floor(s.im));
 };
+
+Cxmath.ceil = function (z) {
+    let s = new Complex(z);
+    return new Complex(Math.ceil(s.re), Math.ceil(s.im));
+};
+
+Cxmath.round = function (z) {
+    let s = new Complex(z);
+    return new Complex(Math.round(s.re), Math.round(s.im));
+};
+
+Cxmath.trunc = function (z) {
+    let s = new Complex(z);
+    return new Complex(Math.trunc(s.re), Math.trunc(s.im));
+};
+
+Cxmath.random = function () {
+    return new Complex(Math.random(), Math.random());
+};
+
+module.exports = { Complex: Complex, Cxmath: Cxmath }
