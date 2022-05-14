@@ -76,35 +76,20 @@ z.arg;
 ```
 
 ### Constants
-
-#### Complex EPSILON
 ```javascript
-Complex.EPSILON := new Complex(Number.EPSILON)
+Complex.EPSILON;
+Complex.PI; // 3.141592...
+Complex.E; // 2.718281...
+Complex.ONE; // 1
+Complex.UNIT; // 1j
 ```
-
-#### Complex PI
-Pi
-```javascript
-Complex.PI := new Complex(Math.PI)
-```
-
-#### Complex E
-Base of the natural logarithm
-```javascript
-Complex.E := new Complex(Math.E)
-```
-
-#### Complex ONE
-1
-```javascript
-Complex.ONE := new Complex(1)
-```
-
-#### Complex UNIT
-Imaginary unit
-```javascript
-Complex.UNIT := new Complex(0, 1)
-```
+|name|description|type|
+|:---:|:---:|:---:|
+|EPSILON|2^-52|Complex|
+|PI|π|Complex|
+|E|e|Complex|
+|ONE|1|Complex|
+|UNIT|imaginary unit|Complex|
 
 ### String Representation
 
