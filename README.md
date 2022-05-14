@@ -13,7 +13,7 @@ This project is ongoing project. The first version hasn't yet released.
 Require(Import) module to start.
 ```javascript
 const { Complex, Cxmath } = require(PATH);
-// It will be available in npm!
+// It will be available in npm later!
 ```
 
 ### [Reference](https://github.com/sweetcorn1229/cplx.js/blob/main/reference.md)
