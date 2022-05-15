@@ -21,7 +21,7 @@ let z = new Complex(1, 2); // 1+2j
 #### constructor(arg, abs, option)
 Generate complex number in polar form
 ```javascript
-z = new Complex(Math.PI, 2, { polar: true }); // 2exp(jπ) = -2
+let z = new Complex(Math.PI, 2, { polar: true }); // 2exp(jπ) = -2
 ```
 
 > Parameters
@@ -35,9 +35,9 @@ z = new Complex(Math.PI, 2, { polar: true }); // 2exp(jπ) = -2
 #### constructor(str)
 Parse string
 ```javascript
-z = new Complex('1+3j'); // 1+3j
-z = new Complex('-7j'); // -7j
-z = new Complex('-6-1j'); // -6-1j
+let z = new Complex('1+3j'); // 1+3j
+let w = new Complex('-7j'); // -7j
+let u = new Complex('-6-1j'); // -6-1j
 ```
 
 > Parameters
@@ -49,14 +49,14 @@ z = new Complex('-6-1j'); // -6-1j
 #### constructor(complex)
 Copy a complex that has already been declared
 ```javascript
-z = new Complex(z);
+let w = new Complex(z);
 ```
 
 > Parameters
 
 |name|type|required|
 |:---:|:---:|:---:|
-|cplx|Complex|O|
+|complex|Complex|O|
 
 ### Properties
 ```javascript
