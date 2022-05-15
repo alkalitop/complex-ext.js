@@ -185,8 +185,8 @@ Cxmath.cbrt(z); // 1.21961...+0.47171...j
 
 |name|description|return type|
 |:---:|:---:|:---:|
-|sqrt|square root|Complex|
-|cbrt|cube root|Complex|
+|sqrt|principal square root|Complex|
+|cbrt|principal cube root|Complex|
 
 > Parameters
 
