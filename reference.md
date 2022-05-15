@@ -85,6 +85,8 @@ Complex.ONE; // 1
 Complex.UNIT; // 1j
 ```
 
+> Description
+
 |name|description|type|
 |:---:|:---:|:---:|
 |EPSILON|2^-52|Complex|
@@ -113,6 +115,8 @@ z.equals(1); // false
 z.equals('3+2j'); // true
 z.equals(w); // false
 ```
+
+> Parameters
 
 |name|type|required|
 |:---:|:---:|:---:|
