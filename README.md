@@ -15,5 +15,5 @@ Require(Import) module to start.
 const { Complex, Cxmath } = require(PATH);
 // It will be available in npm later!
 ```
-
-### [Reference](https://github.com/sweetcorn1229/cplx.js/blob/main/reference.md)
+- [KR](https://github.com/sweetcorn1229/cplx.js/blob/main/docs-kr.md)
+- [EN](https://github.com/sweetcorn1229/cplx.js/blob/main/docs-en.md)
