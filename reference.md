@@ -6,9 +6,8 @@
 
 #### constructor(re[, im, option])
 Generate complex number in cartesian form
-<sup>[note](https://en.wikipedia.org/wiki/Complex_number#Cartesian_complex_plane)</sup> (if the imaginary part equals zero, you may leave it out.)
 ```javascript
-z = new Complex(1, 2); // 1+2j
+let z = new Complex(1, 2); // 1+2j
 ```
 
 > Parameters
@@ -21,7 +20,6 @@ z = new Complex(1, 2); // 1+2j
 
 #### constructor(arg, abs, option)
 Generate complex number in polar form
-<sup>[note](https://en.wikipedia.org/wiki/Complex_number#Polar_complex_plane)</sup>
 ```javascript
 z = new Complex(Math.PI, 2, { polar: true }); // 2exp(jπ) = -2
 ```
