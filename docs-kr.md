@@ -1,4 +1,4 @@
-# cplx.js reference KR
+# cplx.js Docs KR
 
 아직 작업이 완료되지 않음.
 
@@ -71,10 +71,10 @@ z.arg; // 1.10714...
 
 |name|description|type|
 |:---:|:---:|:---:|
-|re|real part|Complex|
-|im|imaginary part|Complex|
-|abs|modulus|Complex|
-|arg|argument|Complex|
+|re|실수부|Complex|
+|im|허수부|Complex|
+|abs|절댓값|Complex|
+|arg|편각|Complex|
 
 ### 상수
 ```javascript
@@ -93,7 +93,7 @@ Complex.UNIT; // 1j
 |PI|π|Complex|
 |E|e|Complex|
 |ONE|1|Complex|
-|UNIT|imaginary unit|Complex|
+|UNIT|허수 단위|Complex|
 
 ### 문자열로 나타내기
 
@@ -122,7 +122,7 @@ z.equals(w); // false
 |:---:|:---:|:---:|
 |z|number/string/Complex|O|
 
-### Method: Basic Operations
+### 메서드: 기본 연산
 ```javascript
 let z = new Complex('3+2j');
 let w = new Complex('1-2j');
@@ -138,11 +138,11 @@ z.inv('13+9j');
 
 |이름|설명|반환 타입|
 |:---:|:---:|:---:|
-|add|addition|Complex|
-|sub|subtraction|Complex|
-|mul|multiplication|Complex|
-|div|division|Complex|
-|inv|exponentiation|Complex|
+|add|덧셈|Complex|
+|sub|뺄셈|Complex|
+|mul|곱셈|Complex|
+|div|나눗셈|Complex|
+|inv|거듭제곱|Complex|
 
 > 매개변수
 
@@ -152,7 +152,7 @@ z.inv('13+9j');
 
 ## class Cxmath
 
-### Static Method: Advanced Operations
+### 정적 메서드: 추가 연산
 ```javascript
 let z = new Complex('1+2j');
 
@@ -165,9 +165,9 @@ Cxmath.rec(z); // 0.19999...-0.39999...j
 
 |이름|설명|반환 타입|
 |:---:|:---:|:---:|
-|conj|complex conjugate|Complex|
-|opp|opposite number (additive inverse)|Complex|
-|rec|reciprocal|Complex|
+|conj|켤레 복소수|Complex|
+|opp|반수 (덧셈 역원)|Complex|
+|rec|역수|Complex|
 
 > 매개변수
 
@@ -175,7 +175,7 @@ Cxmath.rec(z); // 0.19999...-0.39999...j
 |:---:|:---:|:---:|
 |z|number/string/Complex|O|
 
-### Static Method: Radical Roots
+### 정적 메서드: 거듭제곱근
 ```javascript
 let z = new Complex('1+2j');
 
@@ -187,8 +187,8 @@ Cxmath.cbrt(z); // 1.21961...+0.47171...j
 
 |이름|설명|반환 타입|
 |:---:|:---:|:---:|
-|sqrt|square root|Complex|
-|cbrt|cube root|Complex|
+|sqrt|주요 제곱근|Complex|
+|cbrt|주요 세제곱근|Complex|
 
 > 매개변수
 
@@ -196,10 +196,10 @@ Cxmath.cbrt(z); // 1.21961...+0.47171...j
 |:---:|:---:|:---:|
 |z|number/string/Complex|O|
 
-### Static Method: Exponential Function & Logarithm
+### 정적 메서드: 지수함수 & 로그함수
 
 #### Complex static exp(z)
-Exponential function
+지수함수
 ```javascript
 Cxmath.exp(z);
 ```
@@ -211,7 +211,7 @@ Cxmath.exp(z);
 |z|number/string/Complex|O|
 
 #### Complex static log(a[, b=Math.E])
-Logarithm (defined in principal branch) with base b and antilogarithm a (if the base equals e, you can leave it out.)
+진수가 a, 밑이 b인 로그함수 (주 분지에서 정의됨. 밑이 e이면 생략 )
 ```javascript
 Cxmath.log(a); // Natural Logarithm
 Cxmath.log(a, 2); // Binary Logarithm
