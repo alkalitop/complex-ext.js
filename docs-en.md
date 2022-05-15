@@ -1,4 +1,4 @@
-# cplx.js reference
+# cplx.js Docs EN
 
 ## class Complex
 
