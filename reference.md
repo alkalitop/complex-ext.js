@@ -344,7 +344,6 @@ Cxmath.atanh(z);
 
 #### Complex static csgn(z)
 Complex sign function
-<sup>[note](https://en.wikipedia.org/wiki/Sign_function#Complex_signum)</sup>
 ```javascript
 Cxmath.csgn(z);
 ```
