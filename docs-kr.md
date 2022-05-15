@@ -1,4 +1,4 @@
-# cplx.js reference
+# cplx.js reference KR
 
 아직 작업이 완료되지 않음.
 
