@@ -226,9 +226,9 @@ Cxmath.log(a, b);
 |a|number/string/Complex|O|
 |b|numner/string/Complex|X|
 
-### Static Method: Trigonometric 함수
+### 정적 메서드: 삼각함수
 
-#### Trigonometric 함수
+#### 삼각함수
 
 ```javascript
 Cxmath.sin(z);
@@ -244,12 +244,12 @@ Cxmath.cot(z);
 
 |이름|설명|반환 타입|
 |:---:|:---:|:---:|
-|sin|Sine|Complex|
-|cos|Cosine|Complex|
-|tan|Tangent|Complex|
-|csc|Cosecant|Complex|
-|sec|Secant|Complex|
-|cot|Cotangent|Complex|
+|sin|사인|Complex|
+|cos|코사인|Complex|
+|tan|탄젠트|Complex|
+|csc|코시컨트|Complex|
+|sec|시컨트|Complex|
+|cot|코탄젠트|Complex|
 
 > 매개변수
 
@@ -257,7 +257,7 @@ Cxmath.cot(z);
 |:---:|:---:|:---:|
 |z|number/string/Complex|O|
 
-#### Inverse Trigonometric 함수
+#### 역삼각함수
 
 ```javascript
 Cxmath.asin(z);
@@ -296,9 +296,9 @@ Cxmath.atan2(z1, z2);
 |z1|number/string/Complex|O|
 |z2|number/string/Complex|O|
 
-### Static Method: Hyperbolic 함수
+### 정적 메서드: 쌍곡선 함수
 
-#### Hyperbolic 함수
+#### 쌍곡선 함수
 
 ```javascript
 Cxmath.sinh(z);
