@@ -1,10 +1,8 @@
 # cplx.js Docs KR
 
-아직 작업이 완료되지 않음.
-
 ## class Complex
 
-### Constructor
+### 생성자
 
 #### constructor(re[, im, option])
 직교 형식의 복소수를 생성합니다.
@@ -106,7 +104,7 @@ z.toString()
 ### 메서드: 같음
 
 #### boolean equals(z)
-복소수의 값이 같은지 판별합니다.
+복소수의 값이 같은지 판별
 ```javascript
 let z = new Complex('3+2j');
 let w = new Complex('5-4j');
@@ -273,12 +271,12 @@ Cxmath.acot(z);
 
 |이름|설명|반환 타입|
 |:---:|:---:|:---:|
-|asin|Arcsine|Complex|
-|acos|Arccosine|Complex|
-|atan|Arctangent|Complex|
-|acsc|Arccosecant|Complex|
-|asec|Arcsecant|Complex|
-|acot|Arccotangent|Complex|
+|asin|아크사인|Complex|
+|acos|아크코사인|Complex|
+|atan|아크탄젠트|Complex|
+|acsc|아크코시컨트|Complex|
+|asec|아크시컨트|Complex|
+|acot|아크코탄젠트|Complex|
 
 > 매개변수
 
@@ -310,9 +308,9 @@ Cxmath.tanh(z);
 
 |이름|설명|반환 타입|
 |:---:|:---:|:---:|
-|sinh|Hyperbolic-sine|Complex|
-|cosh|Hyperbolic-cosine|Complex|
-|tanh|Hyperbolic-tangent|Complex|
+|sinh|쌍곡사인|Complex|
+|cosh|쌍곡코사인|Complex|
+|tanh|쌍곡탄젠트|Complex|
 
 > 매개변수
 
@@ -320,7 +318,7 @@ Cxmath.tanh(z);
 |:---:|:---:|:---:|
 |z|number/string/Complex|O|
 
-#### Inverse Hyperbolic 함수
+#### 쌍곡선 함수의 역함수
 
 ```javascript
 Cxmath.asinh(z);
@@ -342,10 +340,10 @@ Cxmath.atanh(z);
 |:---:|:---:|:---:|
 |z|number/string/Complex|O|
 
-### Static Method: Sign Function
+### 정적 메서드: 부호함수
 
 #### Complex static csgn(z)
-Complex sign function
+복소부호함수
 ```javascript
 Cxmath.csgn(z);
 ```
@@ -353,10 +351,10 @@ Cxmath.csgn(z);
 |:---:|:---:|:---:|
 |z|number/string/Complex|O|
 
-### Static Method: Vector
+### 정적 메서드: 벡터
 
 #### Complex static inprod(a, b)
-Inner Product
+내적
 ```javascript
 Cxmath.inprod(a, b);
 ```
@@ -366,7 +364,7 @@ Cxmath.inprod(a, b);
 |b|number/string/Complex|O|
 
 #### Complex static dist(a, b)
-Distance from point (Re(a), Im(a)) to point (Re(b), Im(b))
+(Re(a), Im(a)) 에서 (Re(b), Im(b)) 까지의 거리
 ```javascript
 Cxmath.dist(a, b);
 ```
@@ -375,15 +373,15 @@ Cxmath.dist(a, b);
 |a|number/string/Complex|O|
 |b|number/string/Complex|O|
 
-### Static Method: Random
+### 정적 메서드: 난수
 
 #### Complex static random()
-Random complex (both real part and imaginary part are more than or equal to 0 and less than 1)
+실수부와 허수부가 모두 [0, 1]에 포함되는 난수 생성
 ```javascript
 Cxmath.random();
 ```
 
-### Static Method: Floor & Ceil
+### 정적 메서드: 바닥함수 & 천장함수
 ```javascript
 Cxmath.floor(z);
 Cxmath.ceil(z);
@@ -394,9 +392,9 @@ Cxmath.trunc(z);
 
 |이름|설명|반환 타입|
 |:---:|:---:|:---:|
-|floor|-|Complex|
-|ceil|-|Complex|
-|round|-|Complex|
+|floor|바닥함수|Complex|
+|ceil|천장함수|Complex|
+|round|반올림|Complex|
 |trunc|-|Complex|
 
 > 매개변수
