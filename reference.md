@@ -365,7 +365,7 @@ Cxmath.inprod(a, b);
 |b|number/string/Complex|O|
 
 #### Complex static dist(a, b)
-Distance from point a to point b
+Distance from point (Re(a), Im(a)) to point (Re(b), Im(b))
 ```javascript
 Cxmath.dist(a, b);
 ```
