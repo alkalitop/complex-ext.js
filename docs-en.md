@@ -69,10 +69,10 @@ z.arg; // 1.10714...
 
 |name|description|type|
 |:---:|:---:|:---:|
-|re|real part|Complex|
-|im|imaginary part|Complex|
-|abs|modulus|Complex|
-|arg|argument|Complex|
+|re|real part|number|
+|im|imaginary part|number|
+|abs|modulus|number|
+|arg|argument|number|
 
 ### Constants
 ```javascript
