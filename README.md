@@ -1,5 +1,5 @@
 # cplx.js
-Javascript complex number library
+Pure Javascript Complex Number Library
 
 ## Copyright
 © 2021-2022 sanha1229, all rights reserved.
