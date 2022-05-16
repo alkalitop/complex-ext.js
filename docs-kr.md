@@ -67,7 +67,7 @@ z.abs; // 2.23606...
 z.arg; // 1.10714...
 ```
 
-|name|description|type|
+|이름|설명|타입|
 |:---:|:---:|:---:|
 |re|실수부|number|
 |im|허수부|number|
@@ -85,7 +85,7 @@ Complex.UNIT; // 1j
 
 > 설명
 
-|name|description|type|
+|이름|설명|타입|
 |:---:|:---:|:---:|
 |EPSILON|2^-52|Complex|
 |PI|π|Complex|
