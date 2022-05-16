@@ -69,10 +69,10 @@ z.arg; // 1.10714...
 
 |name|description|type|
 |:---:|:---:|:---:|
-|re|실수부|Complex|
-|im|허수부|Complex|
-|abs|절댓값|Complex|
-|arg|편각|Complex|
+|re|실수부|number|
+|im|허수부|number|
+|abs|절댓값|number|
+|arg|편각|number|
 
 ### 상수
 ```javascript
