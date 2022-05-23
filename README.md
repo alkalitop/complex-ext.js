@@ -1,4 +1,4 @@
-# cplx.js
+# complex-master
 Pure Javascript Complex Number Library
 
 ## Copyright
@@ -15,5 +15,5 @@ Require(Import) module to start.
 const { Complex, Cxmath } = require(PATH);
 // It will be available in npm later!
 ```
-### [Korean Docs](https://github.com/sweetcorn1229/cplx.js/blob/main/docs-kr.md)
-### [English Docs](https://github.com/sweetcorn1229/cplx.js/blob/main/docs-en.md)
+### [Korean Docs](https://github.com/sweetcorn1229/complex-master/blob/main/docs-kr.md)
+### [English Docs](https://github.com/sweetcorn1229/complex-master/blob/main/docs-en.md)
