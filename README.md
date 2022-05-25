@@ -1,9 +1,6 @@
 # complex-master
 Pure Javascript Complex Number Library
 
-## Copyright
-© 2021-2022 sanha1229, all rights reserved.
-
 ## Notice
 This project has not been completed yet!
 
