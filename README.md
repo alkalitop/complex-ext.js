@@ -1,4 +1,4 @@
-# complex-master
+# complex-pure.js
 Pure Javascript Complex Number Library
 
 ## Notice
