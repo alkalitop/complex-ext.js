@@ -82,36 +82,37 @@ String toString()
 ```js
 Boolean equals(Number|String|Complex z)
 ```
-먼저, `z`는 주어진 수와 비교할 수를 의미합니다.
 <br/>주어진 수를 `z`와 비교하여 실수부와 허수부 각각의 차가 모두 2^-52 이하이면 참, 아니면 거짓을 반환합니다.
 
 ### add()
-```javascript
-let z = new Complex('3+2j');
-let w = new Complex('1-2j');
-
-z.add(3);
-z.sub('6-2j');
-z.mul(w);
-z.div(Complex.UNIT);
-z.inv('13+9j');
+```js
+Complex add(Number|String|Complex z)
 ```
+주어진 수에 `z`를 더한 복소수를 반환합니다.
 
-> 함수
+### sub()
+```js
+Complex sub(Number|String|Complex z)
+```
+주어진 수에서 `z`를 뺀 복소수를 반환합니다.
 
-|이름|설명|반환 타입|
-|:---:|:---:|:---:|
-|add|덧셈|Complex|
-|sub|뺄셈|Complex|
-|mul|곱셈|Complex|
-|div|나눗셈|Complex|
-|inv|거듭제곱|Complex|
+### mul()
+```js
+Complex mul(Number|String|Complex z)
+```
+주어진 수에 `z`를 곱한 복소수를 반환합니다.
 
-> 매개변수
+### div()
+```js
+Complex div(Number|String|Complex z)
+```
+주어진 수에 `z`의 역수를 곱한 복소수를 반환합니다.
 
-|이름|타입|필수|
-|:---:|:---:|:---:|
-|z|number/string/Complex|O|
+### inv()
+```js
+Complex inv(Number|String|Complex z)
+```
+밑이 주어진 수이고 지수가 `z`인 복소수를 반환합니다.
 
 ## class Cxmath
 
