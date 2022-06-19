@@ -3,18 +3,19 @@
 ## class Complex
 
 ### constructor()
+#### type-1
 ```js
 constructor(number re, number im)
 ```
 직교 형식 복소수를 생성합니다. `re`는 **실수부**, `im`은 **허수부**를 의미합니다. 허수부가 0일 경우에는 `im`을 생략할 수 있습니다.
 
 > 매개변수
-
 |이름|타입|필수|
 |:---:|:---:|:---:|
 |re|number|O|
 |im|number|X|
 
+#### type-2
 ```js
 constructor(number abs, number arg, object option)
 ```
@@ -25,7 +26,6 @@ constructor(number abs, number arg, object option)
 ```
 
 > 매개변수
-
 |이름|타입|필수|
 |:---:|:---:|:---:|
 |arg|number|O|
