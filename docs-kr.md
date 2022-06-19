@@ -24,18 +24,17 @@ constructor(Number abs, Number arg, Object option)
 constructor(String str)
 ```
 문자열을 파싱하여 복소수를 생성합니다. `str`은 파싱할 문자열을 의미합니다.
-<br/> `str`에는 다음 9가지 유형이 가능합니다:
-- `x+yj`
-- `x-yj`
-- `-x+yj`
-- `-x-yj`
-- `x`
-- `-x`
-- `yj`
-- `-yj`
-- `0`
+<br/> `str`에는 다음 8가지 유형이 가능합니다:
+- `'x+yj'`
+- `'x-yj'`
+- `'-x+yj'`
+- `'-x-yj'`
+- `'x'`
+- `'-x'`
+- `'yj'`
+- `'-yj'`
 
-*(단, x>0, y>0 입니다.)*
+*(단, x와 y는 0보다 작지 않습니다.)*
 
 #### type-4
 ```js
@@ -43,21 +42,12 @@ constructor(Complex z)
 ```
 복소수를 복사합니다. `z`는 복사할 복소수를 의미합니다.
 
-### 프로퍼티
-```javascript
-let z = new Complex('1+2j');
-z.re; // 1
-z.im; // 2
-z.abs; // 2.23606...
-z.arg; // 1.10714...
+### re
+```js
+Number re
 ```
+실수부
 
-|이름|설명|타입|
-|:---:|:---:|:---:|
-|re|실수부|number|
-|im|허수부|number|
-|abs|절댓값|number|
-|arg|편각|number|
 
 ### 상수
 ```javascript
