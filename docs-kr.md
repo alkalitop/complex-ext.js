@@ -3,13 +3,10 @@
 ## class Complex
 
 ### constructor()
-```ts
-constructor(re: number, im: number)
+```js
+constructor(number re, number im)
 ```
-직교 형식의 복소수를 생성합니다.
-```javascript
-let z = new Complex(1, 2); // 1+2j
-```
+직교 형식의 복소수를 생성합니다. `re`는 *실수부*, `im`은 *허수부*를 의미합니다. 허수부가 0일 경우에는 `im`을 생략할 수 있습니다.
 
 > 매개변수
 
@@ -17,7 +14,6 @@ let z = new Complex(1, 2); // 1+2j
 |:---:|:---:|:---:|
 |re|number|O|
 |im|number|X|
-|option|object|X|
 
 #### constructor(arg, abs, option)
 극형식의 복소수를 생성합니다.
