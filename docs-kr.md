@@ -10,6 +10,7 @@ constructor(number re, number im)
 직교 형식 복소수를 생성합니다. `re`는 **실수부**, `im`은 **허수부**를 의미합니다. 허수부가 0일 경우에는 `im`을 생략할 수 있습니다.
 
 > 매개변수
+
 |이름|타입|필수|
 |:---:|:---:|:---:|
 |re|number|O|
@@ -26,19 +27,29 @@ constructor(number abs, number arg, object option)
 ```
 
 > 매개변수
+
 |이름|타입|필수|
 |:---:|:---:|:---:|
 |arg|number|O|
 |abs|number|O|
 |option|object|O|
 
-#### constructor(str)
-문자열로부터 복소수를 생성합니다.
-```javascript
-let z = new Complex('1+3j'); // 1+3j
-let w = new Complex('-7j'); // -7j
-let u = new Complex('-6-1j'); // -6-1j
+#### type-3
+```js
+constructor(string str)
 ```
+문자열을 파싱하여 복소수를 생성합니다. `str`은 파싱할 문자열을 의미합니다.
+<br/> `str`에는 다음 9가지 유형이 가능합니다:
+- `x+yj`
+- `x-yj`
+- `-x+yj`
+- `-x-yj`
+- `x`
+- `-x`
+- `yj`
+- `-yj`
+- `0`
+*(단, x>0, y>0 입니다.)*
 
 > 매개변수
 
