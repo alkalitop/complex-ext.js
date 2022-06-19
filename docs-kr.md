@@ -9,13 +9,6 @@ constructor(Number re, Number im)
 ```
 직교 형식 복소수를 생성합니다. `re`는 **실수부**, `im`은 **허수부**를 의미합니다. 허수부가 0일 경우에는 `im`을 생략할 수 있습니다.
 
-> 매개변수
-
-|이름|타입|필수|
-|:---:|:---:|:---:|
-|re|number|O|
-|im|number|X|
-
 #### type-2
 ```js
 constructor(Number abs, Number arg, Object option)
@@ -25,14 +18,6 @@ constructor(Number abs, Number arg, Object option)
 ```js
 { polar: true }
 ```
-
-> 매개변수
-
-|이름|타입|필수|
-|:---:|:---:|:---:|
-|arg|number|O|
-|abs|number|O|
-|option|object|O|
 
 #### type-3
 ```js
@@ -52,23 +37,11 @@ constructor(String str)
 
 *(단, x>0, y>0 입니다.)*
 
-> 매개변수
-
-|이름|타입|필수|
-|:---:|:---:|:---:|
-|str|string|O|
-
 #### type-4
 ```js
 constructor(Complex z)
 ```
 복소수를 복사합니다. `z`는 복사할 복소수를 의미합니다.
-
-> 매개변수
-
-|이름|타입|필수|
-|:---:|:---:|:---:|
-|z|Complex|O|
 
 ### 프로퍼티
 ```javascript
