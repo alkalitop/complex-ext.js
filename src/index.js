@@ -167,7 +167,7 @@ class Complex {
         return Math.atan2(this.im, this.re);
     }
 
-    set (value) {
+    set arg (value) {
         let prevAbs = Number(this.abs);
         this.re = Math.cos(value)*prevAbs;
         this.im = Math.sin(value)*prevAbs;
