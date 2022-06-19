@@ -6,7 +6,7 @@
 ```js
 constructor(number re, number im)
 ```
-직교 형식의 복소수를 생성합니다. `re`는 *실수부*, `im`은 *허수부*를 의미합니다. 허수부가 0일 경우에는 `im`을 생략할 수 있습니다.
+직교 형식 복소수를 생성합니다. `re`는 **실수부**, `im`은 **허수부**를 의미합니다. 허수부가 0일 경우에는 `im`을 생략할 수 있습니다.
 
 > 매개변수
 
@@ -15,10 +15,13 @@ constructor(number re, number im)
 |re|number|O|
 |im|number|X|
 
-#### constructor(arg, abs, option)
-극형식의 복소수를 생성합니다.
-```javascript
-let z = new Complex(Math.PI, 2, { polar: true }); // 2exp(jπ) = -2
+```js
+constructor(number abs, number arg, object option)
+```
+극형식의 복소수를 생성합니다. `abs`는 **절댓값**, `arg`는 **편각**을 의미합니다.
+<br/> `option`에는 다음과 같은 객체가 들어가야합니다:
+```js
+{ polar: true }
 ```
 
 > 매개변수
