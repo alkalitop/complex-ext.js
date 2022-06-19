@@ -49,6 +49,7 @@ constructor(string str)
 - `yj`
 - `-yj`
 - `0`
+
 *(단, x>0, y>0 입니다.)*
 
 > 매개변수
@@ -57,17 +58,17 @@ constructor(string str)
 |:---:|:---:|:---:|
 |str|string|O|
 
-#### constructor(complex)
-이미 있는 복소수를 복사합니다.
-```javascript
-let w = new Complex(z);
+#### type-4
+```js
+constructor(Complex z)
 ```
+복소수를 복사합니다. `z`는 복사할 복소수를 의미합니다.
 
 > 매개변수
 
 |이름|타입|필수|
 |:---:|:---:|:---:|
-|complex|Complex|O|
+|z|Complex|O|
 
 ### 프로퍼티
 ```javascript
