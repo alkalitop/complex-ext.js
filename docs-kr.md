@@ -74,15 +74,18 @@ Complex Complex.UNIT; // 1j
 String toString()
 ```
 
+### NOTICE
+지금부터, Complex 클래스로서 생성된 복소수가 자신을 가리키는 수를 **주어진 수** 라고 서술하겠습니다.<br/>
+이 문장 아래에서 소개되는 함수들의 매개변수로서 문자열이 들어간다면, 그 문자열은 복소수를 생성하기위해 파싱할 문자열입니다.
+
 ### equals()
-지금부터, Complex 클래스로서 생성된 복소수가 자신을 가리키는 수를 **주어진 수** 라고 서술하겠습니다.
 ```js
 Boolean equals(Number|String|Complex z)
 ```
 먼저, `z`는 주어진 수와 비교할 수를 의미합니다.
 <br/>주어진 수를 `z`와 비교하여 실수부와 허수부 각각의 차가 모두 2^-52 이하이면 참, 아니면 거짓을 반환합니다.
 
-### 메서드: 기본 연산
+### add()
 ```javascript
 let z = new Complex('3+2j');
 let w = new Complex('1-2j');
