@@ -1,12 +1,11 @@
 # complex-pure Docs KR
 
-영문판 설명서는 작성 당시 고등학교 수학(하)를 배우고 있던 제가, 한글판 설명서는 작성 당시 고등학교 수학I을 배우고 있던 제가 작성했습니다(...) 수학 전공하셨거나 수학을 사랑하시는 분 아무나 제대로 된 용어를 사용해서 수정,기여해주시면 감사하겠습니다.
-
 ## class Complex
 
-### 생성자
-
-#### constructor(re[, im, option])
+### constructor()
+```ts
+constructor(re: number, im: number)
+```
 직교 형식의 복소수를 생성합니다.
 ```javascript
 let z = new Complex(1, 2); // 1+2j
