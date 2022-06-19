@@ -42,12 +42,17 @@ constructor(Complex z)
 ```
 복소수를 복사합니다. `z`는 복사할 복소수를 의미합니다.
 
-### re
+### 프로퍼티 (Properties)
 ```js
 Number re
+Number im
+Number abs
+Number arg
 ```
-실수부
-
+- `re`: 실수부
+- `im`: 허수부
+- `abs`: 절댓값
+- `arg`: 편각
 
 ### 상수
 ```javascript
