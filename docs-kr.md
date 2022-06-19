@@ -49,10 +49,10 @@ Number im
 Number abs
 Number arg
 ```
-- `re` 실수부
-- `im` 허수부
-- `abs` 절댓값
-- `arg` 편각
+`re` 실수부
+<br/>`im` 허수부
+<br/>`abs` 절댓값
+<br/>`arg` 편각
 
 ### 상수
 ```js
@@ -69,26 +69,20 @@ Complex Complex.UNIT; // 1j
 - `Complex.ONE` 1
 - `Complex.UNIT` 허수 단위
 
-### 문자열로 나타내기
-
-#### string toString()
-String representation
-```javascript
-z.toString()
+### toString()
+```js
+String toString()
 ```
 
-### 메서드: 같음
-
-#### boolean equals(z)
-복소수의 값이 같은지 판별
-```javascript
-let z = new Complex('3+2j');
-let w = new Complex('5-4j');
-
-z.equals(1); // false
-z.equals('3+2j'); // true
-z.equals(w); // false
+### equals()
+```js
+Boolean equals( z)
+Boolean equals(Complex
 ```
+먼저, `z`는 다음을 의미합니다:
+- ㅇㅇ
+주어진 수를 복소수 `z`와 비교하여 실수부와 허수부 각각의 차가 모두 2^-52 이하이면 참, 아니면 거짓을 반환합니다.
+<br/> 즉, 주어진 수와 복소수 `z`가 *거의* 같거나 완전히 같다면 참, 아니면 거짓을 반환합니다.
 
 > 매개변수
 
