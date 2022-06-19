@@ -49,29 +49,25 @@ Number im
 Number abs
 Number arg
 ```
-- `re`: 실수부
-- `im`: 허수부
-- `abs`: 절댓값
-- `arg`: 편각
+- `re` 실수부
+- `im` 허수부
+- `abs` 절댓값
+- `arg` 편각
 
 ### 상수
-```javascript
-Complex.EPSILON;
-Complex.PI; // 3.141592...
-Complex.E; // 2.718281...
-Complex.ONE; // 1
-Complex.UNIT; // 1j
+```js
+Complex Complex.EPSILON;
+Complex Complex.PI; // 3.141592...
+Complex Complex.E; // 2.718281...
+Complex Complex.ONE; // 1
+Complex Complex.UNIT; // 1j
 ```
 
-> 설명
-
-|이름|설명|타입|
-|:---:|:---:|:---:|
-|EPSILON|2^-52|Complex|
-|PI|π|Complex|
-|E|e|Complex|
-|ONE|1|Complex|
-|UNIT|허수 단위|Complex|
+- `Complex.EPSILON` 2^-52
+- `Complex.PI` π
+- `Complex.E` e
+- `Complex.ONE` 1
+- `Complex.UNIT` 허수 단위
 
 ### 문자열로 나타내기
 
