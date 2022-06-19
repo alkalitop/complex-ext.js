@@ -76,19 +76,11 @@ String toString()
 
 ### equals()
 ```js
-Boolean equals( z)
-Boolean equals(Complex
+Boolean equals(Number|String|Complex z)
 ```
-먼저, `z`는 다음을 의미합니다:
-- ㅇㅇ
-주어진 수를 복소수 `z`와 비교하여 실수부와 허수부 각각의 차가 모두 2^-52 이하이면 참, 아니면 거짓을 반환합니다.
+먼저, `z`는 주어진 수와 비교할 수를 의미합니다.
+주어진 수를 `z`와 비교하여 실수부와 허수부 각각의 차가 모두 2^-52 이하이면 참, 아니면 거짓을 반환합니다.
 <br/> 즉, 주어진 수와 복소수 `z`가 *거의* 같거나 완전히 같다면 참, 아니면 거짓을 반환합니다.
-
-> 매개변수
-
-|이름|타입|필수|
-|:---:|:---:|:---:|
-|z|number/string/Complex|O|
 
 ### 메서드: 기본 연산
 ```javascript
