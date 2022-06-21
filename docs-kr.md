@@ -85,6 +85,7 @@ Boolean equals(Number|String|Complex z)
 <br/>주어진 수를 `z`와 비교하여 실수부와 허수부 각각의 차가 모두 2^-52 이하이면 참, 아니면 거짓을 반환합니다.
 
 ### add()
+[설명 보기](#div)
 ### sub()
 ### mul()
 ### div()
