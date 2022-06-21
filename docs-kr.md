@@ -120,9 +120,9 @@ Complex Cxmath.conj(Number|String|Complex z)
 Complex Cxmath.opp(Number|String|Complex z)
 Complex Cxmath.rec(Number|String|Complex z)
 ```
-`Cxmath.conj()`: `z`의 켤레복소수를 반환합니다.
-`Cxmath.opp()`: `z`에 -1을 곱한 복소수를 반환합니다.
-`Cxmath.rec()`: `z`의 역수인 복소수를 반환합니다.
+- `Cxmath.conj()`: `z`의 켤레복소수를 반환합니다.
+- `Cxmath.opp()`: `z`에 -1을 곱한 복소수를 반환합니다.
+- `Cxmath.rec()`: `z`의 역수인 복소수를 반환합니다.
 
 ### Cxmath.sqrt()
 [설명 보기](#cxmathcbrt)
@@ -131,8 +131,8 @@ Complex Cxmath.rec(Number|String|Complex z)
 Complex Cxmath.sqrt(Number|String|Complex z)
 Complex Cxmath.cbrt(Number|String|Complex z)
 ```
-- `Cxmath.sqrt()` `z`의 주요 제곱근을 반환합니다.
-- `Cxmath.cbrt()` `z`의 주요 세제곱근을 반환합니다.
+- `Cxmath.sqrt()`: `z`의 주요 제곱근을 반환합니다.
+- `Cxmath.cbrt()`: `z`의 주요 세제곱근을 반환합니다.
 
 ### 정적 메서드: 지수함수 & 로그함수
 
