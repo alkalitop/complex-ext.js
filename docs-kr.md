@@ -180,36 +180,39 @@ Complex Cxmath.cot(Number|String|Complex z)
 - `Cxmath.sec()`: sec(`z`) 를 반환합니다.
 - `Cxmath.cot()`: cot(`z`) 를 반환합니다.
 
-#### 역삼각함수
+### Cxmath.asin()
+[설명 보기](#cxmathatan)
 
-```javascript
-Cxmath.asin(z);
-Cxmath.acos(z);
-Cxmath.atan(z);
+### Cxmath.acos()
+[설명 보기](#cxmathatan)
 
-Cxmath.acsc(z);
-Cxmath.asec(z);
-Cxmath.acot(z);
+### Cxmath.atan()
+```js
+Complex Cxmath.asin(Number|String|Complex z)
+Complex Cxmath.acos(Number|String|Complex z)
+Complex Cxmath.atan(Number|String|Complex z)
 ```
+- `Cxmath.asin()`: arcsin(`z`) 를 반환합니다.
+- `Cxmath.acos()`: arccos(`z`) 를 반환합니다.
+- `Cxmath.atan()`: arctan(`z`) 를 반환합니다.
 
-> 함수
+### Cxmath.acsc()
+[설명 보기](#cxmathacot)
 
-|이름|설명|반환 타입|
-|:---:|:---:|:---:|
-|asin|아크사인|Complex|
-|acos|아크코사인|Complex|
-|atan|아크탄젠트|Complex|
-|acsc|아크코시컨트|Complex|
-|asec|아크시컨트|Complex|
-|acot|아크코탄젠트|Complex|
+### Cxmath.asec()
+[설명 보기](#cxmathacot)
 
-> 매개변수
+### Cxmath.acot()
+```js
+Complex Cxmath.acsc(Number|String|Complex z)
+Complex Cxmath.asec(Number|String|Complex z)
+Complex Cxmath.acot(Number|String|Complex z)
+```
+- `Cxmath.acsc()`: arccsc(`z`) 를 반환합니다.
+- `Cxmath.asec()`: arcsec(`z`) 를 반환합니다.
+- `Cxmath.acot()`: arccot(`z`) 를 반환합니다.
 
-|이름|타입|필수|
-|:---:|:---:|:---:|
-|z|number/string/Complex|O|
-
-#### Complex static atan2(z1, z2)
+### Complex static atan2(z1, z2)
 2-argument-arctangent
 ```javascript
 Cxmath.atan2(z1, z2);
