@@ -141,12 +141,10 @@ Complex Cxmath.exp(Number|String|Complex z)
 밑이 e(자연로그의 밑)이고 지수가 `z`인 복소수를 반환합니다.
 
 ### Cxmath.log()
-진수가 a, 밑이 b인 로그함수
-(주 분지에서 정의됨. 밑이 e이면 생략 )
 ```js
 Complex Cxmath.log(Number|String|Complex a[, Number|String|Colplex b])
 ```
-`a`는 **진수**(antilogarithm)를 의미하고, `b`는 **밑**(base)을 의미합니다.
+**밑**(base)이 `b`이고 **진수**(antilogarithm)가 `a`인 log값을 반환합니다. 
 밑이 e(자연로그의 밑)일 때는 생략할 수 있습니다.
 <br/>**Principal branch에서 정의되었음**에 주의해주세요.
 
