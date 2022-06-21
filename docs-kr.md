@@ -111,22 +111,18 @@ Complex inv(Number|String|Complex z)
 ## class Cxmath
 
 ### Cxmath.conj()
-```js
-Complex Cxmath.conj(Number|String|Complex z)
-```
-`z`의 켤레복소수를 반환합니다.
-
+[설명 보기](#cxmathrec)
 ### Cxmath.opp()
-```js
-Complex Cxmath.opp(Number|String|Complex z)
-```
-`z`에 -1을 곱한 복소수를 반환합니다.
-
+[설명 보기](#cxmathrec)
 ### Cxmath.rec()
 ```js
+Complex Cxmath.conj(Number|String|Complex z)
+Complex Cxmath.opp(Number|String|Complex z)
 Complex Cxmath.rec(Number|String|Complex z)
 ```
-`z`의 역수인 복소수를 반환합니다.
+`Cxmath.conj()`: `z`의 켤레복소수를 반환합니다.
+`Cxmath.opp()`: `z`에 -1을 곱한 복소수를 반환합니다.
+`Cxmath.rec()`: `z`의 역수인 복소수를 반환합니다.
 
 ### Cxmath.sqrt()
 [설명 보기](#cxmathcbrt)
