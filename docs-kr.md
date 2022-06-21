@@ -110,14 +110,23 @@ Complex inv(Number|String|Complex z)
 
 ## class Cxmath
 
-### 정적 메서드: 추가 연산
-```javascript
-let z = new Complex('1+2j');
-
-Cxmath.conj(z); // 1-2j
-Cxmath.opp(z); // -1-2j
-Cxmath.rec(z); // 0.19999...-0.39999...j
+### Cxmath.conj()
+```js
+Complex Cxmath.conj(Number|String|Complex z)
 ```
+`z`의 켤레복소수를 반환합니다.
+
+### Cxmath.opp()
+```js
+Cxmath.opp(Number|String|Complex z)
+`z`에 -1을 곱한 복소수를 반환합니다.
+```
+
+### Cxmath.rec()
+```js
+Cxmath.rec(Number|String|Complex z)
+```
+`z`의 역수인 복소수를 반환합니다.
 
 > 함수
 
