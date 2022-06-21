@@ -85,28 +85,19 @@ Boolean equals(Number|String|Complex z)
 <br/>주어진 수를 `z`와 비교하여 실수부와 허수부 각각의 차가 모두 2^-52 이하이면 참, 아니면 거짓을 반환합니다.
 
 ### add()
-```js
-Complex add(Number|String|Complex z)
-```
-주어진 수에 `z`를 더한 복소수를 반환합니다.
-
 ### sub()
-```js
-Complex sub(Number|String|Complex z)
-```
-주어진 수에서 `z`를 뺀 복소수를 반환합니다.
-
 ### mul()
-```js
-Complex mul(Number|String|Complex z)
-```
-주어진 수에 `z`를 곱한 복소수를 반환합니다.
-
 ### div()
 ```js
+Complex add(Number|String|Complex z)
+Complex sub(Number|String|Complex z)
+Complex mul(Number|String|Complex z)
 Complex div(Number|String|Complex z)
 ```
-주어진 수에 `z`의 역수를 곱한 복소수를 반환합니다.
+`add()` 주어진 수에 `z`를 더한 복소수를 반환합니다.
+`sub()` 주어진 수에서 `z`를 뺀 복소수를 반환합니다.
+`mul()` 주어진 수에 `z`를 곱한 복소수를 반환합니다.
+`div()` 주어진 수에 `z`의 역수를 곱한 복소수를 반환합니다.
 
 ### inv()
 ```js
