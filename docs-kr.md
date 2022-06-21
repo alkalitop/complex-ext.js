@@ -5,7 +5,7 @@
 ### constructor()
 #### type-1
 ```js
-constructor(Number re, Number im)
+constructor(Number re[, Number im])
 ```
 직교 형식 복소수를 생성합니다. `re`는 **실수부**, `im`은 **허수부**를 의미합니다. 허수부가 0일 경우에는 `im`을 생략할 수 있습니다.
 
@@ -134,35 +134,21 @@ Complex Cxmath.cbrt(Number|String|Complex z)
 - `Cxmath.sqrt()`: `z`의 주요 제곱근을 반환합니다.
 - `Cxmath.cbrt()`: `z`의 주요 세제곱근을 반환합니다.
 
-### 정적 메서드: 지수함수 & 로그함수
-
-#### Complex static exp(z)
-지수함수
-```javascript
-Cxmath.exp(z);
+### Cxmath.exp()
+```js
+Complex Cxmath.exp(Number|String|Complex z)
 ```
+밑이 e(자연로그의 밑)이고 지수가 `z`인 복소수를 반환합니다.
 
-> 매개변수
-
-|이름|타입|필수|
-|:---:|:---:|:---:|
-|z|number/string/Complex|O|
-
-#### Complex static log(a[, b=Math.E])
-진수가 a, 밑이 b인 로그함수 (주 분지에서 정의됨. 밑이 e이면 생략 )
-```javascript
-Cxmath.log(a); // Natural Logarithm
-Cxmath.log(a, 2); // Binary Logarithm
-Cxmath.log(a, 10); // Decimal Logarithm
-Cxmath.log(a, b);
+### Cxmath.log()
+진수가 a, 밑이 b인 로그함수
+(주 분지에서 정의됨. 밑이 e이면 생략 )
+```js
+Complex Cxmath.log(Number|String|Complex a[, Number|String|Colplex b])
 ```
-
-> 매개변수
-
-|이름|타입|필수|
-|:---:|:---:|:---:|
-|a|number/string/Complex|O|
-|b|numner/string/Complex|X|
+`a`는 **진수**(antilogarithm)를 의미하고, `b`는 **밑**(base)을 의미합니다.
+밑이 e(자연로그의 밑)일 때는 생략할 수 있습니다.
+<br/>**Principal branch에서 정의되었음**에 주의해주세요.
 
 ### 정적 메서드: 삼각함수
 
