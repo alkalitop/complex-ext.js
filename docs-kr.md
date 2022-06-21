@@ -144,40 +144,41 @@ Complex Cxmath.exp(Number|String|Complex z)
 ```js
 Complex Cxmath.log(Number|String|Complex a[, Number|String|Colplex b])
 ```
-**밑**(base)이 `b`이고 **진수**(antilogarithm)가 `a`인 log값을 반환합니다. 
+밑(**b**ase)이 `b`이고 진수(**a**ntilogarithm)가 `a`인 log값을 반환합니다. 
 밑이 e(자연로그의 밑)일 때는 생략할 수 있습니다.
 <br/>**Principal branch에서 정의되었음**에 주의해주세요.
 
-### 정적 메서드: 삼각함수
+### Cxmath.sin()
+[설명 보기](#cxmathtan)
 
-#### 삼각함수
+### Cxmath.cos()
+[설명 보기](#cxmathtan)
 
-```javascript
-Cxmath.sin(z);
-Cxmath.cos(z);
-Cxmath.tan(z);
-
-Cxmath.csc(z);
-Cxmath.sec(z);
-Cxmath.cot(z);
+### Cxmath.tan()
+```js
+Complex Cxmath.sin(Number|String|Complex z)
+Complex Cxmath.cos(Number|String|Complex z)
+Complex Cxmath.tan(Number|String|Complex z)
 ```
+- `Cxmath.sin()`: sin(`z`) 를 반환합니다.
+- `Cxmath.cos()`: cos(`z`) 를 반환합니다.
+- `Cxmath.tan()`: tan(`z`) 를 반환합니다.
 
-> 함수
+### Cxmath.csc()
+[설명 보기](#cxmathcot)
 
-|이름|설명|반환 타입|
-|:---:|:---:|:---:|
-|sin|사인|Complex|
-|cos|코사인|Complex|
-|tan|탄젠트|Complex|
-|csc|코시컨트|Complex|
-|sec|시컨트|Complex|
-|cot|코탄젠트|Complex|
+### Cxmath.sec()
+[설명 보기](#cxmathcot)
 
-> 매개변수
-
-|이름|타입|필수|
-|:---:|:---:|:---:|
-|z|number/string/Complex|O|
+### Cxmath.cot()
+```js
+Complex Cxmath.csc(Number|String|Complex z)
+Complex Cxmath.sec(Number|String|Complex z)
+Complex Cxmath.cot(Number|String|Complex z)
+```
+- `Cxmath.csc()`: csc(`z`) 를 반환합니다.
+- `Cxmath.sec()`: sec(`z`) 를 반환합니다.
+- `Cxmath.cot()`: cot(`z`) 를 반환합니다.
 
 #### 역삼각함수
 
