@@ -94,10 +94,10 @@ Complex sub(Number|String|Complex z)
 Complex mul(Number|String|Complex z)
 Complex div(Number|String|Complex z)
 ```
-`add()` 주어진 수에 `z`를 더한 복소수를 반환합니다.
-`sub()` 주어진 수에서 `z`를 뺀 복소수를 반환합니다.
-`mul()` 주어진 수에 `z`를 곱한 복소수를 반환합니다.
-`div()` 주어진 수에 `z`의 역수를 곱한 복소수를 반환합니다.
+<br/>`add()` 주어진 수에 `z`를 더한 복소수를 반환합니다.
+<br/>`sub()` 주어진 수에서 `z`를 뺀 복소수를 반환합니다.
+<br/>`mul()` 주어진 수에 `z`를 곱한 복소수를 반환합니다.
+<br/>`div()` 주어진 수에 `z`의 역수를 곱한 복소수를 반환합니다.
 
 ### inv()
 ```js
