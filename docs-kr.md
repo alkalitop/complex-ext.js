@@ -118,50 +118,24 @@ Complex Cxmath.conj(Number|String|Complex z)
 
 ### Cxmath.opp()
 ```js
-Cxmath.opp(Number|String|Complex z)
+Complex Cxmath.opp(Number|String|Complex z)
 ```
 `z`에 -1을 곱한 복소수를 반환합니다.
 
 ### Cxmath.rec()
 ```js
-Cxmath.rec(Number|String|Complex z)
+Complex Cxmath.rec(Number|String|Complex z)
 ```
 `z`의 역수인 복소수를 반환합니다.
 
-> 함수
-
-|이름|설명|반환 타입|
-|:---:|:---:|:---:|
-|conj|켤레 복소수|Complex|
-|opp|반수 (덧셈 역원)|Complex|
-|rec|역수|Complex|
-
-> 매개변수
-
-|이름|타입|필수|
-|:---:|:---:|:---:|
-|z|number/string/Complex|O|
-
-### 정적 메서드: 거듭제곱근
-```javascript
-let z = new Complex('1+2j');
-
-Cxmath.sqrt(z); // 1.27201...+0.78615...j
-Cxmath.cbrt(z); // 1.21961...+0.47171...j
+### Cxmath.sqrt()
+### Cxmath.cbrt()
+```js
+Complex Cxmath.sqrt(Number|String|Complex z)
+Complex Cxmath.cbrt(Number|String|Complex z)
 ```
-
-> 함수
-
-|이름|설명|반환 타입|
-|:---:|:---:|:---:|
-|sqrt|주요 제곱근|Complex|
-|cbrt|주요 세제곱근|Complex|
-
-> 매개변수
-
-|이름|타입|필수|
-|:---:|:---:|:---:|
-|z|number/string/Complex|O|
+- `Cxmath.sqrt()` `z`의 주요 제곱근을 반환합니다.
+- `Cxmath.cbrt()` `z`의 주요 세제곱근을 반환합니다.
 
 ### 정적 메서드: 지수함수 & 로그함수
 
