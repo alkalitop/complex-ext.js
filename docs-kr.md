@@ -119,8 +119,8 @@ Complex Cxmath.conj(Number|String|Complex z)
 ### Cxmath.opp()
 ```js
 Cxmath.opp(Number|String|Complex z)
-`z`에 -1을 곱한 복소수를 반환합니다.
 ```
+`z`에 -1을 곱한 복소수를 반환합니다.
 
 ### Cxmath.rec()
 ```js
