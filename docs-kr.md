@@ -129,6 +129,7 @@ Complex Cxmath.rec(Number|String|Complex z)
 `z`의 역수인 복소수를 반환합니다.
 
 ### Cxmath.sqrt()
+[설명 보기](#cxmathcbrt)
 ### Cxmath.cbrt()
 ```js
 Complex Cxmath.sqrt(Number|String|Complex z)
