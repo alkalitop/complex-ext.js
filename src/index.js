@@ -411,18 +411,6 @@ Cxmath.tan = function (z) {
     return Cxmath.sin(z).div(Cxmath.cos(z));
 };
 
-Cxmath.csc = function (z) {
-    return Complex.ONE.div(Cxmath.sin(z));
-};
-
-Cxmath.sec = function (z) {
-    return Complex.ONE.div(Cxmath.cos(z));
-};
-
-Cxmath.cot = function (z) {
-    return Complex.ONE.div(Cxmath.tan(z));
-};
-
 Cxmath.asin = function (z) {
     let s = new Complex(z);
     return Cxmath.log(Complex.UNIT.mul(s).add(Cxmath.sqrt(Cxmath.opp(s.inv(2).sub(1))))).mul(Cxmath.conj(Complex.UNIT));
@@ -439,18 +427,6 @@ Cxmath.atan = function (z) {
 
 Cxmath.atan2 = function (w, z) {
     return Cxmath.atan(new Complex(w).div(new Complex(z)));
-};
-
-Cxmath.acsc = function (z) {
-    return Cxmath.asin(Complex.ONE.div(z));
-};
-
-Cxmath.asec = function (z) {
-    return Cxmath.acos(Complex.ONE.div(z));
-};
-
-Cxmath.acot = function (z) {
-    return Cxmath.atan(Complex.ONE.div(z));
 };
 
 // hyperbolic
@@ -491,44 +467,14 @@ Cxmath.csgn = function (z) {
     }
 };
 
-// vector
-
-Cxmath.inprod = function (a, b) {
-    let u = new Complex(a);
-    let v = new Complex(b);  
-    return new Complex(u.abs()*v.abs()*Math.cos(u.arg()-v.arg()));
-};
-
 Cxmath.dist = function (a, b) {
     let u = new Complex(a)
     let v = new Complex(b);  
     return new Complex(Math.hypot(u.re-v.re, u.im-v.im));
 };
 
-// Z
-
-Cxmath.floor = function (z) {
-    let s = new Complex(z);
-    return new Complex(Math.floor(s.re), Math.floor(s.im));
-};
-
-Cxmath.ceil = function (z) {
-    let s = new Complex(z);
-    return new Complex(Math.ceil(s.re), Math.ceil(s.im));
-};
-
-Cxmath.round = function (z) {
-    let s = new Complex(z);
-    return new Complex(Math.round(s.re), Math.round(s.im));
-};
-
-Cxmath.trunc = function (z) {
-    let s = new Complex(z);
-    return new Complex(Math.trunc(s.re), Math.trunc(s.im));
-};
-
 Cxmath.random = function () {
     return new Complex(Math.random(), Math.random());
 };
 
-module.exports = { Complex: Complex, Cxmath: Cxmath }
+module.exports = { Complex: Complex, Cxmath: Cxmath };
