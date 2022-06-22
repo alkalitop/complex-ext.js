@@ -222,51 +222,37 @@ Cxmath.atan2(z1, z2);
 |z1|number/string/Complex|O|
 |z2|number/string/Complex|O|
 
-### 정적 메서드: 쌍곡선 함수
+### Cxmath.sinh()
+[설명 보기](#cxmathtanh)
 
-#### 쌍곡선 함수
+### Cxmath.cosh()
+[설명 보기](#cxmathtanh)
 
-```javascript
-Cxmath.sinh(z);
-Cxmath.cosh(z);
-Cxmath.tanh(z);
+### Cxmath.tanh()
+```js
+Complex Cxmath.sinh(Number|String|Complex z)
+Complex Cxmath.cosh(Number|String|Complex z)
+Complex Cxmath.tanh(Number|String|Complex z)
 ```
+- `Cxmath.sinh()`: sinh(`z`) 를 반환합니다.
+- `Cxmath.cosh()`: cosh(`z`) 를 반환합니다.
+- `Cxmath.tanh()`: tanh(`z`) 를 반환합니다.
 
-> 함수
+### Cxmath.asinh()
+[설명 보기](#cxmathatanh)
 
-|이름|설명|반환 타입|
-|:---:|:---:|:---:|
-|sinh|쌍곡사인|Complex|
-|cosh|쌍곡코사인|Complex|
-|tanh|쌍곡탄젠트|Complex|
+### Cxmath.acosh()
+[설명 보기](#cxmathatanh)
 
-> 매개변수
-
-|이름|타입|필수|
-|:---:|:---:|:---:|
-|z|number/string/Complex|O|
-
-#### 쌍곡선 함수의 역함수
-
-```javascript
-Cxmath.asinh(z);
-Cxmath.acosh(z);
-Cxmath.atanh(z);
+### Cxmath.atanh()
+```js
+Complex Cxmath.asinh(Number|String|Complex z)
+Complex Cxmath.acosh(Number|String|Complex z)
+Complex Cxmath.atanh(Number|String|Complex z)
 ```
-
-> 함수
-
-|이름|설명|반환 타입|
-|:---:|:---:|:---:|
-|asinh|Inverse-hyperbolic-sine (arsinh)|Complex|
-|acosh|Inverse-hyperbolic-cosine (arcosh)|Complex|
-|atanh|Inverse-hyperbolic-tangent (artanh)|Complex|
-
-> 매개변수
-
-|이름|타입|필수|
-|:---:|:---:|:---:|
-|z|number/string/Complex|O|
+- `Cxmath.asinh()`: arsinh(`z`) 를 반환합니다.
+- `Cxmath.acosh()`: arcosh(`z`) 를 반환합니다.
+- `Cxmath.atanh()`: artanh(`z`) 를 반환합니다.
 
 ### 정적 메서드: 부호함수
 
