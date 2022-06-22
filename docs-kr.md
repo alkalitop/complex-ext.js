@@ -180,15 +180,11 @@ Complex Cxmath.atan(Number|String|Complex z)
 - `Cxmath.acos()`: arccos(`z`) 를 반환합니다.
 - `Cxmath.atan()`: arctan(`z`) 를 반환합니다.
 
-### Complex static atan2(z1, z2)
-2-argument-arctangent
-```javascript
-Cxmath.atan2(z1, z2);
+### Cxmath.atan2()
+```js
+Complex Cxmath.atan2(Number|String|Complex z1, Number|String|Complex z2)
 ```
-|이름|타입|필수|
-|:---:|:---:|:---:|
-|z1|number/string/Complex|O|
-|z2|number/string/Complex|O|
+atan2(`z1`, `z2`) 를 반환합니다.
 
 ### Cxmath.sinh()
 [설명 보기](#cxmathtanh)
