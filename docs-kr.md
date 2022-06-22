@@ -222,38 +222,17 @@ Complex Cxmath.atanh(Number|String|Complex z)
 - `Cxmath.acosh()`: arcosh(`z`) 를 반환합니다.
 - `Cxmath.atanh()`: artanh(`z`) 를 반환합니다.
 
-### 정적 메서드: 부호함수
-
-#### Complex static csgn(z)
-복소부호함수
-```javascript
-Cxmath.csgn(z);
+### Cxmath.csgn()
+```js
+Complex Cxmath.csgn(Number|String|Complex z)
 ```
-|이름|타입|필수|
-|:---:|:---:|:---:|
-|z|number/string/Complex|O|
+csgn `z` 를 반환합니다.
 
-### 정적 메서드: 벡터
-
-#### Complex static inprod(a, b)
-내적
-```javascript
-Cxmath.inprod(a, b);
+### Cxmath.dist()
+```js
+Complex Cxmath.dist(Number|String|Complex z1, Number|String|Complex z2)
 ```
-|이름|타입|필수|
-|:---:|:---:|:---:|
-|a|number/string/Complex|O|
-|b|number/string/Complex|O|
-
-#### Complex static dist(a, b)
-(Re(a), Im(a)) 에서 (Re(b), Im(b)) 까지의 거리
-```javascript
-Cxmath.dist(a, b);
-```
-|이름|타입|필수|
-|:---:|:---:|:---:|
-|a|number/string/Complex|O|
-|b|number/string/Complex|O|
+복소평면 상에서 z1과 z2이 나타내는 점 사이의 거리를 반환합니다.
 
 ### 정적 메서드: 난수
 
