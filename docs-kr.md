@@ -232,34 +232,10 @@ csgn `z` 를 반환합니다.
 ```js
 Complex Cxmath.dist(Number|String|Complex z1, Number|String|Complex z2)
 ```
-복소평면 상에서 z1과 z2이 나타내는 점 사이의 거리를 반환합니다.
+복소평면 상에서 `z1`과 `z2`이 나타내는 점 사이의 거리를 반환합니다.
 
-### 정적 메서드: 난수
-
-#### Complex static random()
-실수부와 허수부가 모두 [0, 1]에 포함되는 난수 생성
-```javascript
-Cxmath.random();
+### Cxmath.random()
+```js
+Complex Cxmath.random()
 ```
-
-### 정적 메서드: 바닥함수 & 천장함수
-```javascript
-Cxmath.floor(z);
-Cxmath.ceil(z);
-Cxmath.round(z);
-Cxmath.trunc(z);
-```
-> 함수
-
-|이름|설명|반환 타입|
-|:---:|:---:|:---:|
-|floor|바닥함수|Complex|
-|ceil|천장함수|Complex|
-|round|반올림|Complex|
-|trunc|-|Complex|
-
-> 매개변수
-
-|이름|타입|필수|
-|:---:|:---:|:---:|
-|z|number/string/Complex|O|
+실수부와 허수부가 모두 0 이상 1 이하인 복소수 난수를 반환합니다.
