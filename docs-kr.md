@@ -49,10 +49,10 @@ Number im
 Number abs
 Number arg
 ```
-`re` 실수부
-<br/>`im` 허수부
-<br/>`abs` 절댓값
-<br/>`arg` 편각
+- `re` 실수부
+- `im` 허수부
+- `abs` 절댓값
+- `arg` 편각
 
 ### 상수
 ```js
