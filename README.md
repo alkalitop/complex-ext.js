@@ -1,8 +1,9 @@
 # complex-pure.js
 Pure Javascript Complex Number Library
+<br/>자바스크립트 
 
 ## Notice
-This project has not been completed yet!
+This project is ongoing project, but it works well.
 
 ## Docs
 
