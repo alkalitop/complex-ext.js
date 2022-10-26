@@ -2,9 +2,6 @@
 Pure javascript complex number library without any other libraries and frameworks.
 <br/>자바스크립트 복소수 라이브러리
 
-## Notice
-This project is ongoing project, but it works well.
-
 ## Docs
 
 ### Get Started
