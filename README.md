@@ -1,7 +1,5 @@
 # complex-pure.js
-Pure javascript complex number library without any other libraries and frameworks.
-
-## Docs
+Implementation of complex number in Javascript without any other libraries and frameworks.
 
 ### Get Started
 Require(Import) module to start.
