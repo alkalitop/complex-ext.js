@@ -1,4 +1,4 @@
-# complex-pure.js
+# complex-ext.js
 Implementation of complex number in Javascript without any other libraries and frameworks.
 
 ### Get Started
