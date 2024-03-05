@@ -5,5 +5,4 @@ Implementation of complex number in Javascript without any other libraries and f
 Require(Import) module to start.
 ```javascript
 const { Complex, ComplexMath } = require(PATH);
-// It will be available in npm later!
 ```
